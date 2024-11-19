@@ -342,42 +342,6 @@ impl Drop for IOReport {
     }
 }
 
-#[derive(Debug)]
-pub enum ComputeUnit {
-    CPU,
-    GPU,
-    ANE,
-}
-
-impl ComputeUnit {
-    pub fn as_str(&self) -> &str {
-        match self {
-            Self::CPU => "CPU",
-            Self::GPU => "GPU",
-            Self::ANE => "ANE",
-        }
-    }
-}
-
-impl std::fmt::Display for ComputeUnit {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.as_str())
-    }
-}
-
-impl TryFrom<&str> for ComputeUnit {
-    type Error = IOReportError;
-
-    fn try_from(value: &str) -> Result<Self> {
-        match value {
-            "CPU" => Ok(Self::CPU),
-            "GPU" => Ok(Self::GPU),
-            "ANE" => Ok(Self::ANE),
-            _ => Err(IOReportError::InvalidEnergyUnit(value.to_string())),
-        }
-    }
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -392,23 +356,29 @@ mod tests {
         ];
         let measures: usize = 4;
         let mut report = IOReport::new(channels.to_vec()).unwrap();
-        let samples = report.get_samples(1000, measures);
 
-        for (report_it, sample_dt) in samples {
-            for entry in report_it {
-                if entry.group == "Energy Model" {
-                    let unit = EnergyUnit::from(entry.unit.as_str());
-                    let pwr = match entry.channel.as_str() {
-                        "CPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
-                        "GPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
-                        c if c.starts_with("ANE") => read_wattage(entry.item, &unit, sample_dt)?,
-                        _ => continue,
-                    };
-                    println!("POWER {}: {:.2}W", entry.channel, pwr);
+        loop {
+            let samples = report.get_samples(1000, measures);
+
+            let mut sample = String::new();
+            for (report_it, sample_dt) in samples {
+                for entry in report_it {
+                    if entry.group == "Energy Model" {
+                        let unit = EnergyUnit::from(entry.unit.as_str());
+                        let pwr = match entry.channel.as_str() {
+                            "CPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
+                            "GPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
+                            c if c.starts_with("ANE") => {
+                                read_wattage(entry.item, &unit, sample_dt)?
+                            }
+                            _ => continue,
+                        };
+                        sample.push_str(&format!("{}: {:.3}W\t", entry.channel, pwr));
+                    }
                 }
+                sample.push('\n');
             }
+            println!("{}", sample);
         }
-
-        Ok(())
     }
 }
