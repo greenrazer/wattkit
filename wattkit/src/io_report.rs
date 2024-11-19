@@ -1,6 +1,9 @@
+use std::sync::atomic::Ordering;
+use std::thread;
 use std::{
     marker::{PhantomData, PhantomPinned},
     mem::MaybeUninit,
+    sync::{atomic::AtomicBool, Arc, Mutex},
 };
 
 use crate::cf_utils::*;
@@ -315,37 +318,11 @@ impl IOReport {
         self.previous = Some(prev);
         samples
     }
-}
 
-impl Drop for IOReport {
-    fn drop(&mut self) {
-        unsafe {
-            CFRelease(self.channels as _);
-            CFRelease(self.subscription as _);
-            if self.previous.is_some() {
-                CFRelease(self.previous.unwrap().0 as _);
-            }
-        }
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_io_report() -> Result<()> {
-        let channels = [
-            ("Energy Model", None), // cpu/gpu/ane power
-            // ("CPU Stats", Some(CPU_FREQ_DICE_SUBG)), // cpu freq by cluster
-            ("CPU Stats", Some(CPU_FREQ_CORE_SUBG)), // cpu freq per core
-            ("GPU Stats", Some(GPU_FREQ_DICE_SUBG)),
-        ];
+    pub fn start_sampling(&mut self) -> Result<()> {
         let measures: usize = 4;
-        let mut report = IOReport::new(channels.to_vec()).unwrap();
-
         loop {
-            let samples = report.get_samples(1000, measures);
+            let samples = self.get_samples(1000, measures);
 
             let mut sample = String::new();
             for (report_it, sample_dt) in samples {
@@ -367,5 +344,84 @@ mod tests {
             }
             println!("{}", sample);
         }
+    }
+}
+
+impl Drop for IOReport {
+    fn drop(&mut self) {
+        unsafe {
+            CFRelease(self.channels as _);
+            CFRelease(self.subscription as _);
+            if self.previous.is_some() {
+                CFRelease(self.previous.unwrap().0 as _);
+            }
+        }
+    }
+}
+
+#[derive(Debug, Default, Clone)]
+pub struct PowerMeasurement {
+    pub cpu_power: f32,
+    pub gpu_power: f32,
+    pub ane_power: f32,
+    pub timestamp: std::time::Duration,
+}
+
+#[derive(Debug, Default)]
+pub struct EnergyReport {
+    pub measurements: Vec<PowerMeasurement>,
+    pub sample_interval: std::time::Duration,
+    pub total_duration: std::time::Duration,
+}
+
+impl EnergyReport {
+    pub fn new() -> Self {
+        Self::default()
+    }
+
+    pub fn add_measurement(&mut self, measurement: PowerMeasurement) {
+        self.measurements.push(measurement);
+    }
+
+    pub fn average_powers(&self) -> Option<PowerMeasurement> {
+        if self.measurements.is_empty() {
+            return None;
+        }
+
+        let count = self.measurements.len() as f32;
+        let sum =
+            self.measurements
+                .iter()
+                .fold(PowerMeasurement::default(), |mut acc, measurement| {
+                    acc.cpu_power += measurement.cpu_power;
+                    acc.gpu_power += measurement.gpu_power;
+                    acc.ane_power += measurement.ane_power;
+                    acc
+                });
+
+        Some(PowerMeasurement {
+            cpu_power: sum.cpu_power / count,
+            gpu_power: sum.gpu_power / count,
+            ane_power: sum.ane_power / count,
+            timestamp: self.total_duration,
+        })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_io_report() -> Result<()> {
+        let channels = [
+            ("Energy Model", None), // cpu/gpu/ane power
+            // ("CPU Stats", Some(CPU_FREQ_DICE_SUBG)), // cpu freq by cluster
+            ("CPU Stats", Some(CPU_FREQ_CORE_SUBG)), // cpu freq per core
+            ("GPU Stats", Some(GPU_FREQ_DICE_SUBG)),
+        ];
+        let mut report = IOReport::new(channels.to_vec())?;
+        report.start_sampling()?;
+        Ok(())
     }
 }
