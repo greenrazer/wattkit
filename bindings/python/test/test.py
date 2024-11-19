@@ -1,4 +1,4 @@
-from wattkit_py import PowerMonitorStream
+from wattkit import PowerMonitorStream
 
 def monitor_power():
     stream = PowerMonitorStream()

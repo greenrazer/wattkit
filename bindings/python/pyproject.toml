@@ -13,6 +13,7 @@ classifiers = [
 dynamic = ["version"]
 
 [tool.maturin]
+python-source = "py_src"
+module-name = "wattkit._wattkit_pyo3"
 bindings = 'pyo3'
-module_name = "wattkit_py"
 features = ["pyo3/extension-module"]

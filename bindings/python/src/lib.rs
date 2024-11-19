@@ -103,7 +103,7 @@ impl PowerMonitorStream {
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn wattkit_py(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn _wattkit_pyo3(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<PowerMonitorStream>()?;
     Ok(())
 }
