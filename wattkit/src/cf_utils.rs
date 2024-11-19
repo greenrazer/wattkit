@@ -38,7 +38,7 @@ pub fn cfstr(val: &str) -> CFStringRef {
 
 pub fn from_cfstr(val: CFStringRef) -> String {
     unsafe {
-        let mut buf = Vec::with_capacity(128);
+        let mut buf = Vec::with_capacity(128); //128 here seems dumb
         if CFStringGetCString(val, buf.as_mut_ptr(), 128, kCFStringEncodingUTF8) == 0 {
             panic!("Failed to convert CFString to CString");
         }
