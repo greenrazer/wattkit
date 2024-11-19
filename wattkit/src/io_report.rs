@@ -216,6 +216,10 @@ impl IOReportSample {
         &self.iterator
     }
 
+    pub fn iterator_mut(&mut self) -> &mut IOReportIterator {
+        &mut self.iterator
+    }
+
     pub fn duration(&self) -> u64 {
         self.duration
     }
