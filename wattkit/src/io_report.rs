@@ -119,6 +119,16 @@ pub enum IOReportChannelGroup {
     GPUStats,
 }
 
+impl IOReportChannelGroup {
+    pub fn as_str(&self) -> &str {
+        match self {
+            Self::EnergyModel => "Energy Model",
+            Self::CPUStats => "CPU Stats",
+            Self::GPUStats => "GPU Stats",
+        }
+    }
+}
+
 impl From<String> for IOReportChannelGroup {
     fn from(s: String) -> Self {
         match s.as_str() {
@@ -232,14 +242,14 @@ impl IOReportSample {
 }
 
 pub struct IOReportChannelRequest {
-    pub group: String,
+    pub group: IOReportChannelGroup,
     pub subgroup: Option<String>,
 }
 
 impl IOReportChannelRequest {
-    pub fn new<S: ToString>(group: S, subgroup: Option<S>) -> Self {
+    pub fn new<S: ToString>(group: IOReportChannelGroup, subgroup: Option<S>) -> Self {
         Self {
-            group: group.to_string(),
+            group,
             subgroup: subgroup.map(|s| s.to_string()),
         }
     }
@@ -434,9 +444,9 @@ mod tests {
     #[test]
     fn test_io_report() -> Result<()> {
         let requests = vec![
-            IOReportChannelRequest::new("Energy Model", None),
-            IOReportChannelRequest::new("CPU Stats", Some(CPU_FREQ_CORE_SUBG)),
-            IOReportChannelRequest::new("GPU Stats", Some(GPU_FREQ_DICE_SUBG)),
+            IOReportChannelRequest::new(IOReportChannelGroup::EnergyModel, None as Option<String>),
+            IOReportChannelRequest::new(IOReportChannelGroup::CPUStats, Some(CPU_FREQ_CORE_SUBG)),
+            IOReportChannelRequest::new(IOReportChannelGroup::GPUStats, Some(GPU_FREQ_DICE_SUBG)),
         ];
 
         let mut report = IOReport::new(requests)?;
