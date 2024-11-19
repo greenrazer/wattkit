@@ -25,17 +25,17 @@ impl PowerMonitorStream {
         let (tx, rx) = channel();
 
         thread::spawn(move || {
-            let mut report =
-                IOReport::new(vec![("Energy Model", None)]).expect("Failed to create IOReport");
+            let requests = vec![IOReportChannelRequest::new("Energy Model", None)];
+            let report = IOReport::new(requests).unwrap();
 
             loop {
                 let samples = report.get_samples(1000, 1);
-                for (report_it, sample_dt) in samples {
+                for sample in samples {
                     let mut sample = PowerSample {
                         cpu_power: 0.0,
                         gpu_power: 0.0,
                         ane_power: 0.0,
-                        timestamp: sample_dt,
+                        timestamp: sample.duration(),
                     };
 
                     for entry in report_it {

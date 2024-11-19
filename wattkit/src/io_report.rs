@@ -27,17 +27,6 @@ pub struct IOReportSubscription {
 
 pub type IOReportSubscriptionRef = *const IOReportSubscription;
 
-#[link(name = "IOKit", kind = "framework")]
-#[rustfmt::skip]
-extern "C" {
-  pub fn IOServiceMatching(name: *const i8) -> CFMutableDictionaryRef;
-  pub fn IOServiceGetMatchingServices(mainPort: u32, matching: CFDictionaryRef, existing: *mut u32) -> i32;
-  pub fn IOIteratorNext(iterator: u32) -> u32;
-  pub fn IORegistryEntryGetName(entry: u32, name: *mut i8) -> i32;
-  pub fn IORegistryEntryCreateCFProperties(entry: u32, properties: *mut CFMutableDictionaryRef, allocator: CFAllocatorRef, options: u32) -> i32;
-  pub fn IOObjectRelease(obj: u32) -> u32;
-}
-
 #[link(name = "IOReport", kind = "dylib")]
 #[rustfmt::skip]
 extern "C" {
@@ -52,9 +41,6 @@ extern "C" {
   pub fn IOReportChannelGetChannelName(a: CFDictionaryRef) -> CFStringRef;
   pub fn IOReportSimpleGetIntegerValue(a: CFDictionaryRef, b: i32) -> i64;
   pub fn IOReportChannelGetUnitLabel(a: CFDictionaryRef) -> CFStringRef;
-  pub fn IOReportStateGetCount(a: CFDictionaryRef) -> i32;
-  pub fn IOReportStateGetNameForIndex(a: CFDictionaryRef, b: i32) -> CFStringRef;
-  pub fn IOReportStateGetResidency(a: CFDictionaryRef, b: i32) -> i64;
 }
 
 const CPU_FREQ_CORE_SUBG: &str = "CPU Core Performance States";
@@ -81,7 +67,7 @@ impl std::fmt::Display for EnergyUnit {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             Self::MilliJoules => write!(f, "mJ"),
-            Self::MicroJoules => write!(f, "μJ"),
+            Self::MicroJoules => write!(f, "μJ"), //careful, u != μ but goddamn it looks better
             Self::NanoJoules => write!(f, "nJ"),
         }
     }
@@ -101,18 +87,18 @@ impl From<&str> for EnergyUnit {
 pub struct IOReportIterator {
     sample: CFDictionaryRef,
     index: isize,
-    items: CFArrayRef,
-    items_size: isize,
+    channels: CFArrayRef,
+    num_channels: isize,
 }
 
 impl IOReportIterator {
     pub fn new(data: CFDictionaryRef) -> Self {
         let channels = cfdict_get_val(data, "IOReportChannels").unwrap() as CFArrayRef;
-        let items_size = unsafe { CFArrayGetCount(channels) } as isize;
+        let num_channels = unsafe { CFArrayGetCount(channels) } as isize;
         Self {
             sample: data,
-            items: channels,
-            items_size,
+            channels,
+            num_channels,
             index: 0,
         }
     }
@@ -193,11 +179,11 @@ impl Iterator for IOReportIterator {
     type Item = IOReportIteratorItem;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if self.index >= self.items_size {
+        if self.index >= self.num_channels {
             return None;
         }
 
-        let item = unsafe { CFArrayGetValueAtIndex(self.items, self.index) } as CFDictionaryRef;
+        let item = unsafe { CFArrayGetValueAtIndex(self.channels, self.index) } as CFDictionaryRef;
 
         let group =
             IOReportChannelGroup::from(get_cf_string(|| unsafe { IOReportChannelGetGroup(item) }));
@@ -210,20 +196,29 @@ impl Iterator for IOReportIterator {
             .to_string();
 
         self.index += 1;
-        let x = IOReportIteratorItem {
+        Some(IOReportIteratorItem {
             group,
             subgroup,
             channel,
             unit,
             item,
-        };
-        Some(x)
+        })
     }
 }
 
 pub struct IOReportSample {
     iterator: IOReportIterator,
     duration: u64,
+}
+
+impl IOReportSample {
+    pub fn iterator(&self) -> &IOReportIterator {
+        &self.iterator
+    }
+
+    pub fn duration(&self) -> u64 {
+        self.duration
+    }
 }
 
 impl IOReportSample {
@@ -381,6 +376,7 @@ impl IOReport {
         samples
     }
 
+    //TODO: move this to pyo3
     pub fn start_sampling(&mut self) -> Result<()> {
         let measures: usize = 1;
         loop {
