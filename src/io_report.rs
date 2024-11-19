@@ -14,7 +14,6 @@ use core_foundation::{
     string::CFStringRef,
 };
 
-pub type WithError<T> = Result<T, Box<dyn std::error::Error>>;
 pub type CVoidRef = *const std::ffi::c_void;
 
 #[repr(C)]
@@ -59,34 +58,12 @@ extern "C" {
 const CPU_FREQ_CORE_SUBG: &str = "CPU Core Performance States";
 const GPU_FREQ_DICE_SUBG: &str = "GPU Performance States";
 
-fn get_cf_string<F>(getter: F) -> String
-where
-    F: FnOnce() -> CFStringRef,
-{
-    match getter() {
-        x if x.is_null() => String::new(),
-        x => from_cfstr(x),
-    }
-}
-
-pub fn cfio_get_group(item: CFDictionaryRef) -> String {
-    get_cf_string(|| unsafe { IOReportChannelGetGroup(item) })
-}
-
-pub fn cfio_get_subgroup(item: CFDictionaryRef) -> String {
-    get_cf_string(|| unsafe { IOReportChannelGetSubGroup(item) })
-}
-
-pub fn cfio_get_channel(item: CFDictionaryRef) -> String {
-    get_cf_string(|| unsafe { IOReportChannelGetChannelName(item) })
-}
-
-pub fn cfio_get_props(entry: u32, name: String) -> WithError<CFDictionaryRef> {
+pub fn cfio_get_props(entry: u32, name: String) -> Result<CFDictionaryRef> {
     unsafe {
         let mut props: MaybeUninit<CFMutableDictionaryRef> = MaybeUninit::uninit();
         if IORegistryEntryCreateCFProperties(entry, props.as_mut_ptr(), kCFAllocatorDefault, 0) != 0
         {
-            return Err(format!("Failed to get properties for {}", name).into());
+            return Err(IOReportError::PropertyError(name));
         }
 
         Ok(props.assume_init())
@@ -106,14 +83,41 @@ pub fn cfio_get_residencies(item: CFDictionaryRef) -> Vec<(String, i64)> {
     res
 }
 
-pub fn cfio_watts(item: CFDictionaryRef, unit: &String, duration: u64) -> WithError<f32> {
-    let val = unsafe { IOReportSimpleGetIntegerValue(item, 0) } as f32;
-    let val = val / (duration as f32 / 1000.0);
-    match unit.as_str() {
-        "mJ" => Ok(val / 1e3f32),
-        "uJ" => Ok(val / 1e6f32),
-        "nJ" => Ok(val / 1e9f32),
-        _ => Err(format!("Invalid energy unit: {}", unit).into()),
+pub fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
+    let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, 0) } as f32;
+    let val = raw_value / (duration as f32 / 1000.0);
+    match unit {
+        EnergyUnit::MilliJoules => Ok(val / 1e3f32),
+        EnergyUnit::MicroJoules => Ok(val / 1e6f32),
+        EnergyUnit::NanoJoules => Ok(val / 1e9f32),
+    }
+}
+
+#[derive(Debug)]
+pub enum EnergyUnit {
+    MilliJoules,
+    MicroJoules,
+    NanoJoules,
+}
+
+impl std::fmt::Display for EnergyUnit {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::MilliJoules => write!(f, "mJ"),
+            Self::MicroJoules => write!(f, "μJ"),
+            Self::NanoJoules => write!(f, "nJ"),
+        }
+    }
+}
+
+impl From<&str> for EnergyUnit {
+    fn from(s: &str) -> Self {
+        match s {
+            "mJ" => Self::MilliJoules,
+            "uJ" => Self::MicroJoules,
+            "nJ" => Self::NanoJoules,
+            _ => panic!("Invalid energy unit: {}", s),
+        }
     }
 }
 
@@ -164,9 +168,9 @@ impl Iterator for IOReportIterator {
 
         let item = unsafe { CFArrayGetValueAtIndex(self.items, self.index) } as CFDictionaryRef;
 
-        let group = cfio_get_group(item);
-        let subgroup = cfio_get_subgroup(item);
-        let channel = cfio_get_channel(item);
+        let group = get_cf_string(|| unsafe { IOReportChannelGetGroup(item) });
+        let subgroup = get_cf_string(|| unsafe { IOReportChannelGetSubGroup(item) });
+        let channel = get_cf_string(|| unsafe { IOReportChannelGetChannelName(item) });
         let unit = from_cfstr(unsafe { IOReportChannelGetUnitLabel(item) })
             .trim()
             .to_string();
@@ -203,7 +207,7 @@ pub struct IOReport {
 }
 
 impl IOReport {
-    pub fn new(channels: Vec<(&str, Option<&str>)>) -> WithError<Self> {
+    pub fn new(channels: Vec<(&str, Option<&str>)>) -> Result<Self> {
         let channels = Self::create_channels(channels)?;
         let subscription = Self::subscribe(channels)?;
 
@@ -291,7 +295,7 @@ impl IOReport {
         }
     }
 
-    fn raw_sample(&self) -> (CFDictionaryRef, std::time::Instant) {
+    fn initial_sample(&self) -> (CFDictionaryRef, std::time::Instant) {
         (
             unsafe { IOReportCreateSamples(self.subscription, self.channels, std::ptr::null()) },
             std::time::Instant::now(),
@@ -305,13 +309,13 @@ impl IOReport {
 
         let mut prev = match self.previous {
             Some(x) => x,
-            None => self.raw_sample(),
+            None => self.initial_sample(),
         };
 
         for _ in 0..count {
             std::thread::sleep(std::time::Duration::from_millis(step_msec));
 
-            let next = self.raw_sample();
+            let next = self.initial_sample();
             let diff = unsafe { IOReportCreateSamplesDelta(prev.0, next.0, std::ptr::null()) };
             unsafe { CFRelease(prev.0 as _) };
 
@@ -338,12 +342,48 @@ impl Drop for IOReport {
     }
 }
 
+#[derive(Debug)]
+pub enum ComputeUnit {
+    CPU,
+    GPU,
+    ANE,
+}
+
+impl ComputeUnit {
+    pub fn as_str(&self) -> &str {
+        match self {
+            Self::CPU => "CPU",
+            Self::GPU => "GPU",
+            Self::ANE => "ANE",
+        }
+    }
+}
+
+impl std::fmt::Display for ComputeUnit {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", self.as_str())
+    }
+}
+
+impl TryFrom<&str> for ComputeUnit {
+    type Error = IOReportError;
+
+    fn try_from(value: &str) -> Result<Self> {
+        match value {
+            "CPU" => Ok(Self::CPU),
+            "GPU" => Ok(Self::GPU),
+            "ANE" => Ok(Self::ANE),
+            _ => Err(IOReportError::InvalidEnergyUnit(value.to_string())),
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn test_io_report() -> WithError<()> {
+    fn test_io_report() -> Result<()> {
         let channels = [
             ("Energy Model", None), // cpu/gpu/ane power
             // ("CPU Stats", Some(CPU_FREQ_DICE_SUBG)), // cpu freq by cluster
@@ -357,12 +397,11 @@ mod tests {
         for (report_it, sample_dt) in samples {
             for entry in report_it {
                 if entry.group == "Energy Model" {
+                    let unit = EnergyUnit::from(entry.unit.as_str());
                     let pwr = match entry.channel.as_str() {
-                        "CPU Energy" => cfio_watts(entry.item, &entry.unit, sample_dt)?,
-                        "GPU Energy" => cfio_watts(entry.item, &entry.unit, sample_dt)?,
-                        c if c.starts_with("ANE") => {
-                            cfio_watts(entry.item, &entry.unit, sample_dt)?
-                        }
+                        "CPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
+                        "GPU Energy" => read_wattage(entry.item, &unit, sample_dt)?,
+                        c if c.starts_with("ANE") => read_wattage(entry.item, &unit, sample_dt)?,
                         _ => continue,
                     };
                     println!("POWER {}: {:.2}W", entry.channel, pwr);

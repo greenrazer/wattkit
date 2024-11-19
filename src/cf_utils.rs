@@ -47,3 +47,13 @@ pub fn from_cfstr(val: CFStringRef) -> String {
             .to_string()
     }
 }
+
+pub fn get_cf_string<F>(getter: F) -> String
+where
+    F: FnOnce() -> CFStringRef,
+{
+    match getter() {
+        x if x.is_null() => String::new(),
+        x => from_cfstr(x),
+    }
+}
