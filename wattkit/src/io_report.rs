@@ -221,6 +221,31 @@ impl Iterator for IOReportIterator {
     }
 }
 
+pub struct IOReportSample {
+    iterator: IOReportIterator,
+    duration: u64,
+}
+
+impl IOReportSample {
+    pub fn new(iterator: IOReportIterator, duration: u64) -> Self {
+        Self { iterator, duration }
+    }
+}
+
+pub struct IOReportChannelRequest {
+    pub group: String,
+    pub subgroup: Option<String>,
+}
+
+impl IOReportChannelRequest {
+    pub fn new<S: ToString>(group: S, subgroup: Option<S>) -> Self {
+        Self {
+            group: group.to_string(),
+            subgroup: subgroup.map(|s| s.to_string()),
+        }
+    }
+}
+
 #[derive(Debug, thiserror::Error)]
 pub enum IOReportError {
     #[error("Failed to get properties for {0}")]
@@ -242,7 +267,7 @@ pub struct IOReport {
 }
 
 impl IOReport {
-    pub fn new(channels: Vec<(&str, Option<&str>)>) -> Result<Self> {
+    pub fn new(channels: Vec<IOReportChannelRequest>) -> Result<Self> {
         let channels = Self::create_channels(channels)?;
         let subscription = Self::subscribe(channels)?;
 
@@ -272,7 +297,9 @@ impl IOReport {
         Ok(rs)
     }
 
-    fn create_channels(channel_reqs: Vec<(&str, Option<&str>)>) -> Result<CFMutableDictionaryRef> {
+    fn create_channels(
+        channel_reqs: Vec<IOReportChannelRequest>,
+    ) -> Result<CFMutableDictionaryRef> {
         // if no items are provided, return all channels
         if channel_reqs.is_empty() {
             unsafe {
@@ -285,14 +312,14 @@ impl IOReport {
         }
 
         let mut channels = Vec::with_capacity(channel_reqs.len());
-        for (group, subgroup) in channel_reqs {
-            let gname = cfstr(group);
-            let sname = subgroup.map_or(std::ptr::null(), cfstr);
+        for request in channel_reqs {
+            let gname = cfstr(request.group.as_str());
+            let sname = request.subgroup.as_deref().map_or(std::ptr::null(), cfstr);
             let chan = unsafe { IOReportCopyChannelsInGroup(gname, sname, 0, 0, 0) };
             channels.push(chan);
 
             unsafe { CFRelease(gname as _) };
-            if subgroup.is_some() {
+            if request.subgroup.is_some() {
                 unsafe { CFRelease(sname as _) };
             }
         }
@@ -324,9 +351,9 @@ impl IOReport {
         )
     }
 
-    pub fn get_samples(&mut self, duration: u64, count: usize) -> Vec<(IOReportIterator, u64)> {
+    pub fn get_samples(&mut self, duration: u64, count: usize) -> Vec<IOReportSample> {
         let count = count.clamp(1, 32);
-        let mut samples: Vec<(IOReportIterator, u64)> = Vec::with_capacity(count);
+        let mut samples: Vec<IOReportSample> = Vec::with_capacity(count);
         let step_msec = duration / count as u64;
 
         let mut prev = match self.previous {
@@ -344,7 +371,10 @@ impl IOReport {
             let elapsed = next.1.duration_since(prev.1).as_millis() as u64;
             prev = next;
 
-            samples.push((IOReportIterator::new(diff), elapsed.max(1)));
+            samples.push(IOReportSample::new(
+                IOReportIterator::new(diff),
+                elapsed.max(1),
+            ));
         }
 
         self.previous = Some(prev);
@@ -356,9 +386,9 @@ impl IOReport {
         loop {
             let samples = self.get_samples(1000, measures);
 
-            let mut sample = String::new();
-            for (report_it, sample_dt) in samples {
-                for entry in report_it {
+            let mut result = String::new();
+            for sample in samples {
+                for entry in sample.iterator {
                     match entry.group {
                         IOReportChannelGroup::EnergyModel => {
                             let pwr = match entry.channel {
@@ -368,19 +398,19 @@ impl IOReport {
                                     read_wattage(
                                         entry.item,
                                         &EnergyUnit::from(entry.unit.as_str()),
-                                        sample_dt,
+                                        sample.duration,
                                     )?
                                 },
                                 _ => continue,
                             };
-                            sample.push_str(&format!("{}: {:.3}W\t", entry.channel, pwr));
+                            result.push_str(&format!("{}: {:.3}W\t", entry.channel, pwr));
                         }
                         _ => continue,
                     }
                 }
-                sample.push('\n');
+                result.push('\n');
             }
-            println!("{}", sample);
+            println!("{}", result);
         }
     }
 }
@@ -403,12 +433,13 @@ mod tests {
 
     #[test]
     fn test_io_report() -> Result<()> {
-        let channels = [
-            ("Energy Model", None),                  // cpu/gpu/ane power
-            ("CPU Stats", Some(CPU_FREQ_CORE_SUBG)), // cpu freq per core
-            ("GPU Stats", Some(GPU_FREQ_DICE_SUBG)),
+        let requests = vec![
+            IOReportChannelRequest::new("Energy Model", None),
+            IOReportChannelRequest::new("CPU Stats", Some(CPU_FREQ_CORE_SUBG)),
+            IOReportChannelRequest::new("GPU Stats", Some(GPU_FREQ_DICE_SUBG)),
         ];
-        let mut report = IOReport::new(channels.to_vec())?;
+
+        let mut report = IOReport::new(requests)?;
         report.start_sampling()?;
         Ok(())
     }
