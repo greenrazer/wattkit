@@ -1,15 +1,12 @@
-use std::sync::atomic::Ordering;
-use std::thread;
 use std::{
     marker::{PhantomData, PhantomPinned},
     mem::MaybeUninit,
-    sync::{atomic::AtomicBool, Arc, Mutex},
 };
 
 use crate::cf_utils::*;
 use core_foundation::{
     array::{CFArrayGetCount, CFArrayGetValueAtIndex, CFArrayRef},
-    base::{kCFAllocatorDefault, CFAllocatorRef, CFRelease, CFTypeRef},
+    base::{kCFAllocatorDefault, CFRelease, CFTypeRef},
     dictionary::{
         CFDictionaryCreateMutableCopy, CFDictionaryGetCount, CFDictionaryRef,
         CFMutableDictionaryRef,
@@ -269,6 +266,7 @@ pub enum IOReportError {
 
 type Result<T> = std::result::Result<T, IOReportError>;
 
+#[derive(Debug)]
 pub struct IOReport {
     subscription: IOReportSubscriptionRef,
     channels: CFMutableDictionaryRef,

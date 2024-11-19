@@ -1,19 +1,14 @@
-from wattkit import PowerMonitorStream
+from wattkit import PowerProfiler
+import time
 
-def monitor_power():
-    stream = PowerMonitorStream()
+with PowerProfiler() as profiler:
+    for i in range(5):
+        time.sleep(1)
     
-    try:
-        for cpu_power, gpu_power, ane_power, timestamp in stream:
-            print(f"Timestamp: {timestamp}")
-            print(f"CPU Power: {cpu_power:.2f}W")
-            print(f"GPU Power: {gpu_power:.2f}W")
-            print(f"ANE Power: {ane_power:.2f}W")
-            print("-" * 40)
-            
-    except KeyboardInterrupt:
-        stream.close()
-        print("\nMonitoring stopped")
+avg_power = profiler.average_power      
+total_energy = profiler.total_energy    
+duration = profiler.duration_seconds
 
-if __name__ == "__main__":
-    monitor_power()
+print(f"Average power: {avg_power}")
+print(f"Total energy: {total_energy}")
+print(f"Duration: {duration} seconds")
