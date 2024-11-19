@@ -126,11 +126,11 @@ pub struct IOReportIterator {
 
 impl IOReportIterator {
     pub fn new(data: CFDictionaryRef) -> Self {
-        let items = cfdict_get_val(data, "IOReportChannels").unwrap() as CFArrayRef;
-        let items_size = unsafe { CFArrayGetCount(items) } as isize;
+        let channels = cfdict_get_val(data, "IOReportChannels").unwrap() as CFArrayRef;
+        let items_size = unsafe { CFArrayGetCount(channels) } as isize;
         Self {
             sample: data,
-            items,
+            items: channels,
             items_size,
             index: 0,
         }
@@ -182,6 +182,20 @@ impl Iterator for IOReportIterator {
     }
 }
 
+#[derive(Debug, thiserror::Error)]
+pub enum IOReportError {
+    #[error("Failed to get properties for {0}")]
+    PropertyError(String),
+    #[error("Failed to get channels")]
+    ChannelError,
+    #[error("Failed to create subscription")]
+    SubscriptionError,
+    #[error("Invalid energy unit: {0}")]
+    InvalidEnergyUnit(String),
+}
+
+type Result<T> = std::result::Result<T, IOReportError>;
+
 pub struct IOReport {
     subscription: IOReportSubscriptionRef,
     channels: CFMutableDictionaryRef,
@@ -200,22 +214,28 @@ impl IOReport {
         })
     }
 
-    fn subscribe(chan: CFMutableDictionaryRef) -> WithError<IOReportSubscriptionRef> {
+    fn subscribe(channel: CFMutableDictionaryRef) -> Result<IOReportSubscriptionRef> {
         let mut s: MaybeUninit<CFMutableDictionaryRef> = MaybeUninit::uninit();
         let rs = unsafe {
-            IOReportCreateSubscription(std::ptr::null(), chan, s.as_mut_ptr(), 0, std::ptr::null())
+            IOReportCreateSubscription(
+                std::ptr::null(),
+                channel,
+                s.as_mut_ptr(),
+                0,
+                std::ptr::null(),
+            )
         };
         if rs.is_null() {
-            return Err("Failed to create subscription".into());
+            return Err(IOReportError::SubscriptionError);
         }
 
         unsafe { s.assume_init() };
         Ok(rs)
     }
 
-    fn create_channels(items: Vec<(&str, Option<&str>)>) -> WithError<CFMutableDictionaryRef> {
+    fn create_channels(channel_reqs: Vec<(&str, Option<&str>)>) -> Result<CFMutableDictionaryRef> {
         // if no items are provided, return all channels
-        if items.is_empty() {
+        if channel_reqs.is_empty() {
             unsafe {
                 let c = IOReportCopyAllChannels(0, 0);
                 let r =
@@ -225,8 +245,8 @@ impl IOReport {
             }
         }
 
-        let mut channels = vec![];
-        for (group, subgroup) in items {
+        let mut channels = Vec::with_capacity(channel_reqs.len());
+        for (group, subgroup) in channel_reqs {
             let gname = cfstr(group);
             let sname = subgroup.map_or(std::ptr::null(), cfstr);
             let chan = unsafe { IOReportCopyChannelsInGroup(gname, sname, 0, 0, 0) };
@@ -252,7 +272,7 @@ impl IOReport {
         }
 
         if cfdict_get_val(chan, "IOReportChannels").is_none() {
-            return Err("Failed to get channels".into());
+            return Err(IOReportError::ChannelError);
         }
 
         Ok(chan)
