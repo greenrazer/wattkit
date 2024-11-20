@@ -85,13 +85,14 @@ impl std::fmt::Display for EnergyUnit {
     }
 }
 
-impl From<&str> for EnergyUnit {
-    fn from(s: &str) -> Self {
-        match s {
+impl<S: AsRef<str>> From<S> for EnergyUnit {
+    fn from(s: S) -> Self {
+        let st = s.as_ref();
+        match st {
             "mJ" => Self::MilliJoules,
             "uJ" => Self::MicroJoules,
             "nJ" => Self::NanoJoules,
-            _ => panic!("Invalid energy unit: {}", s),
+            _ => panic!("Invalid energy unit: {}", st),
         }
     }
 }
@@ -388,41 +389,6 @@ impl IOReport {
         self.previous = Some(prev);
         samples
     }
-
-    //TODO: move this to some kind of polling / stream / subscription / maybe async / maybe
-    //callback model
-    pub fn start_sampling(&mut self) -> Result<()> {
-        let measures: usize = 1;
-        loop {
-            let samples = self.get_samples(1000, measures);
-
-            let mut result = String::new();
-            for sample in samples {
-                for entry in sample.iterator {
-                    match entry.group {
-                        IOReportChannelGroup::EnergyModel => {
-                            let pwr = match entry.channel {
-                                IOReportChannel::CPUEnergy
-                                | IOReportChannel::GPUEnergy
-                                | IOReportChannel::ANE => unsafe {
-                                    read_wattage(
-                                        entry.item,
-                                        &EnergyUnit::from(entry.unit.as_str()),
-                                        sample.duration,
-                                    )?
-                                },
-                                _ => continue,
-                            };
-                            result.push_str(&format!("{}: {:.3}W\t", entry.channel, pwr));
-                        }
-                        _ => continue,
-                    }
-                }
-                result.push('\n');
-            }
-            println!("{}", result);
-        }
-    }
 }
 
 impl Drop for IOReport {
@@ -434,23 +400,5 @@ impl Drop for IOReport {
                 CFRelease(self.previous.unwrap().0 as _);
             }
         }
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_io_report() -> Result<()> {
-        let requests = vec![
-            IOReportChannelRequest::new(IOReportChannelGroup::EnergyModel, None as Option<String>),
-            IOReportChannelRequest::new(IOReportChannelGroup::CPUStats, Some(CPU_FREQ_CORE_SUBG)),
-            IOReportChannelRequest::new(IOReportChannelGroup::GPUStats, Some(GPU_FREQ_DICE_SUBG)),
-        ];
-
-        let mut report = IOReport::new(requests)?;
-        report.start_sampling()?;
-        Ok(())
     }
 }

@@ -23,7 +23,7 @@ use std::{
 /// ```rust
 /// use wattkit::*;
 ///
-/// let sampler = Sampler::new(SamplerType::Power);
+/// let sampler = Sampler::new(SamplerType::Energy);
 /// {
 ///     // Start sampling
 ///     let guard = sampler.subscribe(1000); //sample every 1000ms
@@ -67,12 +67,12 @@ impl Drop for SamplerGuard<'_> {
     }
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct PowerSample {
     cpu_power: f32,
     gpu_power: f32,
     ane_power: f32,
-    timestamp: u64,
+    duration: u64,
 }
 
 impl Sampler {
@@ -109,29 +109,20 @@ impl Sampler {
                 for mut sample in samples {
                     let duration = sample.duration();
                     let mut power_sample = PowerSample {
-                        cpu_power: 0.0,
-                        gpu_power: 0.0,
-                        ane_power: 0.0,
-                        timestamp: duration,
+                        duration,
+                        ..Default::default()
                     };
 
                     for entry in sample.iterator_mut() {
-                        println!("entry: {:?}", entry);
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
-                                let wattage = unsafe {
-                                    read_wattage(
-                                        entry.item,
-                                        &EnergyUnit::from(entry.unit.as_str()),
-                                        duration,
-                                    )
-                                    .unwrap()
-                                };
+                                let u = EnergyUnit::from(entry.unit);
+                                let w = unsafe { read_wattage(entry.item, &u, duration).unwrap() };
                                 match entry.channel {
-                                    IOReportChannel::CPUEnergy => power_sample.cpu_power = wattage,
-                                    IOReportChannel::GPUEnergy => power_sample.gpu_power = wattage,
-                                    IOReportChannel::ANE => power_sample.ane_power = wattage,
-                                    _ => continue,
+                                    IOReportChannel::CPUEnergy => power_sample.cpu_power = w,
+                                    IOReportChannel::GPUEnergy => power_sample.gpu_power = w,
+                                    IOReportChannel::ANE => power_sample.ane_power = w,
+                                    _ => {}
                                 };
                             }
                             _ => continue,
@@ -176,7 +167,7 @@ mod tests {
         for s in sampler.samples.iter() {
             println!(
                 "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
-                s.cpu_power, s.gpu_power, s.ane_power, s.timestamp
+                s.cpu_power, s.gpu_power, s.ane_power, s.duration
             );
         }
     }
