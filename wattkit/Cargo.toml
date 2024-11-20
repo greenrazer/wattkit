@@ -5,4 +5,5 @@ edition = "2021"
 
 [dependencies]
 core-foundation = "0.10.0"
+oneshot = "0.1.8"
 thiserror = "2.0.3"

@@ -14,7 +14,20 @@ use core_foundation::{
     string::CFStringRef,
 };
 
+#[derive(Debug, thiserror::Error)]
+pub enum IOReportError {
+    #[error("Failed to get properties for {0}")]
+    PropertyError(String),
+    #[error("Failed to get channels")]
+    ChannelError,
+    #[error("Failed to create subscription")]
+    SubscriptionError,
+    #[error("Invalid energy unit: {0}")]
+    InvalidEnergyUnit(String),
+}
+
 pub type CVoidRef = *const std::ffi::c_void;
+type Result<T> = std::result::Result<T, IOReportError>;
 
 #[repr(C)]
 pub struct IOReportSubscription {
@@ -43,6 +56,8 @@ extern "C" {
 const CPU_FREQ_CORE_SUBG: &str = "CPU Core Performance States";
 const GPU_FREQ_DICE_SUBG: &str = "GPU Performance States";
 
+/// # Safety
+/// Ensure dictionary is valid and contains the key
 pub unsafe fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
     let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, 0) } as f32;
     let val = raw_value / (duration as f32 / 1000.0);
@@ -252,20 +267,6 @@ impl IOReportChannelRequest {
     }
 }
 
-#[derive(Debug, thiserror::Error)]
-pub enum IOReportError {
-    #[error("Failed to get properties for {0}")]
-    PropertyError(String),
-    #[error("Failed to get channels")]
-    ChannelError,
-    #[error("Failed to create subscription")]
-    SubscriptionError,
-    #[error("Invalid energy unit: {0}")]
-    InvalidEnergyUnit(String),
-}
-
-type Result<T> = std::result::Result<T, IOReportError>;
-
 #[derive(Debug)]
 pub struct IOReport {
     subscription: IOReportSubscriptionRef,
@@ -286,22 +287,22 @@ impl IOReport {
     }
 
     fn subscribe(channel: CFMutableDictionaryRef) -> Result<IOReportSubscriptionRef> {
-        let mut s: MaybeUninit<CFMutableDictionaryRef> = MaybeUninit::uninit();
-        let rs = unsafe {
+        let mut subscription: MaybeUninit<CFMutableDictionaryRef> = MaybeUninit::uninit();
+        let sub_ref = unsafe {
             IOReportCreateSubscription(
                 std::ptr::null(),
                 channel,
-                s.as_mut_ptr(),
+                subscription.as_mut_ptr(),
                 0,
                 std::ptr::null(),
             )
         };
-        if rs.is_null() {
+        if sub_ref.is_null() {
             return Err(IOReportError::SubscriptionError);
         }
 
-        unsafe { s.assume_init() };
-        Ok(rs)
+        unsafe { subscription.assume_init() };
+        Ok(sub_ref)
     }
 
     fn create_channels(
@@ -311,10 +312,10 @@ impl IOReport {
         if channel_reqs.is_empty() {
             unsafe {
                 let c = IOReportCopyAllChannels(0, 0);
-                let r =
+                let dict_ref =
                     CFDictionaryCreateMutableCopy(kCFAllocatorDefault, CFDictionaryGetCount(c), c);
                 CFRelease(c as _);
-                return Ok(r);
+                return Ok(dict_ref);
             }
         }
 
@@ -337,18 +338,18 @@ impl IOReport {
         }
 
         let size = unsafe { CFDictionaryGetCount(base_channel) };
-        let chan =
+        let chan_dict_ref =
             unsafe { CFDictionaryCreateMutableCopy(kCFAllocatorDefault, size, base_channel) };
 
         for channel in channels {
             unsafe { CFRelease(channel as _) };
         }
 
-        if cfdict_get_val(chan, "IOReportChannels").is_none() {
+        if cfdict_get_val(chan_dict_ref, "IOReportChannels").is_none() {
             return Err(IOReportError::ChannelError);
         }
 
-        Ok(chan)
+        Ok(chan_dict_ref)
     }
 
     fn initial_sample(&self) -> (CFDictionaryRef, std::time::Instant) {
@@ -388,7 +389,8 @@ impl IOReport {
         samples
     }
 
-    //TODO: move this to pyo3
+    //TODO: move this to some kind of polling / stream / subscription / maybe async / maybe
+    //callback model
     pub fn start_sampling(&mut self) -> Result<()> {
         let measures: usize = 1;
         loop {
