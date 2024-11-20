@@ -5,6 +5,7 @@
 
 `wattkit` intends to provide a method for measuring the power consumption of your Rust or Python code.
 
+Using RAII, we provide a nice Rust interface
 ```rust
 let mut sampler = Sampler::new();
 {
@@ -15,6 +16,7 @@ assert!(!sampler.samples().is_empty());
 sampler.print_summary();
 ```
 
+We use `pyo3` to provide a Python interface.
 
 ```python
 from wattkit import PowerProfiler
@@ -29,7 +31,7 @@ profiler.print_summary()
 
 # TODO
 - [ ] Code is pretty jank
-- [ ] Surface ContextManager impl
+- [x] Surface ContextManager impl
 - [ ] Add frequency measurements
 - [ ] Add braindead method that does statistical sampling for you
 - [ ] Convenience method to generate comparison report of power consumption between compute units? (Seems CoreML specific)
