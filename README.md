@@ -35,5 +35,7 @@ profiler.print_summary()
 - [ ] Add frequency measurements
 - [ ] Add braindead method that does statistical sampling for you
 - [ ] Convenience method to generate comparison report of power consumption between compute units? (Seems CoreML specific)
+- [ ] Publish on PyPi
+
 
 Lots of the reverse engineering work here was done by @vladkens with [macmon](https://github.com/vladkens/macmon).
