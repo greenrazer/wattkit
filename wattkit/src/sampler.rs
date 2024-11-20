@@ -2,7 +2,7 @@ use oneshot::channel as oneshot_channel;
 use oneshot::Sender as OneshotSender;
 
 use crate::io_report::{
-    read_wattage, EnergyUnit, IOReport, IOReportChannel, IOReportChannelGroup,
+    read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
     IOReportChannelRequest,
 };
 
@@ -33,6 +33,7 @@ use std::{
 ///         let y = x * x;
 ///     }
 /// }
+/// sampler.print_summary();
 #[derive(Debug, Default)]
 pub struct Sampler {
     samples: Vec<PowerSample>,
@@ -117,11 +118,11 @@ impl Sampler {
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
                                 let u = EnergyUnit::from(entry.unit);
-                                let w = unsafe { read_wattage(entry.item, &u, duration).unwrap() };
-                                match entry.channel {
-                                    IOReportChannel::CPUEnergy => power_sample.cpu_power = w,
-                                    IOReportChannel::GPUEnergy => power_sample.gpu_power = w,
-                                    IOReportChannel::ANE => power_sample.ane_power = w,
+                                let w = read_wattage(entry.item, &u, duration).unwrap();
+                                match entry.channel_name {
+                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power = w,
+                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power = w,
+                                    IOReportChannelName::ANE => power_sample.ane_power = w,
                                     _ => {}
                                 };
                             }
@@ -143,6 +144,15 @@ impl Sampler {
     pub fn samples(&self) -> &Vec<PowerSample> {
         &self.samples
     }
+
+    pub fn print_summary(&self) {
+        for s in self.samples.iter() {
+            println!(
+                "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
+                s.cpu_power, s.gpu_power, s.ane_power, s.duration
+            );
+        }
+    }
 }
 
 #[cfg(test)]
@@ -161,14 +171,8 @@ mod tests {
                 println!("{}", bingo);
             }
         }
-
         assert!(!sampler.samples.is_empty());
         println!("Number of samples: {}", sampler.samples.len());
-        for s in sampler.samples.iter() {
-            println!(
-                "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
-                s.cpu_power, s.gpu_power, s.ane_power, s.duration
-            );
-        }
+        sampler.print_summary();
     }
 }

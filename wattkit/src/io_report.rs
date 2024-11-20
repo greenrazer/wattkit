@@ -16,14 +16,10 @@ use core_foundation::{
 
 #[derive(Debug, thiserror::Error)]
 pub enum IOReportError {
-    #[error("Failed to get properties for {0}")]
-    PropertyError(String),
     #[error("Failed to get channels")]
     ChannelError,
     #[error("Failed to create subscription")]
     SubscriptionError,
-    #[error("Invalid energy unit: {0}")]
-    InvalidEnergyUnit(String),
 }
 
 pub type CVoidRef = *const std::ffi::c_void;
@@ -53,12 +49,7 @@ extern "C" {
   pub fn IOReportChannelGetUnitLabel(a: CFDictionaryRef) -> CFStringRef;
 }
 
-const CPU_FREQ_CORE_SUBG: &str = "CPU Core Performance States";
-const GPU_FREQ_DICE_SUBG: &str = "GPU Performance States";
-
-/// # Safety
-/// Ensure dictionary is valid and contains the key
-pub unsafe fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
+pub fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
     let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, 0) } as f32;
     let val = raw_value / (duration as f32 / 1000.0);
     match unit {
@@ -87,12 +78,11 @@ impl std::fmt::Display for EnergyUnit {
 
 impl<S: AsRef<str>> From<S> for EnergyUnit {
     fn from(s: S) -> Self {
-        let st = s.as_ref();
-        match st {
+        match s.as_ref() {
             "mJ" => Self::MilliJoules,
             "uJ" => Self::MicroJoules,
             "nJ" => Self::NanoJoules,
-            _ => panic!("Invalid energy unit: {}", st),
+            _ => panic!("Invalid energy unit: {}", s.as_ref()),
         }
     }
 }
@@ -142,26 +132,26 @@ impl IOReportChannelGroup {
     }
 }
 
-impl From<String> for IOReportChannelGroup {
-    fn from(s: String) -> Self {
-        match s.as_str() {
+impl<S: AsRef<str>> From<S> for IOReportChannelGroup {
+    fn from(s: S) -> Self {
+        match s.as_ref() {
             "Energy Model" => Self::EnergyModel,
             "CPU Stats" => Self::CPUStats,
             "GPU Stats" => Self::GPUStats,
-            _ => panic!("Invalid channel group: {}", s),
+            _ => panic!("Invalid channel group: {}", s.as_ref()),
         }
     }
 }
 
 #[derive(Debug)]
-pub enum IOReportChannel {
+pub enum IOReportChannelName {
     CPUEnergy,
     GPUEnergy,
     ANE,
     Unknown,
 }
 
-impl IOReportChannel {
+impl IOReportChannelName {
     pub fn as_str(&self) -> &str {
         match self {
             Self::CPUEnergy => "CPU Energy",
@@ -172,7 +162,7 @@ impl IOReportChannel {
     }
 }
 
-impl From<String> for IOReportChannel {
+impl From<String> for IOReportChannelName {
     fn from(s: String) -> Self {
         match s.as_str() {
             "CPU Energy" => Self::CPUEnergy,
@@ -183,7 +173,7 @@ impl From<String> for IOReportChannel {
     }
 }
 
-impl std::fmt::Display for IOReportChannel {
+impl std::fmt::Display for IOReportChannelName {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.as_str())
     }
@@ -193,7 +183,7 @@ impl std::fmt::Display for IOReportChannel {
 pub struct IOReportIteratorItem {
     pub group: IOReportChannelGroup,
     pub subgroup: String,
-    pub channel: IOReportChannel,
+    pub channel_name: IOReportChannelName,
     pub unit: String,
     pub item: CFDictionaryRef,
 }
@@ -211,7 +201,7 @@ impl Iterator for IOReportIterator {
         let group =
             IOReportChannelGroup::from(get_cf_string(|| unsafe { IOReportChannelGetGroup(item) }));
         let subgroup = get_cf_string(|| unsafe { IOReportChannelGetSubGroup(item) });
-        let channel = IOReportChannel::from(get_cf_string(|| unsafe {
+        let channel = IOReportChannelName::from(get_cf_string(|| unsafe {
             IOReportChannelGetChannelName(item)
         }));
         let unit = from_cfstr(unsafe { IOReportChannelGetUnitLabel(item) })
@@ -222,7 +212,7 @@ impl Iterator for IOReportIterator {
         Some(IOReportIteratorItem {
             group,
             subgroup,
-            channel,
+            channel_name: channel,
             unit,
             item,
         })
