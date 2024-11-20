@@ -1,3 +1,5 @@
 **/target
 .DS_Store
 **/*.mlpackage
+*.so
+__pycache__
