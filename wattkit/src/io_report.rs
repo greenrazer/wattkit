@@ -45,18 +45,35 @@ extern "C" {
   pub fn IOReportChannelGetGroup(a: CFDictionaryRef) -> CFStringRef;
   pub fn IOReportChannelGetSubGroup(a: CFDictionaryRef) -> CFStringRef;
   pub fn IOReportChannelGetChannelName(a: CFDictionaryRef) -> CFStringRef;
-  pub fn IOReportSimpleGetIntegerValue(a: CFDictionaryRef, b: i32) -> i64;
+  pub fn IOReportSimpleGetIntegerValue(a: CFDictionaryRef, b: *mut i32) -> i64;
   pub fn IOReportChannelGetUnitLabel(a: CFDictionaryRef) -> CFStringRef;
+  pub fn IOReportStateGetCount(a: CFDictionaryRef) -> i64;
+  pub fn IOReportStateGetNameForIndex(a: CFDictionaryRef, b: i64) -> CFStringRef;
+  pub fn IOReportStateGetResidency(a: CFDictionaryRef, b: i64) -> i64;
+  pub fn IOReportSampleCopyDescription(a: CFDictionaryRef, b: i64) -> CFStringRef;
 }
 
 pub fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
-    let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, 0) } as f32;
+    let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, std::ptr::null_mut()) } as f32;
     let val = raw_value / (duration as f32 / 1000.0);
     match unit {
         EnergyUnit::MilliJoules => Ok(val / 1e3f32),
         EnergyUnit::MicroJoules => Ok(val / 1e6f32),
         EnergyUnit::NanoJoules => Ok(val / 1e9f32),
     }
+}
+
+pub fn cfio_get_residencies(item: CFDictionaryRef) -> Vec<(String, i64)> {
+    let count = unsafe { IOReportStateGetCount(item) };
+    let mut res = vec![];
+
+    for i in 0..count {
+        let name = unsafe { IOReportStateGetNameForIndex(item, i) };
+        let val = unsafe { IOReportStateGetResidency(item, i) };
+        res.push((from_cfstr(name), val));
+    }
+
+    res
 }
 
 #[derive(Debug)]
@@ -120,6 +137,8 @@ pub enum IOReportChannelGroup {
     EnergyModel,
     CPUStats,
     GPUStats,
+    H11ANE,
+    Unknown(String),
 }
 
 impl IOReportChannelGroup {
@@ -128,6 +147,8 @@ impl IOReportChannelGroup {
             Self::EnergyModel => "Energy Model",
             Self::CPUStats => "CPU Stats",
             Self::GPUStats => "GPU Stats",
+            Self::H11ANE => "H11ANE",
+            Self::Unknown(s) => s.as_str(),
         }
     }
 }
@@ -138,7 +159,8 @@ impl<S: AsRef<str>> From<S> for IOReportChannelGroup {
             "Energy Model" => Self::EnergyModel,
             "CPU Stats" => Self::CPUStats,
             "GPU Stats" => Self::GPUStats,
-            _ => panic!("Invalid channel group: {}", s.as_ref()),
+            "H11ANE" => Self::H11ANE,
+            s => Self::Unknown(s.to_string()),
         }
     }
 }

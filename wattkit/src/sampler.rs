@@ -1,6 +1,10 @@
 use oneshot::channel as oneshot_channel;
 use oneshot::Sender as OneshotSender;
 
+use crate::cf_utils::get_cf_string;
+use crate::io_report::cfio_get_residencies;
+use crate::io_report::IOReportSampleCopyDescription;
+use crate::io_report::IOReportSimpleGetIntegerValue;
 use crate::io_report::{
     read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
     IOReportChannelRequest,
@@ -95,10 +99,12 @@ impl Sampler {
         };
 
         let handle = std::thread::spawn(move || {
-            let requests = vec![IOReportChannelRequest::new(
-                IOReportChannelGroup::EnergyModel,
-                None as Option<String>,
-            )];
+            //let requests = vec![IOReportChannelRequest::new(
+            //    IOReportChannelGroup::EnergyModel,
+            //    None as Option<String>,
+            //)];
+            let requests = vec![];
+
             let mut report = IOReport::new(requests).unwrap();
 
             loop {
@@ -120,11 +126,19 @@ impl Sampler {
                                 let u = EnergyUnit::from(entry.unit);
                                 let w = read_wattage(entry.item, &u, duration).unwrap();
                                 match entry.channel_name {
-                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power = w,
-                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power = w,
-                                    IOReportChannelName::ANE => power_sample.ane_power = w,
+                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power += w,
+                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power += w,
+                                    IOReportChannelName::ANE => power_sample.ane_power += w,
                                     _ => {}
                                 };
+                            }
+                            IOReportChannelGroup::H11ANE => {}
+                            _ if matches!(entry.channel_name, IOReportChannelName::ANE) => {
+                                println!("{:?}", entry);
+                                let desc = get_cf_string(|| unsafe {
+                                    IOReportSampleCopyDescription(entry.item, 0)
+                                });
+                                println!("{:?}", desc);
                             }
                             _ => continue,
                         }

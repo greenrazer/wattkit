@@ -38,9 +38,9 @@ pub fn cfstr(val: &str) -> CFStringRef {
 
 pub fn from_cfstr(val: CFStringRef) -> String {
     unsafe {
-        let mut buf = Vec::with_capacity(128); //128 here seems dumb
-        if CFStringGetCString(val, buf.as_mut_ptr(), 128, kCFStringEncodingUTF8) == 0 {
-            panic!("Failed to convert CFString to CString");
+        let mut buf = Vec::with_capacity(256); //128 here seems dumb
+        if CFStringGetCString(val, buf.as_mut_ptr(), 256, kCFStringEncodingUTF8) == 0 {
+            return String::new();
         }
         std::ffi::CStr::from_ptr(buf.as_ptr())
             .to_string_lossy()
