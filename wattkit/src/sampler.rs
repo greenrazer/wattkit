@@ -1,9 +1,10 @@
-use crate::{
+use oneshot::channel as oneshot_channel;
+use oneshot::Sender as OneshotSender;
+
+use crate::io_report::{
     read_wattage, EnergyUnit, IOReport, IOReportChannel, IOReportChannelGroup,
     IOReportChannelRequest,
 };
-use oneshot::channel as oneshot_channel;
-use oneshot::Sender as OneshotSender;
 
 use std::{
     sync::mpsc::{channel, Receiver},
@@ -32,6 +33,7 @@ use std::{
 ///         let y = x * x;
 ///     }
 /// }
+#[derive(Debug, Default)]
 pub struct Sampler {
     samples: Vec<PowerSample>,
 }
@@ -66,7 +68,7 @@ impl Drop for SamplerGuard<'_> {
 }
 
 #[derive(Clone, Debug)]
-struct PowerSample {
+pub struct PowerSample {
     cpu_power: f32,
     gpu_power: f32,
     ane_power: f32,
@@ -114,6 +116,7 @@ impl Sampler {
                     };
 
                     for entry in sample.iterator_mut() {
+                        println!("entry: {:?}", entry);
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
                                 let wattage = unsafe {
@@ -144,6 +147,10 @@ impl Sampler {
         guard.thread_handle = Some(handle);
 
         guard
+    }
+
+    pub fn samples(&self) -> &Vec<PowerSample> {
+        &self.samples
     }
 }
 
