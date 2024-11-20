@@ -1,19 +1,100 @@
 use oneshot::channel as oneshot_channel;
 use oneshot::Sender as OneshotSender;
-
-use crate::cf_utils::get_cf_string;
-use crate::io_report::cfio_get_residencies;
-use crate::io_report::IOReportSampleCopyDescription;
-use crate::io_report::IOReportSimpleGetIntegerValue;
-use crate::io_report::{
-    read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
-    IOReportChannelRequest,
-};
-
 use std::{
     sync::mpsc::{channel, Receiver},
     thread::JoinHandle,
 };
+
+use crate::cf_utils::get_cf_string;
+use crate::io_report::IOReportSampleCopyDescription;
+use crate::io_report::{
+    read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
+};
+
+#[derive(Clone, Debug, Default)]
+pub struct PowerSample {
+    cpu_power: f32,
+    gpu_power: f32,
+    ane_power: f32,
+    duration: u64,
+}
+
+#[derive(Debug)]
+struct SampleManager {
+    cancel_sender: OneshotSender<()>,
+    sample_receiver: Receiver<PowerSample>,
+    thread_handle: JoinHandle<()>,
+}
+
+impl SampleManager {
+    fn new(duration: u64, num_samples: usize) -> Self {
+        let (cancel_tx, cancel_rx) = oneshot_channel();
+        let (sample_tx, sample_rx) = channel();
+
+        let handle = std::thread::spawn(move || {
+            let requests = vec![];
+            let mut report = IOReport::new(requests).unwrap();
+
+            loop {
+                if cancel_rx.try_recv().is_ok() {
+                    break;
+                }
+
+                let samples = report.get_samples(duration, num_samples);
+                for mut sample in samples {
+                    let duration = sample.duration();
+                    let mut power_sample = PowerSample {
+                        duration,
+                        ..Default::default()
+                    };
+
+                    for entry in sample.iterator_mut() {
+                        match entry.group {
+                            IOReportChannelGroup::EnergyModel => {
+                                let u = EnergyUnit::from(entry.unit);
+                                let w = read_wattage(entry.item, &u, duration).unwrap();
+                                match entry.channel_name {
+                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power += w,
+                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power += w,
+                                    IOReportChannelName::ANE => power_sample.ane_power += w,
+                                    _ => {}
+                                };
+                            }
+                            //IOReportChannelGroup::H11ANE => {}
+                            //_ if matches!(entry.channel_name, IOReportChannelName::ANE) => {
+                            //    println!("{:?}", entry);
+                            //    let desc = get_cf_string(|| unsafe {
+                            //        IOReportSampleCopyDescription(entry.item, 0)
+                            //    });
+                            //    println!("{:?}", desc);
+                            //}
+                            _ => continue,
+                        }
+                    }
+                    if sample_tx.send(power_sample).is_err() {
+                        break;
+                    }
+                }
+            }
+        });
+
+        SampleManager {
+            cancel_sender: cancel_tx,
+            sample_receiver: sample_rx,
+            thread_handle: handle,
+        }
+    }
+
+    fn stop(self) -> Vec<PowerSample> {
+        let _ = self.cancel_sender.send(());
+        let mut samples = Vec::new();
+        while let Ok(sample) = self.sample_receiver.recv() {
+            samples.push(sample);
+        }
+        let _ = self.thread_handle.join();
+        samples
+    }
+}
 
 /// # Sampler
 ///
@@ -43,41 +124,17 @@ pub struct Sampler {
     samples: Vec<PowerSample>,
 }
 
-pub enum SamplerType {
-    Energy,
-    Temp,
-    All,
-}
-
 pub struct SamplerGuard<'a> {
     sampler: &'a mut Sampler,
-    cancel_sender: Option<OneshotSender<()>>,
-    receiver: Receiver<PowerSample>,
-    thread_handle: Option<JoinHandle<()>>,
+    manager: Option<SampleManager>,
 }
 
-impl Drop for SamplerGuard<'_> {
+impl<'a> Drop for SamplerGuard<'a> {
     fn drop(&mut self) {
-        if let Some(sender) = self.cancel_sender.take() {
-            let _ = sender.send(());
-        }
-
-        while let Ok(s) = self.receiver.recv() {
-            self.sampler.samples.push(s);
-        }
-
-        if let Some(handle) = self.thread_handle.take() {
-            let _ = handle.join();
+        if let Some(manager) = self.manager.take() {
+            self.sampler.samples.extend(manager.stop());
         }
     }
-}
-
-#[derive(Clone, Debug, Default)]
-pub struct PowerSample {
-    cpu_power: f32,
-    gpu_power: f32,
-    ane_power: f32,
-    duration: u64,
 }
 
 impl Sampler {
@@ -88,71 +145,10 @@ impl Sampler {
     }
 
     pub fn subscribe(&mut self, duration: u64, num_samples: usize) -> SamplerGuard {
-        let (cancel_tx, cancel_rx) = oneshot_channel();
-        let (sample_tx, sample_rx) = channel();
-
-        let mut guard = SamplerGuard {
+        SamplerGuard {
             sampler: self,
-            cancel_sender: Some(cancel_tx),
-            receiver: sample_rx,
-            thread_handle: None,
-        };
-
-        let handle = std::thread::spawn(move || {
-            //let requests = vec![IOReportChannelRequest::new(
-            //    IOReportChannelGroup::EnergyModel,
-            //    None as Option<String>,
-            //)];
-            let requests = vec![];
-
-            let mut report = IOReport::new(requests).unwrap();
-
-            loop {
-                if cancel_rx.try_recv().is_ok() {
-                    break;
-                }
-
-                let samples = report.get_samples(duration, num_samples);
-                for mut sample in samples {
-                    let duration = sample.duration();
-                    let mut power_sample = PowerSample {
-                        duration,
-                        ..Default::default()
-                    };
-
-                    for entry in sample.iterator_mut() {
-                        match entry.group {
-                            IOReportChannelGroup::EnergyModel => {
-                                let u = EnergyUnit::from(entry.unit);
-                                let w = read_wattage(entry.item, &u, duration).unwrap();
-                                match entry.channel_name {
-                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power += w,
-                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power += w,
-                                    IOReportChannelName::ANE => power_sample.ane_power += w,
-                                    _ => {}
-                                };
-                            }
-                            IOReportChannelGroup::H11ANE => {}
-                            _ if matches!(entry.channel_name, IOReportChannelName::ANE) => {
-                                println!("{:?}", entry);
-                                let desc = get_cf_string(|| unsafe {
-                                    IOReportSampleCopyDescription(entry.item, 0)
-                                });
-                                println!("{:?}", desc);
-                            }
-                            _ => continue,
-                        }
-                    }
-                    if sample_tx.send(power_sample).is_err() {
-                        break;
-                    }
-                }
-            }
-        });
-
-        guard.thread_handle = Some(handle);
-
-        guard
+            manager: Some(SampleManager::new(duration, num_samples)),
+        }
     }
 
     pub fn samples(&self) -> &Vec<PowerSample> {
@@ -169,24 +165,88 @@ impl Sampler {
     }
 }
 
+/// # StartStopSampler
+///
+/// Exclusively for use with pyo3, use `Sampler` from Rust instead.
+#[derive(Debug, Default)]
+pub struct StartStopSampler {
+    samples: Vec<PowerSample>,
+    manager: Option<SampleManager>,
+}
+
+impl StartStopSampler {
+    pub fn new() -> Self {
+        StartStopSampler {
+            samples: Vec::new(),
+            manager: None,
+        }
+    }
+
+    pub fn start(&mut self, duration: u64, num_samples: usize) -> Result<(), &'static str> {
+        if self.manager.is_some() {
+            return Err("Sampling is already in progress");
+        }
+        self.manager = Some(SampleManager::new(duration, num_samples));
+        Ok(())
+    }
+
+    pub fn stop(&mut self) -> Result<(), &'static str> {
+        println!("Stopping sampling");
+        if let Some(core) = self.manager.take() {
+            self.samples.extend(core.stop());
+            Ok(())
+        } else {
+            Err("No sampling in progress")
+        }
+    }
+
+    pub fn is_sampling(&self) -> bool {
+        self.manager.is_some()
+    }
+
+    pub fn samples(&self) -> &Vec<PowerSample> {
+        &self.samples
+    }
+
+    pub fn print_summary(&self) {
+        println!("SAMPLES: {}", self.samples.len());
+        for s in self.samples.iter() {
+            println!(
+                "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
+                s.cpu_power, s.gpu_power, s.ane_power, s.duration
+            );
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn test_sampler() {
+    fn test_guard_sampler() {
         let mut sampler = Sampler::new();
-
         {
             let _guard = sampler.subscribe(100, 1);
-            std::thread::sleep(std::time::Duration::from_secs(5));
-            for i in 0..100 {
-                let bingo = i * 2;
-                println!("{}", bingo);
-            }
+            std::thread::sleep(std::time::Duration::from_secs(4));
         }
-        assert!(!sampler.samples.is_empty());
-        println!("Number of samples: {}", sampler.samples.len());
+        assert!(!sampler.samples().is_empty());
+        sampler.print_summary();
+    }
+
+    #[test]
+    fn test_start_stop_sampler() {
+        let mut sampler = StartStopSampler::new();
+
+        assert!(!sampler.is_sampling());
+        sampler.start(100, 1).unwrap();
+        assert!(sampler.is_sampling());
+
+        std::thread::sleep(std::time::Duration::from_secs(4));
+
+        sampler.stop().unwrap();
+        assert!(!sampler.is_sampling());
+        assert!(!sampler.samples().is_empty());
         sampler.print_summary();
     }
 }

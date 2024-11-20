@@ -1,6 +1,5 @@
 from wattkit import PowerProfiler
 import coremltools as ct
-import numpy as np
 from PIL import Image
 from torchvision import transforms
 from torchvision.transforms.functional import InterpolationMode
@@ -24,10 +23,11 @@ def validation_image():
     return transform(input)
 
 # Load the CoreML model
-cml_model = ct.models.MLModel("FastViTMA36F16.mlmodel")
+cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage")
 img = validation_image()
 
-with PowerProfiler() as profiler:
-    cml_model.predict({"image": img})
+with PowerProfiler(duration=100, num_samples=1) as profiler:
+    for i in range(5000):
+        cml_model.predict({"image": img})
     
 profiler.print_summary()
