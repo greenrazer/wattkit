@@ -35,6 +35,8 @@ profiler.print_summary()
 - [ ] Improve measurements by determining the process in question, and computing
   what % of the time during the sample period it is running. Use that to compute
   the fraction of the power consumption that is due to the process.
+- [ ] Determine Wh capacity of current battery, output what % of total bat cap
+  was consumed by the scope 
 - [ ] Add frequency measurements (ANE impossible :( )
 - [ ] Add braindead method that does statistical sampling for you
 - [ ] Convenience method to generate comparison report of power consumption between compute units? (CoreML specific, put in coremlprofiler)
