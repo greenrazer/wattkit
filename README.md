@@ -32,6 +32,7 @@ profiler.print_summary()
 # TODO
 - [x] Surface ContextManager impl
 - [ ] Code is very jank
+- [ ] Determine baseline energy consumption of ANE
 - [ ] Improve measurements by determining the process in question, and computing
   what % of the time during the sample period it is running. Use that to compute
   the fraction of the power consumption that is due to the process.
