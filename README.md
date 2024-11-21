@@ -1,19 +1,29 @@
-# WattKit - Measure the power usage of your code! (Rust / Python)
+# WattKit - Measure the power usage of your code on MacOS! (Rust / Python)
 
 > [!WARNING]  
 > This is a sandbox for active development! Do not use :) 
 
+> [!WARNING]
+> This only works on MacOS!
+
 `wattkit` intends to provide a method for measuring the power consumption of your Rust or Python code.
+
+Currently `wattkit` records the power consumption of the **entire compute unit**
+(CPU, GPU, etc) over a period of time. It does not specifically measure your process, use with caution.
 
 Using RAII, we provide a nice Rust interface:
 ```rust
 let mut sampler = Sampler::new();
 {
     let _guard = sampler.subscribe(100, 1); # Will be sampled until drop/end of scope
+    # Do intensive work here
+    # Sleep will measure background processing of your machine :)
     std::thread::sleep(std::time::Duration::from_secs(4));
 }
-assert!(!sampler.samples().is_empty());
-sampler.print_summary();
+
+let profile = sampler.power_profile();
+println!("{}", profile);
+
 ```
 
 We use `pyo3` to provide a Python interface.
@@ -22,16 +32,17 @@ We use `pyo3` to provide a Python interface.
 from wattkit import PowerProfiler
 import time
 
-with PowerProfiler(duration=100, num_samples=1) as profiler:
+with PowerProfiler(duration=100, num_samples=2) as profiler:
+    # Do intensive work here
     for i in range(10):
         time.sleep(0.5)
     
-profiler.print_summary()
+profiler.print_profile()
 ```
 
 # TODO
 - [x] Surface ContextManager impl
-- [ ] `num_samples` (sampling multiple times within a sample duration doesn't work)
+- [x] `num_samples` (sampling multiple times within a sample duration doesn't work)
 - [ ] Code is very jank
 - [ ] Determine baseline energy consumption of ANE
 - [ ] Improve measurements by determining the process in question, and computing
