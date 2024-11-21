@@ -42,13 +42,13 @@ impl SampleManager {
 
             loop {
                 if cancel_rx.try_recv().is_ok() {
-                    println!("Cancelling sampling");
-                    for uc in unique_channel_names.iter() {
-                        println!("unique chan name: {}", uc);
-                    }
-                    for uc in unique_channel_groups.iter() {
-                        println!("Unique chan grp: {}", uc);
-                    }
+                    //println!("Cancelling sampling");
+                    //for uc in unique_channel_names.iter() {
+                    //    println!("unique chan name: {}", uc);
+                    //}
+                    //for uc in unique_channel_groups.iter() {
+                    //    println!("Unique chan grp: {}", uc);
+                    //}
                     break;
                 }
 
@@ -61,7 +61,7 @@ impl SampleManager {
                     };
 
                     for entry in sample.iterator_mut() {
-                        //println!("ENTRY: {:?}", entry);
+                        println!("{:?}", entry);
                         if let IOReportChannelName::Unknown(ref u) = entry.channel_name {
                             unique_channel_names.insert(u.clone());
                         }
@@ -69,6 +69,10 @@ impl SampleManager {
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
                                 let u = EnergyUnit::from(entry.unit);
+                                let raw_joules = unsafe {
+                                    IOReportSimpleGetIntegerValue(entry.item, std::ptr::null_mut())
+                                } as f32;
+                                println!("Raw joules: {} {}{}", entry.channel_name, raw_joules, u);
                                 let w = read_wattage(entry.item, &u, duration).unwrap();
                                 match entry.channel_name {
                                     IOReportChannelName::CPUEnergy => power_sample.cpu_power += w,
