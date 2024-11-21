@@ -4,23 +4,23 @@ use wattkit::*;
 #[pyclass]
 struct PowerProfiler {
     sampler: StartStopSampler,
-    duration: u64,
+    sample_duration: u64,
     num_samples: usize,
 }
 
 #[pymethods]
 impl PowerProfiler {
     #[new]
-    fn new(duration: u64, num_samples: usize) -> PyResult<Self> {
+    fn new(sample_duration: u64, num_samples: usize) -> PyResult<Self> {
         Ok(PowerProfiler {
             sampler: StartStopSampler::new(),
-            duration,
+            sample_duration,
             num_samples,
         })
     }
 
     fn __enter__(mut slf: PyRefMut<'_, Self>) -> PyResult<PyRefMut<'_, Self>> {
-        let duration = slf.duration;
+        let duration = slf.sample_duration;
         let num_samples = slf.num_samples;
         slf.sampler.start(duration, num_samples).unwrap();
         assert!(slf.sampler.is_sampling());
@@ -41,6 +41,10 @@ impl PowerProfiler {
 
     fn print_summary(&self) {
         self.sampler.print_summary()
+    }
+
+    fn profile_duration(&self) {
+        println!("Profiling duration: {:?}", self.sampler.duration());
     }
 }
 

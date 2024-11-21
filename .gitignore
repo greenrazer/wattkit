@@ -3,3 +3,4 @@
 **/*.mlpackage
 *.so
 __pycache__
+*.txt

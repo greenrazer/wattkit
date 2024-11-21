@@ -1,31 +1,25 @@
 use oneshot::channel as oneshot_channel;
 use oneshot::Sender as OneshotSender;
-use std::collections::HashSet;
 use std::{
     sync::mpsc::{channel, Receiver},
     thread::JoinHandle,
 };
 
-use crate::cf_utils::get_cf_string;
-use crate::io_report::read_residencies;
-use crate::io_report::IOReportSampleCopyDescription;
 use crate::io_report::IOReportSimpleGetIntegerValue;
-use crate::io_report::{
-    read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
-};
+use crate::io_report::{EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName};
 
 #[derive(Clone, Debug, Default)]
-pub struct PowerSample {
-    cpu_power: f32,
-    gpu_power: f32,
-    ane_power: f32,
+pub struct EnergySample {
+    cpu_energy: u128,
+    gpu_energy: u128,
+    ane_energy: u128,
     duration: u64,
 }
 
 #[derive(Debug)]
 struct SampleManager {
     cancel_sender: OneshotSender<()>,
-    sample_receiver: Receiver<PowerSample>,
+    sample_receiver: Receiver<EnergySample>,
     thread_handle: JoinHandle<()>,
 }
 
@@ -37,75 +31,52 @@ impl SampleManager {
         let handle = std::thread::spawn(move || {
             let requests = vec![];
             let mut report = IOReport::new(requests).unwrap();
-            let mut unique_channel_groups = HashSet::new();
-            let mut unique_channel_names = HashSet::new();
 
             loop {
                 if cancel_rx.try_recv().is_ok() {
-                    //println!("Cancelling sampling");
-                    //for uc in unique_channel_names.iter() {
-                    //    println!("unique chan name: {}", uc);
-                    //}
-                    //for uc in unique_channel_groups.iter() {
-                    //    println!("Unique chan grp: {}", uc);
-                    //}
+                    println!("Cancelling sampling");
                     break;
                 }
 
                 let samples = report.get_samples(duration, num_samples);
                 for mut sample in samples {
                     let duration = sample.duration();
-                    let mut power_sample = PowerSample {
+                    let mut energy_sample = EnergySample {
                         duration,
                         ..Default::default()
                     };
 
                     for entry in sample.iterator_mut() {
-                        println!("{:?}", entry);
-                        if let IOReportChannelName::Unknown(ref u) = entry.channel_name {
-                            unique_channel_names.insert(u.clone());
-                        }
-
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
                                 let u = EnergyUnit::from(entry.unit);
                                 let raw_joules = unsafe {
                                     IOReportSimpleGetIntegerValue(entry.item, std::ptr::null_mut())
-                                } as f32;
-                                println!("Raw joules: {} {}{}", entry.channel_name, raw_joules, u);
-                                let w = read_wattage(entry.item, &u, duration).unwrap();
+                                } as u128;
+                                let milli_joules = match u {
+                                    EnergyUnit::NanoJoules => raw_joules / 1_000_000,
+                                    EnergyUnit::MicroJoules => raw_joules / 1_000,
+                                    EnergyUnit::MilliJoules => raw_joules,
+                                    _ => 0,
+                                };
+
                                 match entry.channel_name {
-                                    IOReportChannelName::CPUEnergy => power_sample.cpu_power += w,
-                                    IOReportChannelName::GPUEnergy => power_sample.gpu_power += w,
-                                    IOReportChannelName::ANE => power_sample.ane_power += w,
+                                    IOReportChannelName::CPUEnergy => {
+                                        energy_sample.cpu_energy += milli_joules
+                                    }
+                                    IOReportChannelName::GPUEnergy => {
+                                        energy_sample.gpu_energy += milli_joules
+                                    }
+                                    IOReportChannelName::ANE => {
+                                        energy_sample.ane_energy += milli_joules
+                                    }
                                     _ => {}
                                 };
-                            }
-                            IOReportChannelGroup::SoCStats => match entry.channel_name {
-                                IOReportChannelName::ANE => {
-                                    let y = read_residencies(entry.item);
-                                    println!("ANE: {:?}", y);
-                                }
-                                _ => {}
-                            },
-                            IOReportChannelGroup::H11ANE => {
-                                println!("H11ANE: {:?}", entry.item);
-                                let desc = get_cf_string(|| unsafe {
-                                    IOReportSampleCopyDescription(entry.item, 0)
-                                });
-                                let raw_value = unsafe {
-                                    IOReportSimpleGetIntegerValue(entry.item, std::ptr::null_mut())
-                                } as f32;
-                                println!("{:?}", desc);
-                                println!("Raw value: {}", raw_value);
-                            }
-                            IOReportChannelGroup::Unknown(u) => {
-                                unique_channel_groups.insert(u);
                             }
                             _ => continue,
                         }
                     }
-                    if sample_tx.send(power_sample).is_err() {
+                    if sample_tx.send(energy_sample).is_err() {
                         break;
                     }
                 }
@@ -119,7 +90,7 @@ impl SampleManager {
         }
     }
 
-    fn stop(self) -> Vec<PowerSample> {
+    fn stop(self) -> Vec<EnergySample> {
         let _ = self.cancel_sender.send(());
         let mut samples = Vec::new();
         while let Ok(sample) = self.sample_receiver.recv() {
@@ -155,7 +126,9 @@ impl SampleManager {
 /// sampler.print_summary();
 #[derive(Debug, Default)]
 pub struct Sampler {
-    samples: Vec<PowerSample>,
+    start_time: Option<std::time::Instant>,
+    end_time: Option<std::time::Instant>,
+    samples: Vec<EnergySample>,
 }
 
 pub struct SamplerGuard<'a> {
@@ -166,6 +139,7 @@ pub struct SamplerGuard<'a> {
 impl<'a> Drop for SamplerGuard<'a> {
     fn drop(&mut self) {
         if let Some(manager) = self.manager.take() {
+            self.sampler.end_time = Some(std::time::Instant::now());
             self.sampler.samples.extend(manager.stop());
         }
     }
@@ -175,26 +149,51 @@ impl Sampler {
     pub fn new() -> Self {
         Sampler {
             samples: Vec::new(),
+            start_time: None,
+            end_time: None,
         }
     }
 
     pub fn subscribe(&mut self, duration: u64, num_samples: usize) -> SamplerGuard {
+        self.start_time = Some(std::time::Instant::now());
         SamplerGuard {
             sampler: self,
             manager: Some(SampleManager::new(duration, num_samples)),
         }
     }
 
-    pub fn samples(&self) -> &Vec<PowerSample> {
+    pub fn samples(&self) -> &Vec<EnergySample> {
         &self.samples
     }
 
     pub fn print_summary(&self) {
+        println!("SAMPLES: {}", self.samples.len());
+
+        let mut total_sample = EnergySample::default();
         for s in self.samples.iter() {
             println!(
-                "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
-                s.cpu_power, s.gpu_power, s.ane_power, s.duration
+                "CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
+                s.cpu_energy, s.gpu_energy, s.ane_energy, s.duration
             );
+            total_sample.cpu_energy += s.cpu_energy;
+            total_sample.gpu_energy += s.gpu_energy;
+            total_sample.ane_energy += s.ane_energy;
+            total_sample.duration += s.duration;
+        }
+        println!(
+            "TOTAL: CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
+            total_sample.cpu_energy,
+            total_sample.gpu_energy,
+            total_sample.ane_energy,
+            total_sample.duration
+        );
+    }
+
+    pub fn duration(&self) -> Option<u64> {
+        if let (Some(start), Some(end)) = (self.start_time, self.end_time) {
+            Some(end.duration_since(start).as_secs())
+        } else {
+            None
         }
     }
 }
@@ -204,8 +203,10 @@ impl Sampler {
 /// Exclusively for use with pyo3, use `Sampler` from Rust instead.
 #[derive(Debug, Default)]
 pub struct StartStopSampler {
-    samples: Vec<PowerSample>,
+    samples: Vec<EnergySample>,
     manager: Option<SampleManager>,
+    start_time: Option<std::time::Instant>,
+    end_time: Option<std::time::Instant>,
 }
 
 impl StartStopSampler {
@@ -213,6 +214,8 @@ impl StartStopSampler {
         StartStopSampler {
             samples: Vec::new(),
             manager: None,
+            start_time: None,
+            end_time: None,
         }
     }
 
@@ -220,6 +223,7 @@ impl StartStopSampler {
         if self.manager.is_some() {
             return Err("Sampling is already in progress");
         }
+        self.start_time = Some(std::time::Instant::now());
         self.manager = Some(SampleManager::new(duration, num_samples));
         Ok(())
     }
@@ -227,6 +231,7 @@ impl StartStopSampler {
     pub fn stop(&mut self) -> Result<(), &'static str> {
         println!("Stopping sampling");
         if let Some(core) = self.manager.take() {
+            self.end_time = Some(std::time::Instant::now());
             self.samples.extend(core.stop());
             Ok(())
         } else {
@@ -238,17 +243,38 @@ impl StartStopSampler {
         self.manager.is_some()
     }
 
-    pub fn samples(&self) -> &Vec<PowerSample> {
+    pub fn samples(&self) -> &Vec<EnergySample> {
         &self.samples
     }
 
     pub fn print_summary(&self) {
         println!("SAMPLES: {}", self.samples.len());
+
+        let mut total_sample = EnergySample::default();
         for s in self.samples.iter() {
             println!(
-                "CPU: {:.2}W, GPU: {:.2}W, ANE: {:.2}W, Time: {}",
-                s.cpu_power, s.gpu_power, s.ane_power, s.duration
+                "CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
+                s.cpu_energy, s.gpu_energy, s.ane_energy, s.duration
             );
+            total_sample.cpu_energy += s.cpu_energy;
+            total_sample.gpu_energy += s.gpu_energy;
+            total_sample.ane_energy += s.ane_energy;
+            total_sample.duration += s.duration;
+        }
+        println!(
+            "TOTAL: CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
+            total_sample.cpu_energy,
+            total_sample.gpu_energy,
+            total_sample.ane_energy,
+            total_sample.duration
+        );
+    }
+
+    pub fn duration(&self) -> Option<u128> {
+        if let (Some(start), Some(end)) = (self.start_time, self.end_time) {
+            Some(end.duration_since(start).as_millis())
+        } else {
+            None
         }
     }
 }
@@ -262,7 +288,7 @@ mod tests {
         let mut sampler = Sampler::new();
         {
             let _guard = sampler.subscribe(100, 1);
-            std::thread::sleep(std::time::Duration::from_secs(10));
+            std::thread::sleep(std::time::Duration::from_secs(5));
         }
         assert!(!sampler.samples().is_empty());
         sampler.print_summary();

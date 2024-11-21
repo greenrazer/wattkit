@@ -1,0 +1,5082 @@
+
+running 1 test
+Cancelling sampling
+unique chan name: 233
+unique chan name: PARK
+unique chan name: Power Counter FSTP 2
+unique chan name: Tx MPDU in AMPDU 56
+unique chan name: PCPUDTL113
+unique chan name: Rx AMPDU with No BA policy
+unique chan name: Rx MCS Success 10
+unique chan name: Tg35a Min
+unique chan name: link 1 EP corr(4)
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 7
+unique chan name: Used stack(21)
+unique chan name: mca1a.IRQ.TXA_Underflow
+unique chan name: Tx SGI MCS Usage 6
+unique chan name: Port 1 Disable Hardware Off            
+unique chan name: Port 1 AER RC Cor Advisory Non-Fatal Error
+unique chan name: H2T Buffer Responses
+unique chan name: Tx SGI VHT Usage 20
+unique chan name: Rx MCS Usage 2x1
+unique chan name: mtp.HSP_SPI.HIDSPI_WAKE_SIGNAL_FAILURE
+unique chan name: Grp7 Misses
+unique chan name: Report 13
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 47
+unique chan name: PCPU1_PPT_TRG
+unique chan name: Rx HE Success 1
+unique chan name: Rx overflow errors
+unique chan name: link 2 RC uncor(10)
+unique chan name: mtp.TPM.FSM_ACTIVE_ENTERED
+unique chan name: Rx Range Extension SU PPDU
+unique chan name: Rx VHT Success 10
+unique chan name: Tx VHT Attempts 13
+unique chan name: Dropped Set 8 Preserve
+unique chan name: status
+unique chan name: link 2 EP corr(4)
+unique chan name: AFR_ADCLK_TRG
+unique chan name: Tg49a Sum Count
+unique chan name: ap-aop_time_delta_abs_[hist]_18
+unique chan name: aop_host_time_[hist]_8
+unique chan name: LogState
+unique chan name: CLK002
+unique chan name: mca2b.IRQ.RXB_Overflow
+unique chan name:     Core    ARM Core           Read 
+unique chan name: Tx SGI VHT Usage 1
+unique chan name: Rx bphy Bad PLCP
+unique chan name: link 2 RC corr(5)
+unique chan name:                         Tx MPDU Tid3
+unique chan name: Shaders with only Ideal exceeding HW Max
+unique chan name: Channel CCA State   4
+unique chan name: Tx SGI VHT Usage 4
+unique chan name: PCPU1DTL32
+unique chan name: ECPM v2
+unique chan name: ANS
+unique chan name: mtp.KB_TRANSPORT.DEVICE_COMM_FAILURE
+unique chan name: DEV239
+unique chan name: spu_sshb
+unique chan name: Tx Multi TID BACK
+unique chan name: ap-aop_time_delta_abs_[hist]_5
+unique chan name: Commander Wakeup
+unique chan name: Tx MPDU in AMPDU 42
+unique chan name: DEV317
+unique chan name: PCPU1DTL22
+unique chan name: Report 12
+unique chan name: mediaserverd Restarts
+unique chan name: No Buffers
+unique chan name: Successfully Acked PM
+unique chan name: Channel CCA State 124
+unique chan name: link 2 RC corr(7)
+unique chan name: Second Level Interrupt Handler System Time (MATUs)
+unique chan name: Commander Unpause
+unique chan name: RC2 Critical Map Max
+unique chan name: MGPU3_PPT_TRG
+unique chan name: OPRT0517
+unique chan name: Port 1 Deep Sleep Exit                 
+unique chan name:                         Rx LOST MPDU NonBA Tid4
+unique chan name: Tg17a Max
+unique chan name: Codec Output.1VRMS
+unique chan name: PCPU0_AD_HWTRG
+unique chan name: WLAN Rx Preemption
+unique chan name: com.apple.wifi.dext.crashStats
+unique chan name: PWR024
+unique chan name: Channel CCA State  64
+unique chan name: IDLE
+unique chan name: PCPU1DTL00
+unique chan name: spu_io_time_raw_[hist]_16
+unique chan name: Total stack(31)
+unique chan name: Grp2 Hits
+unique chan name: mtp.KB_TRANSPORT.CR_SET_FAILURE
+unique chan name: Periodic Audio Grant Count
+unique chan name: SOC-BLQ-ReqOvf Count
+unique chan name: mtp.Z2SPI.ERR_RESULT_CMD_INCORRECT
+unique chan name: spu_io_time_raw_[strt]_4
+unique chan name: Chip Mode error - AWDL   - TS NOT Requested
+unique chan name: OPRT2400
+unique chan name: ap_io_host_time_[stop]_8
+unique chan name: Port 0 Link Up                         
+unique chan name: spu_io_time_raw_[stop]_7
+unique chan name: PCPU1DTL112
+unique chan name: ap-aop_time_delta_abs_[stop]_13
+unique chan name: Page Scan
+unique chan name: Roam Scan Start
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 10
+unique chan name: Channel CCA State 153
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 29
+unique chan name: Rx Deauth
+unique chan name:  64 5g 20MHz n
+unique chan name: SCODEC0
+unique chan name: 193
+unique chan name: Dropped Set FSM
+unique chan name: Port 1 AER RC Unc Receiver Overflow       
+unique chan name: DEV134
+unique chan name: DISP_INT
+unique chan name: Tg35a Sum Count
+unique chan name: Osmium reports
+unique chan name: RSSI value
+unique chan name: MGPU1_PPT_SWTRG
+unique chan name: Tx input throughput from NW stack (Mbps)
+unique chan name: SYS_AWAKE
+unique chan name: PWR031
+unique chan name: FAB_ADCLK_TRG
+unique chan name: mtp.AFE_TRANSPORT.INIT_FAILURE
+unique chan name: EACC_CPU1_SRAM
+unique chan name: aop_zero_host_time_[stop]_12
+unique chan name: Port 1 AER RC Unc Flow Ctrl Protocol Error
+unique chan name: AFR-BW
+unique chan name: PCPM v13
+unique chan name: OPRT1200
+unique chan name: PCPU1_PPT_SWTRG
+unique chan name: DEV064
+unique chan name: DEV165
+unique chan name: OPRT0613
+unique chan name: link 0 EP uncor(11)
+unique chan name: DEV036
+unique chan name: Station Count
+unique chan name: spu_io_time_raw_[strt]_10
+unique chan name: mtp.ACT_MGR.HOST_CONTROL_REQUESTED_BB
+unique chan name: DEV176
+unique chan name: Outbound Queue Time
+unique chan name: ap-aop_time_delta_abs_[hist]_17
+unique chan name: Rx MPDU in SU AMPDU Usage 9
+unique chan name: aop_zero_frame_cnt_[strt]_8
+unique chan name: mtp.HSP_SPI.TRANSFER_INVALID_CRC
+unique chan name: Rx Control Frame Multicast
+unique chan name: MGPU0_EXT_TRG0
+unique chan name: Grp17 Hits
+unique chan name: ISPCPU Commands Sent
+unique chan name: No Resources - SoftAP - TS NOT Requested
+unique chan name: TXA Defer Duration
+unique chan name: Rx throughput (Mbps)
+unique chan name: nits_count
+unique chan name: Set Error
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 1
+unique chan name: C1PPT_PPT_HWTRG
+unique chan name: spu_io_time_raw_[strt]_8
+unique chan name: DISP_INT_VMIN
+unique chan name: PACC1_CPU0_SRAM
+unique chan name: CLVR_EXT_MGPU0
+unique chan name: Channel CCA State  85
+unique chan name: OMI Tx Success
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 10
+unique chan name: IOA6 WR
+unique chan name: link 3 EP uncor(7)
+unique chan name: OPRT0708
+unique chan name: Used stack(22)
+unique chan name: byte_cnt_[hist]_6
+unique chan name: Scan Phy Mode 11AC
+unique chan name: Active Tx Muted
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 5
+unique chan name: Core Dump Success Count
+unique chan name: Rx VHT Usage 6x2
+unique chan name: Port 1 AER EP Cor Receiver Error          
+unique chan name: Used stack(29)
+unique chan name: Tx NSTS change request txed successfully
+unique chan name: Used stack(4)
+unique chan name: ap_io_host_time_[hist]_9
+unique chan name: Effective Link Rate
+unique chan name: DUT Tx PHY rate issue
+unique chan name: PCPM v21
+unique chan name: Peer Count State
+unique chan name: Num Scan Rejected Low RSSI Roam on
+unique chan name: OPRT0411
+unique chan name: Roam Scan Off Ch Dur 5G
+unique chan name: MGPU1_DITHR_TRG
+unique chan name: Channel 0
+unique chan name: AGX.Max_UT_Engagement_Perf_State_3
+unique chan name: T2H Buffer Notifications
+unique chan name: Buffer Count
+unique chan name: Tx HE Attempts 1
+unique chan name: Total memory of Backup Lists
+unique chan name: Failure  - SoftAP - TS NOT Requested
+unique chan name: Num Host Scan Req-Back to back
+unique chan name: Rx MPDU in SU AMPDU Usage 52
+unique chan name: aop_zero_host_time_[stop]_18
+unique chan name: Port 0 AER EP Cor Receiver Error          
+unique chan name: SOC_ADCLK_TRG
+unique chan name: Rx Trigger NFRP
+unique chan name: mca2b.IRQ.TXB_Frame_Error
+unique chan name: Rx VHT Usage 9x2
+unique chan name: Scan Type Fast
+unique chan name: Rx replays are too high
+unique chan name: Read Success Count
+unique chan name: Rx Bad SA MAC
+unique chan name: Pool Flags
+unique chan name: Port 1 AER EP Unc Atomic OP Egress Blocked
+unique chan name: OPRT0811
+unique chan name: Number SAC Action1 FreqArray2
+unique chan name: link 1 RC uncor(0)
+unique chan name: mtp.HSP_SPI.SPI_CLOCK_POLARITY_KEY_SET_FAILURE
+unique chan name: DCS_F3
+unique chan name: link 0 RC corr(4)
+unique chan name: CLK003
+unique chan name: PWR025
+unique chan name: link 0 RC corr(5)
+unique chan name: byte_cnt_[hist]_1
+unique chan name: Tx MPDU in AMPDU 52
+unique chan name: 96000 Hz
+unique chan name: Tx Null AMPDU in Rsp to Trig FIFO empty
+unique chan name: Tx MPDU in AMPDU 17
+unique chan name: mtp.TOUCH_ALGS.FRAME_PROCESS_FAILURE
+unique chan name: PCPUDTL20
+unique chan name: C1PPT_EXT_TRG2
+unique chan name: Port 0 AER EP Cor Retry Timer Timeout     
+unique chan name: TX packets
+unique chan name: Pruned
+unique chan name: Total stack(4)
+unique chan name: PCPUDTL06
+unique chan name: Rx Trigger with Rand AID
+unique chan name: DUT Rx PN replay issue
+unique chan name: Channel CCA State 157
+unique chan name: Tg1a Min
+unique chan name: IOA6 RD+WR
+unique chan name: CCMP Replays
+unique chan name: Tx MPDU in AMPDU 7
+unique chan name: SC Tx Blanking Count Total Bin 4
+unique chan name: Failure  - STA    - TS NOT Requested
+unique chan name: link 0 RC corr(6)
+unique chan name: byte_cnt_[hist]_17
+unique chan name: Rx HE Success 5
+unique chan name: mtp.HSP_SPI.HIDSPI_INTER_TRANS_US_KEY_SET_FAILURE
+unique chan name: PWR026
+unique chan name: MGPU1_DTH_SWTRG
+unique chan name: AP Tx after PM Protection
+unique chan name: PCPUDTL17
+unique chan name: link 2 EP uncor(10)
+unique chan name: PCIe PERST          Dur
+unique chan name: PWR082
+unique chan name: OPRT0607
+unique chan name: Rx Block Ack
+unique chan name: PCPUDTL45
+unique chan name: com.apple.xnu.memorystatus_pressure_interval
+unique chan name: Dynamic SDB Reentry
+unique chan name: Tx MPDU in AMPDU 9
+unique chan name: Peer Infra Channel Flags
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 3
+unique chan name: ECPUDTL35
+unique chan name: Ant Grant By High BT Task
+unique chan name: Concurrent interfaces active duration (ms)
+unique chan name: Timebase Offset (Negative)
+unique chan name: GPU Power Zone Filter 1
+unique chan name: Num Rx Single MPDUs, HT rates
+unique chan name: WLC Init
+unique chan name: Power Counter FSTP 16
+unique chan name: OPRT0402
+unique chan name: Rx Unsol Probe Response
+unique chan name: mtp.ACT_MGR.DOWN_CLICK_BB
+unique chan name: link 3 EP corr(4)
+unique chan name: Input Enqueued
+unique chan name: mtp.TPM.FSM_INIT_ENTERED
+unique chan name: aop_zero_host_time_[stop]_16
+unique chan name: MSDU successfully transmits >= 1 attempt
+unique chan name: aop_host_time_[hist]_15
+unique chan name: Rx packet (FW reported) count
+unique chan name: Bcn Offload Rx Beacon Count
+unique chan name: BE Tx Bytes
+unique chan name: Tx Channel Rejection
+unique chan name: PWR052
+unique chan name: link 1 EP corr(5)
+unique chan name: Number of services
+unique chan name: link 3 RC corr(6)
+unique chan name: Tx MPDU in AMPDU 61
+unique chan name: Tg37a Latest
+unique chan name: Channel CCA State 116
+unique chan name: AppleSDXCSlot Power State
+unique chan name: OPRT0813
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 3
+unique chan name: link 0 EP uncor(5)
+unique chan name: Rx VHT Success 3
+unique chan name: Tx VHT Attempts 20
+unique chan name: ap-aop_time_delta_abs_[stop]_5
+unique chan name: PWR008
+unique chan name: DEV203
+unique chan name: PCPUDTL25
+unique chan name: aop_zero_host_time_[strt]_19
+unique chan name: Tx HE Attempts 21
+unique chan name: Num Scan Rejected Join Busy
+unique chan name: Port 0 AER EP Cor REPLAY_NUM Rollover     
+unique chan name: Interface Average CCA State
+unique chan name: AirPlay Sessions
+unique chan name: Roam Scan Dur 5G
+unique chan name: WEP Excluded Count
+unique chan name: PCPUDTL46
+unique chan name: ECPU_EXT_TRG3
+unique chan name: PCPU1DTL47
+unique chan name: Sys1s
+unique chan name: ISP WR
+unique chan name: mtp.AFE_BOOTLOADER.CHIP_BOOT_HBPP_FAILURE
+unique chan name: 199
+unique chan name: 41819
+unique chan name: spu_io_time_raw_[hist]_13
+unique chan name: Crash Tracer Triggered
+unique chan name: Port 1 AER RC Unc Completion Timeout      
+unique chan name: Set AMT
+unique chan name: Rx MPDU in SU AMPDU Usage 47
+unique chan name: Cursor Total Latency
+unique chan name: DEV174
+unique chan name: mtp.HSP_SPI.HIDSPI_MISSING_CONFIG
+unique chan name: Number of Rx unicast received
+unique chan name: Input Passup
+unique chan name: Tg35a Sum
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 14
+unique chan name: PACC0_CPU3_SRAM
+unique chan name: DEV074
+unique chan name: DISPEXT2
+unique chan name: PCPM1 v6
+unique chan name: MSR1
+unique chan name: AGX.Max_UT_Engagement_Perf_State_9
+unique chan name: PCPU1DTL3a
+unique chan name: DEV327
+unique chan name: AFR_VNOM
+unique chan name: FAB_DTH_HWTRG
+unique chan name: Tx RU size 26
+unique chan name: aop_zero_frame_cnt_[stop]_0
+unique chan name: Probe test negative
+unique chan name: DISPEXT3 RD
+unique chan name: DCS_F5
+unique chan name: User Scan Count
+unique chan name: MGPU1_EXT_TRG1
+unique chan name: Tx Null AMPDU in Rsp to BSRP
+unique chan name: Accumulated Inactivity Dur-sec
+unique chan name: Tx failure count
+unique chan name: UVWarn Active
+unique chan name: Rx MPDU in SU AMPDU Usage 53
+unique chan name: Port 1 Fatal Error Interrupt Error     
+unique chan name: Tx MPDU in AMPDU in 242 Tone RU
+unique chan name: PCPU1DTL411
+unique chan name: Tx Block Ack
+unique chan name: OPRT0005
+unique chan name: link 0 EP uncor(2)
+unique chan name: link 3 EP uncor(10)
+unique chan name: Port 1 AER EP Cor Bad TLP                 
+unique chan name: aop_workout_detected
+unique chan name: DEV225
+unique chan name: DEV255
+unique chan name: ap_io_host_time_[strt]_16
+unique chan name: Total PostMessage Driver Available
+unique chan name: SOC_THRTL_TRG1
+unique chan name: link 3 RC uncor(5)
+unique chan name: Message reports
+unique chan name: Tx VHT Success 16
+unique chan name: DEV253
+unique chan name: Codec Output.HighImpedance
+unique chan name: EVT252
+unique chan name: SOC_THRTL_TRG2
+unique chan name: PCPU1DTL110
+unique chan name: Power Counter FSTP 29
+unique chan name: IOA7 RD
+unique chan name: mtp.TOUCH.RESET_SEND
+unique chan name: spu_io_time_raw_[stop]_19
+unique chan name: Tx MPDU in AMPDU 41
+unique chan name: CLK030
+unique chan name: Port 0 Link Up Timeout                 
+unique chan name: mtp.AFE_MGR.BL_REQ_ENQUEUE_FAILURE
+unique chan name: Tier2 BW Scale Factor
+unique chan name: Rx SGI VHT Usage 18
+unique chan name: Duration Since Last Failed Completion
+unique chan name: mtp.AFE_PWR.ST_SET_FAILURE
+unique chan name: STRESS-2
+unique chan name: ap-aop_time_delta_abs_[strt]_17
+unique chan name: Tx VHT Attempts 18
+unique chan name: TVPM Changed
+unique chan name: DEV187
+unique chan name: PCPUDTL31
+unique chan name: RC2 Duration
+unique chan name: PCPU1DTL310
+unique chan name:  56 5g 20MHz n
+unique chan name: DEV246
+unique chan name: BSTGPUPH
+unique chan name: mtp.TL_SCM.RING_BUFFER_SPACE_NOT_ENOUGH
+unique chan name: Tx MCS Usage 7x2
+unique chan name: aop_zero_frame_cnt_[strt]_13
+unique chan name: mtp.AFE_BOOTLOADER.HW_CLOSE_FAILURE
+unique chan name: ECPU_PPT_HWTRG
+unique chan name: Port 0 AER EP Cor Bad DLLP                
+unique chan name: CDM Kill Count
+unique chan name: 0x1f0000
+unique chan name: DEV345
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 53
+unique chan name: No Resources - SoftAP - TS Requested
+unique chan name: aop_smart_cover
+unique chan name: PCPU1DTL06
+unique chan name: Life Time Expired - AWDL   - TS Requested
+unique chan name: PWR011
+unique chan name: PWR043
+unique chan name: Port 1 AER RC Cor Receiver Error          
+unique chan name: Rx AMPDU TxBA mismatch
+unique chan name: DEV023
+unique chan name: aop_host_time_[hist]_1
+unique chan name: Requested count
+unique chan name: Dequeue Depletions
+unique chan name: OPRT0203
+unique chan name: FAB_EXT_TRG2
+unique chan name: ap-aop_time_delta_abs_[hist]_14
+unique chan name: Rx RTS
+unique chan name: Channel CCA 104
+unique chan name: Rx Multi STA BACK
+unique chan name: PWR019
+unique chan name: TXA Defer Count
+unique chan name: OPRT0800
+unique chan name: ambient_count
+unique chan name: Total Interrupts
+unique chan name: PCPM1 v19
+unique chan name: IOA4 WR
+unique chan name: mtp.TOUCH_ALGS.AFE_CLICK_CONTROL_CB_ERROR
+unique chan name: Log Dump Count
+unique chan name: PCIe L2             Dur
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 49
+unique chan name: PCPM1 v14
+unique chan name: Rx Data Frames
+unique chan name: Tag SUP Info
+unique chan name: PCPM1 v16
+unique chan name: ap_io_host_time_[hist]_2
+unique chan name: mtp.HSP_SPI.HIDSPI_IDLE_TIMER_SLEEP
+unique chan name: Total stack(17)
+unique chan name: Roam Scan Count 5G
+unique chan name: PCPU1_DITHR_TRG
+unique chan name: Tx MCS Attempts 11
+unique chan name: AGX.Count_UT_Engagement_Perf_State_9
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 17
+unique chan name: Rx MPDU in SU AMPDU Usage 57
+unique chan name: Total stack(24)
+unique chan name: Tx HE Attempts 10
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 41
+unique chan name: Power Counter FSTP 4
+unique chan name: aop_zero_host_time_[strt]_11
+unique chan name: AGX.Max_UT_Engagement_Perf_State_15
+unique chan name: aop_zero_frame_cnt_[strt]_12
+unique chan name: PNO Scan Cnt
+unique chan name: Rx MPDU in SU AMPDU Usage 46
+unique chan name: DEV257
+unique chan name: aop_host_time_[hist]_12
+unique chan name: Rx SGI VHT Usage 11
+unique chan name: AGX.Min_UT_Engagement_Perf_State_2
+unique chan name: Rx MU-MIMO MCS Usage 23
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 5
+unique chan name: SOC_DTH_SWTRG
+unique chan name: 130
+unique chan name: ISP RD+WR
+unique chan name: Tx VHT Success 14
+unique chan name: GPU0
+unique chan name: Scan Phy Mode 11TurboG
+unique chan name: Engine Running
+unique chan name: mtp.TPM.FSM_TOUCH_SUPERVISOR_DISABLE
+unique chan name: Tx VHT Attempts 5
+unique chan name: Capacity
+unique chan name: Segment Prepare Max Retries
+unique chan name: Scan Mode IBSS
+unique chan name: spu_io_time_raw_[strt]_3
+unique chan name: aop_zero_frame_cnt_[stop]_8
+unique chan name: byte_cnt_[hist]_9
+unique chan name: DEV339
+unique chan name: GTP Kill Count
+unique chan name: Scan Mode Infra
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 54
+unique chan name: Tx VHT Success 17
+unique chan name: PWR023
+unique chan name: link 3 EP corr(3)
+unique chan name: ap_wake_time_abs_3
+unique chan name: PACC0_CPU0_SRAM
+unique chan name: Sample Time
+unique chan name: Tx VHT Usage 6x2
+unique chan name: Chip Mode error - SoftAP - TS Requested
+unique chan name: OPRT1210
+unique chan name: MaxAccessLatencyACLK
+unique chan name: 108 5g 20MHz n
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 39
+unique chan name: Rx VHT Success 16
+unique chan name: Controller Count
+unique chan name: Expected Peak Latency
+unique chan name: Cached Peers On 5G
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_9
+unique chan name: OPRT1309
+unique chan name: EVT232
+unique chan name: Cached Peers 6E Capable
+unique chan name: mtp.AFE_TRANSPORT.CR_GET
+unique chan name: Grp13 Hits
+unique chan name: 112 5g 20MHz n
+unique chan name: PCPUDTL413
+unique chan name: MGPU3_PPT_HWTRG
+unique chan name: io_event_id_4
+unique chan name: Tx VHT Usage 10x2
+unique chan name: 157
+unique chan name: mtp.TPM.FSM_DEEP_READY_ENTERED
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_8
+unique chan name: ap-aop_time_delta_abs_[stop]_8
+unique chan name: SC Tx Blanking Upper Bound Bin 3
+unique chan name: MGPU2_EXT_TRG0
+unique chan name: spu_io_time_raw_[hist]_7
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 11
+unique chan name: Tx VHT Usage 2x2
+unique chan name: CLK007
+unique chan name: GTP Round robin
+unique chan name: Tx MCS Attempts 7
+unique chan name: Sensor1 Power
+unique chan name: CLK045
+unique chan name: No Resources - STA    - TS Requested
+unique chan name: aop_host_time_[hist]_14
+unique chan name: PCPM
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_4
+unique chan name: OPRT0500
+unique chan name: Channel CCA State  40
+unique chan name: Path Off Requests
+unique chan name: Rx MPDU in SU AMPDU Usage 23
+unique chan name: PCPUDTL212
+unique chan name: Port 0 AER RC Unc Unsupported Request     
+unique chan name: Rsv
+unique chan name: spu_slave
+unique chan name: OPRT1308
+unique chan name: mtp.HSP_SPI.INVALID_ACK_RECEIVED
+unique chan name: mtp.HSP_SPI.BUSY_SENT
+unique chan name: TICKS
+unique chan name: Tag MIMO PS Trace
+unique chan name:                                 h2d Doorbell Rings
+unique chan name: SC Tx Blanking Count AC BT Tx Bin 1
+unique chan name: Tx MPDU in AMPDU 11
+unique chan name: ECPM_IDLE
+unique chan name: mtp.AFE_TRANSPORT.CR_INPUT_REPORT_ALGS_FAILURE
+unique chan name: mtp.TPM.FSM_TRANS_EXIT_FAILURE
+unique chan name: Num Low Prio Req While Moving
+unique chan name: ISP RD
+unique chan name: Supressed
+unique chan name: Grp20 Hits
+unique chan name: Path Mute Requests
+unique chan name: FerInst
+unique chan name: Unknown
+unique chan name: Link Status
+unique chan name: BusPr-CmdPrty-BOM Count
+unique chan name: Tx MPDU in AMPDU 64
+unique chan name: Tg32a Min
+unique chan name: Assoc Scan Dur - since LinkUp
+unique chan name: Tg37a Min
+unique chan name: Completion Latency Vo
+unique chan name: Pool Allocation Errors
+unique chan name: AP Tx data stall issue
+unique chan name: Pending count
+unique chan name: mtp.TOUCH_ALGS.AFE_FEEDBACK_CB
+unique chan name:                         Rx LOST MPDU NonBA Tid0
+unique chan name: spu_als
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 33
+unique chan name: OPRT0706
+unique chan name: spu_osmium
+unique chan name: PCIe L1.1 Entry     Count
+unique chan name: DEV040
+unique chan name: Chip Buffer Unavailable  - AWDL   - TS Requested
+unique chan name: Cached Peers On 6G
+unique chan name: Tier0 BW Scale Factor
+unique chan name: Assoc Scan Off Ch Dur 2G
+unique chan name: AGX.UT_Not_Engaged_Perf_State_12
+unique chan name: Symptoms fails
+unique chan name: link 1 EP uncor(2)
+unique chan name: Success - SoftAP - TS Requested
+unique chan name: User Scan Dur - since LinkUp
+unique chan name: aop_zero_host_time_[stop]_8
+unique chan name: DEV057
+unique chan name: Report 242
+unique chan name: AFR_PERF_2
+unique chan name: Tx PS Poll
+unique chan name:                         Rx LOST MPDU BA Tid3
+unique chan name: ap_io_host_time_[strt]_8
+unique chan name: Grp20 Misses
+unique chan name: Port 1 Non-fatal Error Interrupt       
+unique chan name: OPRT0519
+unique chan name: PCPUDTL0e
+unique chan name: aop_host_time_[hist]_9
+unique chan name: Auth Failed
+unique chan name: OPRT1113
+unique chan name: Assoc Scan Count 2G
+unique chan name: Chip Mode error - SoftAP - TS NOT Requested
+unique chan name: PCPU1DTL29
+unique chan name: Ring grown
+unique chan name: Int Status Mailbox D3 Enter Ack            Counter
+unique chan name: CCMP Format Errors
+unique chan name: Tag MCS VHT Rate
+unique chan name: Tx MCS Usage 0x2
+unique chan name: Roam Scan Cnt - since LinkUp
+unique chan name: Total stack(13)
+unique chan name: Port 0 AER EP Unc Poisoned TLP            
+unique chan name: Tx MPDU in AMPDU 40
+unique chan name: Rx CTS
+unique chan name: IOA7 RD+WR
+unique chan name: Tx Null AMPDU becasue of Suppression
+unique chan name: PCPUDTL07
+unique chan name: Remote Peer Unavailable - NAN    - TS Requested
+unique chan name: User Scan Dur 2G
+unique chan name: mtp.TPM.FSM_ANTICIPATE_ENTERED
+unique chan name: PCPUDTL35
+unique chan name: Grp12 Hits
+unique chan name: Total stack(20)
+unique chan name: Serialized Message Bytes
+unique chan name: Doorbell Path Pkt Cnt
+unique chan name: DCS_F1
+unique chan name: mtp.KB_TRANSPORT.KB_IR
+unique chan name: apl
+unique chan name: TKIP Replays
+unique chan name: Rx SGI MCS Usage 8
+unique chan name: FRG Round robin
+unique chan name: Tx HE Success 5
+unique chan name: mtp.DOCK.CHANNEL_SEND_FAILURE
+unique chan name: PCPU1_EXT_TRG3
+unique chan name: spu_io_time_raw_[hist]_18
+unique chan name: Total stack(1)
+unique chan name: link 1 RC uncor(2)
+unique chan name: Number SAC Action4 FreqArray2
+unique chan name: Cached Peers Same Infra
+unique chan name: OPRT0508
+unique chan name: Num Normal Prio Req While Moving
+unique chan name: Rx MU-MIMO MCS Usage 4
+unique chan name: Number of Logs
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 30
+unique chan name: Rx MPDU in SU AMPDU Usage 31
+unique chan name: PCPU1DTL210
+unique chan name: OPRT0707
+unique chan name: OPRT1012
+unique chan name: DISPINT
+unique chan name: DEV042
+unique chan name: Available duration for WLAN Tx activity (ms)
+unique chan name: Tx MCS Usage 0x1
+unique chan name: Expired Completions
+unique chan name: OPRT1007
+unique chan name: PCPU1DTL4d
+unique chan name: Port 0 Suspend LTSSM Off               
+unique chan name: Tg51a Min
+unique chan name: Bcn Offload Enter Count
+unique chan name: subframes(7)
+unique chan name: ap-aop_time_delta_abs_[hist]_15
+unique chan name: DEV076
+unique chan name: AGX.Min_UT_Engagement_Perf_State_15
+unique chan name: FAB_EXT_TRG1
+unique chan name: Rx Buffer Submit Fill Level
+unique chan name: mtp.TPM.FSM_POST_FAIL
+unique chan name:   8 2g 20MHz n
+unique chan name: No Service Idle Time
+unique chan name: Rx VHT Success 11
+unique chan name: Last GPU Restart
+unique chan name: MGPU0_DITHR_TRG
+unique chan name: PCPU1DTL45
+unique chan name: Total stack(0)
+unique chan name: SOC_VNOM
+unique chan name: Port 0 Disable Complete                
+unique chan name: Tx HE Success 18
+unique chan name: mtp.KB_TRANSPORT.CR_SET_OUTPUT_FAILURE
+unique chan name: Total stack(5)
+unique chan name: PWR040
+unique chan name: Since Last Success How Many Failed Completions
+unique chan name: DEV247
+unique chan name: AGX.UT_Not_Engaged_Perf_State_15
+unique chan name: PNO SSID  Scan Off Ch Dur
+unique chan name: Assoc Failed
+unique chan name: link 1 RC corr(0)
+unique chan name: com.apple.appleBiometricSensor.powerMonitor.hourlyUpdate
+unique chan name:                         Rx MPDU Tid4
+unique chan name: Channel Switch Event
+unique chan name: Pool Allocation Retries
+unique chan name: Tg51a Latest
+unique chan name: FAB_VMAX
+unique chan name: Rx Control Frame matching RA
+unique chan name: Grp22 Misses
+unique chan name: Compass reports
+unique chan name: Rx BCMC decrypt errors are too high
+unique chan name: AFNC4-WR-BWR
+unique chan name: PCPUDTL49
+unique chan name: PCPU
+unique chan name: DEV302
+unique chan name: Port 1 AER RC Cor Bad TLP                 
+unique chan name: SOC-TxFltr Count
+unique chan name: PNO SSID  Scan Count 2G
+unique chan name: DUT Tx Aggr issue
+unique chan name: Assoc Scan Cnt
+unique chan name: link 3 RC uncor(8)
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 62
+unique chan name: PCPM v16
+unique chan name: ORED_SPMI30_VWS
+unique chan name: Tg0a Min
+unique chan name: Channel CCA   5
+unique chan name: state
+unique chan name: SOC_AD_SWTRG
+unique chan name: OPRT0207
+unique chan name: FAB_PPT_TRG
+unique chan name: ambient
+unique chan name: Cached Peers On DFS
+unique chan name: io_event_id_16
+unique chan name: 104 5g 20MHz n
+unique chan name:                            Log Calls
+unique chan name: OPRT0317
+unique chan name: aop_zero_frame_cnt_[stop]_17
+unique chan name: PCPU040
+unique chan name: EACC_CPU2
+unique chan name: Reset reports
+unique chan name: ap-aop_time_delta_abs_[hist]_7
+unique chan name: Tx HE Attempts 3
+unique chan name: ACL
+unique chan name: CTS2A Protection Success
+unique chan name: Tx expected throughput for given channel conditions (Mbps)
+unique chan name: PCPUDTL08
+unique chan name: IP timed out
+unique chan name: Grp5 Misses
+unique chan name: Antenna Requests
+unique chan name: AFR_PPT_TRG
+unique chan name: mtp.TOUCH_ALGS.AFE_CLICK_CONTROL_CB
+unique chan name: Set FSM
+unique chan name: PWR071
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 35
+unique chan name: Power Counter FSTP 37
+unique chan name: OPRT0216
+unique chan name: ap_io_host_time_[hist]_0
+unique chan name: Any Other Rx Errors
+unique chan name: PCPM_IDLE
+unique chan name: PCPU1DTL3e
+unique chan name: OPRT1209
+unique chan name: PCPU1DTL43
+unique chan name: AFNC1-WR-BWR
+unique chan name: aop_zero_host_time_[stop]_6
+unique chan name: RX packets
+unique chan name: Total Bytes Read
+unique chan name: Port 0 AER EP Unc Data Link Protocol Error
+unique chan name: Int Status Active                          Counter
+unique chan name: Scan Phy Mode Unknown
+unique chan name: DEV223
+unique chan name: curr_nits
+unique chan name: Port 1 Link Up Timeout                 
+unique chan name: mca2a.IRQ.TXA_Underflow
+unique chan name: Rx MPDU in SU AMPDU Usage 38
+unique chan name: num_reads
+unique chan name: PCPM1 v19 idle
+unique chan name: TKIP Counter Measures Invoked
+unique chan name: Channel CCA State   2
+unique chan name: Tx Assoc Response
+unique chan name: Rx MPDU in SU AMPDU Usage 58
+unique chan name: Grp22 Hits
+unique chan name: OPRT0004
+unique chan name: CLK060
+unique chan name: Link 2 states
+unique chan name: ECPUDTL30
+unique chan name: ISP0
+unique chan name: link 0 RC uncor(10)
+unique chan name: Station Count State
+unique chan name:  60 5g 20MHz n
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 26
+unique chan name: DSA Util Ant 1 (%)
+unique chan name: DISPEXT1 RD
+unique chan name: SCODEC1 WR
+unique chan name: PCPU1_PPT_HWTRG
+unique chan name: Codec Output.HiCapacitance
+unique chan name: Rx HE Success 0
+unique chan name: Rx SGI VHT Usage 1
+unique chan name: Power state
+unique chan name: Rx Control Frame other RA
+unique chan name:    Log Calls Dropped Console Filters
+unique chan name: OPRT0503
+unique chan name: power state
+unique chan name: PCPU1DTL011
+unique chan name: Channel CCA  36
+unique chan name: mtp.HSP_SPI.HIDSPI_SUSPENDED
+unique chan name: mtp.HSP_SPI.TRANSFER_INVALID_LEN
+unique chan name: Out-of-bounds start byte transfer
+unique chan name: aop_zero_host_time_[strt]_5
+unique chan name: Tg5a Sum Count
+unique chan name: Num Scan Rejected Scan Busy
+unique chan name: MicroAmps value
+unique chan name: DISP0
+unique chan name: Tx MPDU in AMPDU in 26 Tone RU
+unique chan name: Tx MCS Success 14
+unique chan name: PCPUDTL1f
+unique chan name: Tx MPDU in AMPDU 44
+unique chan name: Total packets
+unique chan name: Tg5a Latest
+unique chan name: AGX.Max_UT_Engagement_Perf_State_1
+unique chan name: DEV139
+unique chan name: Tag NAT Info
+unique chan name: succesfuly transmitted MSDU
+unique chan name: spu_io_time_raw_[stop]_0
+unique chan name: aop_zero_host_time_[stop]_1
+unique chan name: ap_io_host_time_[stop]_17
+unique chan name: Tx MCS Success 12
+unique chan name: Rx MPDU in SU AMPDU Usage 41
+unique chan name: Enabled
+unique chan name: mtp.KB_TRANSPORT.CR_GET_OUTPUT_FAILURE
+unique chan name: Input
+unique chan name: AGX.Count_UT_Engagement_Perf_State_8
+unique chan name: ActionFrame Rx Bytes
+unique chan name: DEV262
+unique chan name: PCPU0_EXT_TRG2
+unique chan name: OPRT1101
+unique chan name: SCODEC0 RD+WR
+unique chan name: PCPUDTL111
+unique chan name: Port 0 AER RC Cor REPLAY_NUM Rollover     
+unique chan name: PCIe LTR Active     Dur
+unique chan name: Core Dump Failure Count
+unique chan name: ap_wake_time_abs_5
+unique chan name: Infra duty cycle
+unique chan name: Rx MPDU in SU AMPDU Usage 27
+unique chan name: subframes(4)
+unique chan name: last update
+unique chan name: MPDU Tx
+unique chan name: link 1 EP corr(7)
+unique chan name: A2DP Buffer1 Ant Grant
+unique chan name: Rx MU-MIMO MCS Usage 15
+unique chan name: Max of Minimum UMA Allocation Size
+unique chan name: EVT233
+unique chan name: link 1 RC uncor(4)
+unique chan name: Port 0 Deep Sleep Exit                 
+unique chan name: mtp.TPM.FSM_DIAGNOSTIC_ENTERED
+unique chan name: mca1a.ERR.TxUnderflowAligned
+unique chan name: AGX.UT_Not_Engaged_Perf_State_2
+unique chan name: DPQ Barrier Out
+unique chan name: aop_zero_frame_cnt_[strt]_14
+unique chan name: Fender Idle Time
+unique chan name: Channel CCA State  21
+unique chan name: CLK012
+unique chan name: PCPU1DTL4f
+unique chan name: DEV049
+unique chan name: SOC_EXT_TRG0
+unique chan name: link 2 RC corr(2)
+unique chan name: ap_io_host_time_[stop]_12
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 18
+unique chan name: DELAY
+unique chan name: mtp.TOUCH.RESET_MEMDUMP_SEND
+unique chan name: ECPU010
+unique chan name: DEV068
+unique chan name: Rx MPDU in SU AMPDU Usage 54
+unique chan name: link 2 EP uncor(11)
+unique chan name: Report 18
+unique chan name: Scan Phy Mode 11TurboA
+unique chan name: Rx MCS Usage 3x2
+unique chan name: Tx MCS Success 13
+unique chan name: Tx MPDU in AMPDU 54
+unique chan name: Tg51a Sum Count
+unique chan name: DPB factor
+unique chan name: mtp.KB_TRANSPORT.ACCEL_IR
+unique chan name: GTP Idle
+unique chan name: ap-aop_time_delta_abs_[hist]_9
+unique chan name: ap_io_host_time_[stop]_7
+unique chan name: SOC-SWQ-OvfUnf Count
+unique chan name: ap_wake_time_abs_15
+unique chan name: ap_io_host_time_[strt]_18
+unique chan name: Tx cancelled because CS Req
+unique chan name: mtp.AFE_BOOTLOADER.SPI_CS_HOLD_TIME_KEY_SET_FAILURE
+unique chan name: Reassoc Failed
+unique chan name: Raid Read
+unique chan name: OPRT1305
+unique chan name: Scan Type High accuracy
+unique chan name: link 0 EP uncor(6)
+unique chan name: AVE0
+unique chan name: PCIe Port 1 Energy
+unique chan name: Port 1 AER EP Unc Data Link Protocol Error
+unique chan name: ISP Fast
+unique chan name: Assoc Scan Count 5G
+unique chan name: Interface Role State
+unique chan name: Assoc Done Failed
+unique chan name: Success - AWDL   - TS Requested
+unique chan name: Tx VHT Success 15
+unique chan name: MB Free
+unique chan name: PACC1_CPU4
+unique chan name: mtp.AFE_TRANSPORT.IR_ROUTE_DIRECT_FWD
+unique chan name: PWR054
+unique chan name: PCPM v11 idle
+unique chan name: ap_io_host_time_[stop]_14
+unique chan name: ECPM
+unique chan name: Sleep count
+unique chan name: Tx MPDU in AMPDU 16
+unique chan name: Expired
+unique chan name: Tx MPDU in AMPDU 14
+unique chan name: Expected Tx AMPDU density
+unique chan name: SOC-BLQ-RspUnf Count
+unique chan name: Rx RTS to MAC
+unique chan name: ORED_SPMI11_VWS
+unique chan name: Excessive Jitter
+unique chan name: ap-aop_time_delta_abs_[stop]_16
+unique chan name: Grp16 Hits
+unique chan name: Tx Time Expired
+unique chan name: Rx MPDU in AMPDU in 56 Tone RU
+unique chan name: link 0 EP corr(4)
+unique chan name: Self Infra Channel
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_10
+unique chan name: link 0 RC uncor(5)
+unique chan name: ER SU enable/disable req
+unique chan name: Rx QOS NULL
+unique chan name: Num Scan Rejected LL Supp in prog
+unique chan name: Channel CCA   1
+unique chan name: Shaders with only Min exceeding HW Max
+unique chan name: Throughput test result
+unique chan name: PCPUDTL32
+unique chan name: ap-aop_time_delta_abs_[drift]
+unique chan name: CLVR_EXT_PCPU0
+unique chan name: PCPU1_DTH_HWTRG
+unique chan name: mtp.TOUCH_ALGS.CLICK_CB
+unique chan name: PNO SSID  Scan Off Ch Dur 5G
+unique chan name: DISPINT WR
+unique chan name: mca2b.IRQ.DMA_B.TX_Fifo_Overflow
+unique chan name: Supplicant
+unique chan name: Actual Tx activity duration (ms)
+unique chan name: Tx VHT Success 0
+unique chan name: Tx VHT Attempts 14
+unique chan name: DEV366
+unique chan name: mtp.TPM.BB_FORCE_ONLY_ACTIVE_TIMEOUT
+unique chan name: Used stack(5)
+unique chan name:               Second Level Interrupt Handler Count
+unique chan name: ECPU_AD_SWTRG
+unique chan name: Port 1 Suspend LTSSM Off               
+unique chan name: Power Counter FSTP 13
+unique chan name: aop_zero_frame_cnt_[strt]_3
+unique chan name: com.apple.wifi.SCTxBlankingStats
+unique chan name: ap_io_host_time_[strt]_3
+unique chan name: Active Queue Time
+unique chan name: DEV326
+unique chan name: SCODEC0 RD
+unique chan name: com.apple.agx.ctxswitchlatency
+unique chan name: Rx overflow
+unique chan name: CLK015
+unique chan name: Grp19 Misses
+unique chan name: C1PPT_DTH_HWTRG
+unique chan name: Total stack(18)
+unique chan name: OPRT2204
+unique chan name: UL MU enable/disable request txed successfully
+unique chan name: link 0 RC corr(2)
+unique chan name: Report 4
+unique chan name: Rx VHT Usage 5x2
+unique chan name: AFR_PERF_4
+unique chan name: EACC
+unique chan name: AGX.Min_UT_Engagement_Perf_State_5
+unique chan name: AGX.Max_UT_Engagement_Perf_State_14
+unique chan name: aop_zero_frame_cnt_[strt]_4
+unique chan name: OPRT1304
+unique chan name: TXA On Duration
+unique chan name: VO Tx Packets
+unique chan name: Channel CCA 149
+unique chan name: Tx MPDU in AMPDU 3
+unique chan name:     Wrapper ARM Core    Slave  Read 
+unique chan name: Rx VHT Usage 11x1
+unique chan name: aop_zero_frame_cnt_[strt]_7
+unique chan name: Num Host Scan Req-Back to back low
+unique chan name: Rx OFDMA MCS Usage 8
+unique chan name: aop_zero_frame_cnt_[drift]
+unique chan name: OPRT0213
+unique chan name: mtp.HSP_SPI.HIDSPI_INTER_STAGE_US_KEY_SET_FAILURE
+unique chan name: Assoc Scan Off Ch Dur 5G
+unique chan name: Tag PHY Error
+unique chan name: Tx Failure
+unique chan name: DEV121
+unique chan name: Noise Floor Value
+unique chan name: mtp.HSP_SPI.HIDSPI_RESUMED
+unique chan name: Rx OFDMA MCS Usage 1
+unique chan name: ap_wake_time_abs_7
+unique chan name: ISP
+unique chan name: OPRT1300
+unique chan name: mtp.TPM.BB_ENTER_FORCE_ONLY_F3
+unique chan name: Rx OFDMA MCS Usage 12
+unique chan name: Channel CCA State   6
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 19
+unique chan name: Tx SGI VHT Usage 0
+unique chan name: mtp.HSP_SPI.HIDSPI_IDLE_TIMER_REARM_FAILURE
+unique chan name: Num Host Scan Requested
+unique chan name: IOA1 RD+WR
+unique chan name:                         Tx MPDU Tid2
+unique chan name: Tag PwrStats  Phy
+unique chan name: Channel CCA 132
+unique chan name: Packet Completion Path
+unique chan name: PACC1_CPU5
+unique chan name: UserClient Closed
+unique chan name: PWR005
+unique chan name: ForceOnly
+unique chan name: Tg17a Min
+unique chan name: link 3 EP corr(1)
+unique chan name: BusPr-CmdPrty-NoBOM Count
+unique chan name: PWR038
+unique chan name: PCPU0_ADCLK_TRG
+unique chan name: invalid_samples
+unique chan name: ISP Power
+unique chan name: Report 192
+unique chan name: Pkt Cnt
+unique chan name: Rx Management Frame other RA
+unique chan name: Scan Type None
+unique chan name: Number of Rx AMPDU with SGI
+unique chan name: Rx Trigger with My AID
+unique chan name: Rx data PER is too high
+unique chan name: Scan Type Passive
+unique chan name: DISP_EXT_VMAX
+unique chan name: Channel CCA  44
+unique chan name: CLK031
+unique chan name: AFNC2-RD-BWR
+unique chan name: Radio Rx Multicast Dur
+unique chan name: Link 1 states
+unique chan name: Off channel duration (ms)
+unique chan name: Rx OFDMA MCS Usage 0
+unique chan name: link 1 RC uncor(6)
+unique chan name: Session Duration
+unique chan name: Failure  - SoftAP - TS Requested
+unique chan name: AMPDU Rx Stuck errors
+unique chan name: MGPU3_DTH_HWTRG
+unique chan name: mtp.KB_TRANSPORT.STM_IR
+unique chan name: 141
+unique chan name: OPRT0909
+unique chan name: Interface Interference CCA State
+unique chan name: Channel CCA State  60
+unique chan name: DL MU-MIMO Resound recommendation change req
+unique chan name: PCPUDTL4f
+unique chan name: Memory Alloc Requests
+unique chan name: mtp.ACT_MGR.INIT_FAILURE_BB
+unique chan name: Rx HE Success 2
+unique chan name: PCPUDTL38
+unique chan name: MGPU2_EXT_TRG1
+unique chan name: ap_io_host_time_[stop]_0
+unique chan name: PCPUDTL33
+unique chan name: PWR014
+unique chan name: PCPUDTL42
+unique chan name: Channel CCA State   7
+unique chan name: Total stack(9)
+unique chan name: Time since last recovery
+unique chan name: OPRT0709
+unique chan name: PCPU0_PPT_HWTRG
+unique chan name: com.apple.xnu.vm_swapusage
+unique chan name: mca2b.IRQ.TXB_Underflow
+unique chan name: mtp.BLACK_BOX.BAD_EVENT_ID
+unique chan name: Queued Packets Waiting For Completion
+unique chan name: Escalated count
+unique chan name: CLK059
+unique chan name: PCPM1 v9
+unique chan name: OPRT2404
+unique chan name: Tg31a Min
+unique chan name: ESD Resets
+unique chan name: IOA6-AFNC-BW
+unique chan name: SCODEC0 WR
+unique chan name: mca1a.IRQ.TXA_Frame_Error
+unique chan name: OPRT0312
+unique chan name: PCPM v13 idle
+unique chan name: PCPM v18
+unique chan name: Multicast Rx Bytes
+unique chan name: mca0a.IRQ.TXA_Underflow
+unique chan name: OPRT0601
+unique chan name: mtp.DRAM.REGISTER_FAILURE
+unique chan name: aop_zero_frame_cnt_[strt]_5
+unique chan name: AFNC1-RD-BWR
+unique chan name: NoAck
+unique chan name: OPRT0509
+unique chan name: PWR004
+unique chan name: subframes(9)
+unique chan name: OPRT0409
+unique chan name: Tx VHT Usage 8x2
+unique chan name: Rx VHT Success 1
+unique chan name: link 3 RC corr(4)
+unique chan name: ap-aop_time_delta_abs_[hist]_10
+unique chan name: Tx MCS Success 7
+unique chan name: IOA3 RD+WR
+unique chan name: Port 0 AER RC Cor Bad DLLP                
+unique chan name: PWR065
+unique chan name: Tx SGI MCS Usage 12
+unique chan name: EVT215
+unique chan name: Tx VHT Attempts 16
+unique chan name: Int Status Doorbell                        Counter
+unique chan name: Rx MU-MIMO MCS Usage 6
+unique chan name: AGX.Max_UT_Engagement_Perf_State_13
+unique chan name: No user response
+unique chan name: Chip Buffer Unavailable  - STA    - TS NOT Requested
+unique chan name: Rx phy rate is below expectation
+unique chan name: Tx VHT Success 8
+unique chan name: Average Sum
+unique chan name: Rx MPDU in SU AMPDU Usage 37
+unique chan name: AGX.Max_UT_Engagement_Perf_State_5
+unique chan name: Rx HE Success 17
+unique chan name: Total stack(7)
+unique chan name: Tx MPDU in AMPDU 38
+unique chan name: HID reports
+unique chan name: Total stack(14)
+unique chan name: Dynamic SDB Exited - Rate Below Threashopd
+unique chan name: ap_wake_time_abs_16
+unique chan name: PSNULL exceeded
+unique chan name: Channel CCA  13
+unique chan name: Tx HE Attempts 22
+unique chan name: link 0 RC uncor(6)
+unique chan name: mtp.AFE_TRANSPORT.CR_INPUT_REPORT_IFACE_FAILURE
+unique chan name: Report 0
+unique chan name: Tx MPDU in AMPDU 51
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 60
+unique chan name: Rx VHT Success 19
+unique chan name: Tx VHT Attempts 7
+unique chan name: Grp4 Hits
+unique chan name: OPRT0305
+unique chan name: DEV105
+unique chan name: Total stack(3)
+unique chan name: ECPU_PPT_TRG
+unique chan name: GPU Power Zone Filter 3
+unique chan name: Underrun/Overrun
+unique chan name: Rx MPDU in SU AMPDU Usage 10
+unique chan name: ap_io_host_time_[hist]_14
+unique chan name: DISP_EXT_VNOM
+unique chan name: Grp12 Misses
+unique chan name: Tx MCS Success 6
+unique chan name: link 1 RC uncor(1)
+unique chan name: Data Path Stuck Notifications
+unique chan name: OPRT0210
+unique chan name: Delta TS: in before out
+unique chan name: Dequeue Throttled
+unique chan name: Tx retry count
+unique chan name: Bcn Offload Missed Beacon Count
+unique chan name: ap_io_host_time_[stop]_13
+unique chan name: SC Tx Blanking Count AC BT Tx Bin 2
+unique chan name: Active
+unique chan name: link 2 EP corr(6)
+unique chan name: mtp.TPM.BB_ANTICIPATE_TIMEOUT
+unique chan name: Rx HE Success 13
+unique chan name: PWR057
+unique chan name: PACC0_CPU1_SRAM
+unique chan name: GPU Idle Time
+unique chan name: ap_io_host_time_[strt]_14
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 23
+unique chan name: BusPr-AdrPrty Count
+unique chan name: Sensor0 Power
+unique chan name: link 2 RC uncor(8)
+unique chan name: Channel CCA State 136
+unique chan name: Rx MU-MIMO MCS Usage 17
+unique chan name: Report 11
+unique chan name: PACC1_CPU4_SRAM
+unique chan name: aop_zero_host_time_[stop]_17
+unique chan name: Used stack(20)
+unique chan name: Critical AWDL and Nan
+unique chan name: link 3 EP corr(2)
+unique chan name: Grp10 Hits
+unique chan name: No Resources - STA    - TS NOT Requested
+unique chan name: mtp.BOOT.FCAL_LOAD
+unique chan name: AGX.Count_UT_Engagement_Perf_State_4
+unique chan name: Num Host Scan Req-Low Prio
+unique chan name: mtp.TPM.BB_TOUCH_SUPERVISOR_ENABLE
+unique chan name: PCPUDTL12
+unique chan name: ap_wake_time_abs_9
+unique chan name: aop_eclipse
+unique chan name: Rx OFDMA MCS Usage 15
+unique chan name: PCPU1_EXT_TRG0
+unique chan name: Rx VHT Success 2
+unique chan name: Rx MU-MIMO MCS Usage 14
+unique chan name: Rx MPDU in SU AMPDU Usage 5
+unique chan name: OPRT0416
+unique chan name: Rx OFDMA MCS Usage 17
+unique chan name: aop_zero_host_time_[strt]_10
+unique chan name: Total stack(21)
+unique chan name: accel
+unique chan name: aop_host_time_[hist]_16
+unique chan name: Channel Width change request
+unique chan name: OPRT0308
+unique chan name: Scan Summary
+unique chan name: ChannelTimestampJitter
+unique chan name: DEV170
+unique chan name: No Resources - AWDL   - TS NOT Requested
+unique chan name: Tx HE Attempts 9
+unique chan name: Roam Scan Dur 2G
+unique chan name: FAB_AD_SWTRG
+unique chan name: com.apple.wifi.dsaSimpleStats.slice1
+unique chan name: Self Infra Channel Flags
+unique chan name: Rx SGI VHT Usage 12
+unique chan name: Packet Count
+unique chan name: mtp.AFE_PWR.ST_SET
+unique chan name: Rx OFDMA MCS Usage 14
+unique chan name: PCPM1 v16 idle
+unique chan name: Failure  - NAN    - TS Requested
+unique chan name: Port 0 Suspend Request                 
+unique chan name: spu_io_time_raw_[strt]_15
+unique chan name: BTUse(%)
+unique chan name: link 1 EP uncor(11)
+unique chan name: subframes(1)
+unique chan name: mtp.AFE_TRANSPORT.IR_ROUTE_SA
+unique chan name: DFS Proxy Mode Suspected DFS issue
+unique chan name:                         Rx LOST MPDU NonBA Tid2
+unique chan name:                         Rx LOST MPDU BA Tid7
+unique chan name: PCPU1DTL0f
+unique chan name: LQM RSSI State
+unique chan name: DCS_F4
+unique chan name: Tx dynamic Frgamented packets
+unique chan name: link 2 EP uncor(8)
+unique chan name: PACC1_CPM_SRAM
+unique chan name: aop_zero_frame_cnt_[stop]_6
+unique chan name: PCPUDTL0a
+unique chan name: Rx VHT Success 13
+unique chan name: ap-aop_time_delta_abs_[strt]_14
+unique chan name: Tx MCS Attempts 9
+unique chan name: Rx Bad DS
+unique chan name: NoBuff
+unique chan name: Tx SGI MCS Usage 5
+unique chan name: byte_cnt_[hist]_3
+unique chan name: PCPU1DTL313
+unique chan name: Port 0 Fatal Error Interrupt Error     
+unique chan name: Multicast Tx Bytes
+unique chan name: Rx MU PPDU
+unique chan name: PACC0_CPM_SRAM
+unique chan name: mtp.DOCK.DEV_INIT_FAILURE
+unique chan name: Rx SGI MCS Usage 0
+unique chan name: ap-aop_time_delta_abs_[stop]_12
+unique chan name:                         Rx MPDU Tid5
+unique chan name: bl_frame_count
+unique chan name: mca0a.IRQ.RXA_Frame_Error
+unique chan name: PCPM1 v6 idle
+unique chan name: mtp.AFE_PWR.RESET_ALGS
+unique chan name: Rx RF Disabled
+unique chan name: Symptoms trigger
+unique chan name: PCPU1DTL35
+unique chan name: Rx MPDU in SU AMPDU Usage 56
+unique chan name: Rx AMPDU duplicates are too high
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 8
+unique chan name: DFS Proxy Mode CSA Rx from AP
+unique chan name: io_event_id_14
+unique chan name: com.apple.appleBiometricSensor.powerMonitor.highCurrentUpdate
+unique chan name: link 1 RC corr(4)
+unique chan name: StateErrorCount
+unique chan name: Power Counter FSTP 23
+unique chan name: Report 211
+unique chan name: mtp.HSP_SPI.OUTPUT_REPORT_FAILURE
+unique chan name: ForceLifetimeExpired Completions
+unique chan name: PCPM v19
+unique chan name: DEV022
+unique chan name: PCPUDTL28
+unique chan name: OPRT2203
+unique chan name: Tx MPDU in AMPDU 58
+unique chan name: link 0 RC corr(3)
+unique chan name: DEV311
+unique chan name: FAB_DITHR_TRG
+unique chan name: PCPUDTL410
+unique chan name: ap_io_host_time_[stop]_9
+unique chan name: Report 7
+unique chan name: Anticip
+unique chan name: Data Transfer Rate
+unique chan name: Interface Open State
+unique chan name: Rx SGI MCS Usage 12
+unique chan name: ECPUDTL01
+unique chan name: Assoc Success
+unique chan name: Tg19a Max
+unique chan name:                Log Calls [Emergency]
+unique chan name: DISPEXT0 RD
+unique chan name: CLK005
+unique chan name: CDM Single
+unique chan name: Tx RU size 484
+unique chan name: frm_tim_sum_us
+unique chan name: Interface IBSS CCA
+unique chan name: Tx VHT Attempts 10
+unique chan name: OPRT0611
+unique chan name: link 3 EP uncor(6)
+unique chan name: PCPUDTL23
+unique chan name: OPRT0910
+unique chan name: Rx HE Success 8
+unique chan name: ECPM v3
+unique chan name: DEV067
+unique chan name: aop_zero_frame_cnt_[strt]_1
+unique chan name: Rx RU size 106
+unique chan name: Channel CCA 100
+unique chan name: Rx MPDU in SU AMPDU Usage 35
+unique chan name: AGX.Count_UT_Engagement_Perf_State_3
+unique chan name: Tx HE Success 21
+unique chan name: Rx MCS Usage 4x2
+unique chan name: AP Tx low PHY rate issue
+unique chan name: Unsupported Trigger Rate
+unique chan name: Grp15 Misses
+unique chan name: PCPUDTL110
+unique chan name: MGPU2_PPT_HWTRG
+unique chan name: AGX.Min_UT_Engagement_Perf_State_6
+unique chan name: PCPM1 v8 idle
+unique chan name: Rx NSS change request
+unique chan name: aop_zero_frame_cnt_[strt]_2
+unique chan name: io_event_id_15
+unique chan name: OFDM Desense Value
+unique chan name: SOC_PPT_HWTRG
+unique chan name: State
+unique chan name: PWR051
+unique chan name: mtp.AFE_PWR.ST_SET_ON
+unique chan name: mtp.AFE_BOOTLOADER.START_FAILURE
+unique chan name: PACC1
+unique chan name: Grp18 Misses
+unique chan name: Avg of Ideal UMA Allocation Size
+unique chan name: PCPM1 v10
+unique chan name: Rx MPDU in SU AMPDU Usage 15
+unique chan name: ECPU_EXT_TRG0
+unique chan name: Port 1 Enable Request                  
+unique chan name: ap-aop_time_delta_abs_[strt]_9
+unique chan name: Port 1 AER RC Cor Corrected Internal Error
+unique chan name: subframes(0)
+unique chan name: Is FG traffic
+unique chan name: SOC_THRTL_TRG0
+unique chan name: AGX.Max_UT_Engagement_Perf_State_0
+unique chan name: Rx Trigger with HTP ACK Policy
+unique chan name: Dissasoc Received
+unique chan name: Port 0 AER RC Unc Receiver Overflow       
+unique chan name: Last scan reason
+unique chan name: Tx Timer Expiration
+unique chan name: spu_unknown
+unique chan name: Rx HE Success 6
+unique chan name: Rx VHT Usage 4x2
+unique chan name: link 1 EP uncor(7)
+unique chan name: 36223
+unique chan name: PCPM v8
+unique chan name: Tx VHT Usage 3x2
+unique chan name: Other Scan Off Ch Dur 5G
+unique chan name: PNO Scan Off Ch Dur
+unique chan name: PCPM1 v20
+unique chan name: Tx Data Runt
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_1
+unique chan name: Rx MPDU in SU AMPDU Usage 34
+unique chan name: Report 82
+unique chan name: PCPU0_PPT_SWTRG
+unique chan name: Inquiry
+unique chan name: MGPU2_EXT_TRG3
+unique chan name: spu_io_time_raw_[strt]_18
+unique chan name: CLK035
+unique chan name: DEV062
+unique chan name:     Wrapper Dot11 MAC   Master Read 
+unique chan name: PACC0_CPU3
+unique chan name: DataQueue Enqueue Errors
+unique chan name:   6 2g 20MHz n
+unique chan name: EVT022
+unique chan name: DEV154
+unique chan name: ap-aop_time_delta_abs_[strt]_1
+unique chan name: AGX.Max_UT_Engagement_Perf_State_2
+unique chan name: DFS Proxy Mode AirPlay Connected
+unique chan name: MGPU1_AD_HWTRG
+unique chan name: WEP undecryptable
+unique chan name: Number SAC Action2 ChargePump
+unique chan name: GPU_SW
+unique chan name: Raid Write
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 14
+unique chan name:    Log Messages Dropped Short Of Buffer
+unique chan name: Tx SGI MCS Usage 4
+unique chan name: mtp.TPM.BB_FORCED_DIAGNOSTIC_ACTIVE
+unique chan name: apciec2 Link States
+unique chan name: Rx MPDU in SU AMPDU Usage 4
+unique chan name: DEV313
+unique chan name: PCPU1DTL39
+unique chan name: Tx VHT Success 5
+unique chan name: Number Power Downs
+unique chan name: DSA TxDC Throttle Mode Duration (ms)
+unique chan name: Power Counter FSTP 14
+unique chan name: ap_io_host_time_[stop]_18
+unique chan name: PCPUDTL36
+unique chan name: AGX-AF-BW
+unique chan name: Rx RU size 2x996
+unique chan name: BUSY
+unique chan name: mtp.KB_TRANSPORT.CR_GET
+unique chan name: ER SU enable/disable req txed successfully
+unique chan name: Channel CCA State   5
+unique chan name: Report 6
+unique chan name: Channel CCA 124
+unique chan name: Port 0 AER RC Cor Retry Timer Timeout     
+unique chan name: Request EQ Sync Path
+unique chan name: API dropped and freed
+unique chan name: aop_zero_frame_cnt_[stop]_4
+unique chan name: Ant Grant LT 30ms
+unique chan name: ap_io_host_time_[stop]_4
+unique chan name: Roam Scan Off Ch Dur 2G
+unique chan name: AGX.Min_UT_Engagement_Perf_State_9
+unique chan name: Port 1 AER RC Unc ECRC Error              
+unique chan name: Port 1 Suspend Hardware Off            
+unique chan name: link 0 RC uncor(2)
+unique chan name: Tx MCS Success 11
+unique chan name: Rx VHT Usage 0x1
+unique chan name: Rx VHT Success 9
+unique chan name: Antenna Ownership while on 2GHz
+unique chan name: com.apple.tle.constraints.usage
+unique chan name: Tx MPDU in AMPDU 19
+unique chan name: spu_io_time_raw_[hist]_10
+unique chan name: DEV047
+unique chan name: AGX.Min_UT_Engagement_Perf_State_13
+unique chan name: OPRT2402
+unique chan name: Tx VHT Usage 9x2
+unique chan name: Rx VHT Usage 9x1
+unique chan name: OPRT0001
+unique chan name: PCPUDTL29
+unique chan name: aop_zero_host_time_[strt]_13
+unique chan name: Negative Input DMA Margin
+unique chan name: link 3 RC corr(1)
+unique chan name: DEV340
+unique chan name: AGX.Count_UT_Engagement_Perf_State_13
+unique chan name: Rx MU-MIMO MCS Usage 20
+unique chan name: DEV135
+unique chan name: aop_host_time_[hist]_0
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_6
+unique chan name: Misc
+unique chan name: AGX-DCS-BW
+unique chan name: Channel CCA State  69
+unique chan name: OPRT0809
+unique chan name: THROT-ALL-SUM
+unique chan name: Success
+unique chan name: mtp.KB_TRANSPORT.DEVICE_DETACHED
+unique chan name: Port 1 Disable LTSSM Off               
+unique chan name: Tx Null TBPPDU
+unique chan name: Tx SGI MCS Usage 11
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_15
+unique chan name: Link 0 states
+unique chan name: Port 0 AER RC Unc Flow Ctrl Protocol Error
+unique chan name: AMPDU Rx Out-of-Window errors
+unique chan name: link 0 EP uncor(1)
+unique chan name: 189
+unique chan name: DEV071
+unique chan name: EACC_CPU1
+unique chan name: PCPUDTL4a
+unique chan name: IOA1 RD
+unique chan name: aop_zero_host_time_[stop]_13
+unique chan name: IOA3 RD
+unique chan name: mtp.KB_TRANSPORT.CR_GET_OUTPUT
+unique chan name: Idled SPI Errors
+unique chan name: Roam Scan Off Ch Dur
+unique chan name: Throttled count
+unique chan name: Tx VHT Success 3
+unique chan name: Grp0 Hits
+unique chan name: Rx Trigger BQRP
+unique chan name: mca2b.ERR.TxUnderflowAligned
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 15
+unique chan name: Packet errors
+unique chan name: ap_io_host_time_[hist]_19
+unique chan name: ECPU_DITHR_TRG
+unique chan name: mtp.HSP_SPI.SPI_CS_HOLD_TIME_KEY_SET_FAILURE
+unique chan name: Rx Frame Too Short
+unique chan name: Rx MPDU in SU AMPDU Usage 45
+unique chan name: A2DP Buffer2 Ant Grant
+unique chan name: SCODEC1 RD
+unique chan name: com.apple.AppleCredentialManager.TransportRestrictedMode
+unique chan name: PHY Active Count
+unique chan name: ap-aop_time_delta_abs_[strt]_18
+unique chan name: PCPU0_PPT_TRG
+unique chan name: IOA2 RD+WR
+unique chan name: Used stack(6)
+unique chan name: Interface Data Transfer Histogram
+unique chan name: Tier1 BW Scale Factor
+unique chan name: DEV328
+unique chan name: Tg32a Max
+unique chan name: PCPUDTL013
+unique chan name: Shaders with both Min and Ideal exceeding HW Max
+unique chan name: aop_zero_host_time_[stop]_11
+unique chan name: PCPU1DTL211
+unique chan name: OPRT1005
+unique chan name: ap_io_host_time_[strt]_4
+unique chan name: ap-aop_time_delta_abs_[stop]_14
+unique chan name: Tx Duty Cycle
+unique chan name:  53 6g 20MHz n
+unique chan name: SYS_SLP_S2R
+unique chan name: com.apple.wifi.slicesScanStats
+unique chan name: Port 0 AER RC Unc Atomic OP Egress Blocked
+unique chan name: DEV065
+unique chan name: Segment Size
+unique chan name: Chip Buffer Unavailable  - SoftAP - TS NOT Requested
+unique chan name: com.apple.wifi.SystemSleepStates
+unique chan name: Port 0 AER EP Unc Completion Timeout      
+unique chan name: GPU Restart Count
+unique chan name: Rx retries are too high
+unique chan name: ap_io_host_time_[stop]_19
+unique chan name: PCPU1DTL44
+unique chan name: Total stack(16)
+unique chan name: Other Scan Off Ch Dur - since LinkUp
+unique chan name: PCPUDTL26
+unique chan name: Commander Reset
+unique chan name: DEV119
+unique chan name: DSA Update (#)
+unique chan name: OPRT0303
+unique chan name: DSA Hybrid Mode Duration (ms)
+unique chan name: Radio Rx Multicast Pkts
+unique chan name: OPRT0505
+unique chan name: PCPUDTL16
+unique chan name: EQ Action
+unique chan name: apciec2 Energy
+unique chan name: aop_zero_host_time_[strt]_2
+unique chan name: ORED_SPMI20_VWS
+unique chan name: PCIe PERST Assert   Count
+unique chan name: Tg44a Sum
+unique chan name: #Mem Trans
+unique chan name: Free heap
+unique chan name: aop_juliet_unplug_detected
+unique chan name: Accumulated duration of OMI completion time(ms)
+unique chan name: Tg33a Latest
+unique chan name: OPRT0400
+unique chan name: link 3 RC corr(0)
+unique chan name: CLK039
+unique chan name: PCPUDTL411
+unique chan name: PCPU1_EXT_TRG2
+unique chan name: duration_exp
+unique chan name: EVT253
+unique chan name: mtp.DRAM.ASSIGN_VM_FAILURE
+unique chan name: spu_io_time_raw_[strt]_0
+unique chan name: Roam Scan End
+unique chan name: AXI Read/Write Error
+unique chan name: mtp.TOUCH.INPUT_REPORT_SEND
+unique chan name: PCIe DeepSleep      Dur
+unique chan name: PCPM v7
+unique chan name: PCPU1DTL1c
+unique chan name: mtp.HSP_SPI.ACK_RECEIVED
+unique chan name: Rx MU-MIMO MCS Usage 5
+unique chan name: Tg3a Min
+unique chan name: SOC-WrDis-Rset Count
+unique chan name: Fer1s
+unique chan name: com.apple.amfi.tle_violation.v2
+unique chan name: EACC_CPU
+unique chan name: link 1 RC uncor(9)
+unique chan name: link 1 EP corr(3)
+unique chan name: spu_io_time_raw_[hist]_19
+unique chan name: Last SubReason
+unique chan name: link 2 RC uncor(2)
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 9
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 15
+unique chan name: Dequeue Errors
+unique chan name: 153 5g 20MHz n
+unique chan name: aop_zero_host_time_[stop]_3
+unique chan name: spu_io_time_raw_[hist]_12
+unique chan name: PCPUDTL313
+unique chan name: EVT030
+unique chan name: Tx HE Attempts 23
+unique chan name:                         Rx MPDU Tid2
+unique chan name: apl_count
+unique chan name: OPRT1100
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_5
+unique chan name: Tx MCS Attempts 10
+unique chan name: PWR002
+unique chan name: ap-aop_time_delta_abs_[hist]_11
+unique chan name: Rx SGI VHT Usage 4
+unique chan name: Tg1a Max
+unique chan name: aop_zero_host_time_[stop]_19
+unique chan name: Avg Rx Phy Rate (Mbps)
+unique chan name: Rx VHT Usage 7x1
+unique chan name: ap_wake_time_abs_12
+unique chan name: Rx MPDU in SU AMPDU Usage 28
+unique chan name: Missing Rx sequence numbers
+unique chan name: Channel CCA State  52
+unique chan name: ECPU_DTH_HWTRG
+unique chan name: IOA5-AFNC-BW
+unique chan name: Dropped Set Error
+unique chan name: Duplicate Sequence Control Rx
+unique chan name: Rx overflows are too high
+unique chan name: DEV048
+unique chan name: DEV056
+unique chan name: ap_io_host_time_[hist]_18
+unique chan name: Chip Buffer Unavailable  - SoftAP - TS Requested
+unique chan name: Rx HE Success 7
+unique chan name: Rx VHT Success 15
+unique chan name: C1PPT_DTH_SWTRG
+unique chan name: Queue Full Count
+unique chan name: Rx MPDU in SU AMPDU Usage 18
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 2
+unique chan name: PCPUDTL37
+unique chan name:                         Rx LOST MPDU NonBA Tid5
+unique chan name: ap-aop_time_delta_abs_[strt]_3
+unique chan name: OPRT1203
+unique chan name: Mode Tx AMPDU Density
+unique chan name: Available duration for WLAN Rx activity (ms)
+unique chan name:                         Tx MPDU Tid6
+unique chan name: Realtime Group Peer Count State
+unique chan name: No Resources - AWDL   - TS Requested
+unique chan name: PCPM1
+unique chan name: SC Tx Blanking Upper Bound Bin 4
+unique chan name: OPRT0404
+unique chan name: NoResources
+unique chan name: T2H IO Commands
+unique chan name: first_drift_io_event_id
+unique chan name: link 1 RC uncor(11)
+unique chan name: PCPUDTL21
+unique chan name: SOC_EXT_TRG3
+unique chan name: spu_touch
+unique chan name: OPRT1110
+unique chan name: link 2 RC uncor(7)
+unique chan name: OPRT0315
+unique chan name: Grp15 Hits
+unique chan name: aop_zero_frame_cnt_[strt]_11
+unique chan name: mca0a.IRQ.DMA_A.RX_Fifo_Underflow
+unique chan name: PCPUDTL310
+unique chan name: ECPU020
+unique chan name: mtp.TOUCH_ALGS.TOUCH_CAL_BLOB_INVALID
+unique chan name: PWR063
+unique chan name: Report 224
+unique chan name: DEV204
+unique chan name: STRESS-3
+unique chan name: ECPM v6
+unique chan name: link 1 EP corr(2)
+unique chan name: DEV338
+unique chan name: mtp.HSP_SPI.TRANSFER_RETRY
+unique chan name: Power Counter FSTP 19
+unique chan name: Throttle Counter DPE  
+unique chan name: Number of RTS received
+unique chan name: Total Failed Completions
+unique chan name: Session Tx Bytes
+unique chan name: OPRT0310
+unique chan name: link 3 RC uncor(3)
+unique chan name: Tag PHY Periodic Sec
+unique chan name: link 1 RC uncor(5)
+unique chan name: com.apple.wifi.hostScanStats
+unique chan name: Tx SGI VHT Usage 2
+unique chan name: Grp8 Hits
+unique chan name: MGPU3_EXT_TRG3
+unique chan name: Tx HE Success 8
+unique chan name: link 1 RC uncor(7)
+unique chan name: AGX.UT_Not_Engaged_Perf_State_5
+unique chan name: Port 1 Unexpected Link Down            
+unique chan name: DEV331
+unique chan name: com.apple.wifi.BootCheckPoint
+unique chan name: mtp.HSP_SPI.TRANSFER_SENT
+unique chan name: Avg of Minimum UMA Allocation Size
+unique chan name: PACC1_CPU1
+unique chan name: Cached Peers Count
+unique chan name: PCPU1DTL2c
+unique chan name: Port 1 PMETO Timeout                   
+unique chan name: PCPM1 v20 idle
+unique chan name: Total stack(19)
+unique chan name: OPRT0712
+unique chan name: OPRT0905
+unique chan name: aop_zero_frame_cnt_[stop]_7
+unique chan name: spu_io_time_raw_[stop]_14
+unique chan name: Rx MPDU in SU AMPDU Usage 40
+unique chan name: Tg35a Latest
+unique chan name: Assoc Scan Dur 5G
+unique chan name: A2DP Buffer4 Ant Grant
+unique chan name:  37 6g 20MHz n
+unique chan name: Rx Bad FCS
+unique chan name: DEV155
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 58
+unique chan name:                Log Calls      [Crit]
+unique chan name: Tx MCS Attempts 15
+unique chan name: Serialized Messages
+unique chan name: mtp.KB_TRANSPORT.INIT_FAILURE
+unique chan name: Tx MCS Attempts 4
+unique chan name: OPRT0603
+unique chan name: Commands Issued
+unique chan name: Other Scan Dur - since LinkUp
+unique chan name: DEV206
+unique chan name: aop_zero_frame_cnt_[stop]_16
+unique chan name: User Scan Count 5G
+unique chan name: Channel CCA State 149
+unique chan name: AFI-LIMIT1-BWR
+unique chan name: OPRT1001
+unique chan name: CLK053
+unique chan name: link 0 EP corr(5)
+unique chan name: PCPUDTL41
+unique chan name: Num Scan Rejected Low Priority
+unique chan name: DEV241
+unique chan name: PWR044
+unique chan name: Set 14 PHY Preserve
+unique chan name: Used stack(9)
+unique chan name: VI Tx Bytes
+unique chan name: C1PPT_ADCLK_TRG
+unique chan name: IOA0 WR
+unique chan name: mtp.Z2SPI.CR_GET_RETRY
+unique chan name: Rx MU-MIMO MCS Usage 21
+unique chan name:                        Capture Requests
+unique chan name: ap-aop_time_delta_abs_[stop]_2
+unique chan name: Request EQ Async Path
+unique chan name:     Wrapper USB 2.0     Slave  Read 
+unique chan name: DEV259
+unique chan name: io_event_id_1
+unique chan name: mtp.Z2SPI.ERR_RESULT_LENGTH_MISMATCH
+unique chan name: Rx pkts buffered before host sendup
+unique chan name: UL MU enable/disable change request
+unique chan name: Num Host Scan Completed
+unique chan name: byte_cnt_[hist]_16
+unique chan name: Power Counter FSTP 35
+unique chan name: link 3 EP uncor(3)
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 43
+unique chan name: Tx QOS NULL
+unique chan name: Tx Power Backoff (1/4dBm)
+unique chan name: mtp.HSP_SPI.SPI_CS_SETUP_INTL_TIME_KEY_SET_FAILURE
+unique chan name: aop_zero_host_time_[stop]_4
+unique chan name: Channel CCA State  56
+unique chan name: PWR067
+unique chan name: link 1 EP uncor(4)
+unique chan name: Channel CCA State  10
+unique chan name: mtp.TPM.BB_AFE_ACTIVE_NOTIFY
+unique chan name: Host Time
+unique chan name: unicast acknowledged MPDU
+unique chan name: CLK021
+unique chan name: Rx Probe Request
+unique chan name: Tx VHT Usage 11x2
+unique chan name: OPRT0204
+unique chan name: mtp.ACT_MGR.AFE_HOST_PENDING_TARGET_TRANSITION_BB
+unique chan name: Tx MPDU in AMPDU 62
+unique chan name: CLK047
+unique chan name: mtp.AFE_BOOTLOADER.MEMORY_FREE_SEND
+unique chan name: Interface Avgerage CCA
+unique chan name: mtp.AFE_TRANSPORT.CR_SET_FAILURE
+unique chan name: CLK025
+unique chan name: AFR_VMIN
+unique chan name: Path Off LO Requests
+unique chan name: 97
+unique chan name: PCIe LTR Sleep      Count
+unique chan name: OPRT0609
+unique chan name: link 0 EP corr(6)
+unique chan name: Tg3a Sum Count
+unique chan name: DEV183
+unique chan name: Used stack(31)
+unique chan name: PCPU1DTL04
+unique chan name: Rx ACK to MAC
+unique chan name: Rx MPDU in SU AMPDU Usage 39
+unique chan name: SC Tx Blanking Count MC Tx Bin 2
+unique chan name: apciec0 Link States
+unique chan name: aop_zero_frame_cnt_[stop]_1
+unique chan name: DEV058
+unique chan name: OPRT2602
+unique chan name:                         Rx LOST MPDU BA Tid6
+unique chan name: AGX.UT_Not_Engaged_Perf_State_3
+unique chan name: ap-aop_time_delta_abs_[stop]_1
+unique chan name: ap-aop_time_delta_abs_[strt]_11
+unique chan name: Rx retry count
+unique chan name: Tx SGI MCS Usage 1
+unique chan name: DRAM Stall
+unique chan name: Is 2G band
+unique chan name: OPRT1111
+unique chan name: Tx HE Success 16
+unique chan name: Num Host Scan Req-Back to back high
+unique chan name: Tx RU size 242
+unique chan name: Assoc Scan Off Ch Dur - since LinkUp
+unique chan name: com.apple.wifi.bcnMuteMitiStats
+unique chan name: spu_rtp_optical
+unique chan name: CLK042
+unique chan name: PCPUDTL3b
+unique chan name: AFNC7-RD-BWR
+unique chan name: ap-aop_time_delta_abs_[strt]_13
+unique chan name: aop_zero_frame_cnt_[stop]_14
+unique chan name: DEV173
+unique chan name: link 1 EP uncor(0)
+unique chan name: com.apple.xnu.stackshot_entitlement_report
+unique chan name: Rx AMPDU duplicate errors
+unique chan name: Max of Ideal UMA Allocation Size
+unique chan name: ap_io_host_time_[stop]_11
+unique chan name: DSA Power Boost (dB)
+unique chan name: Used stack(7)
+unique chan name: Enqueued Packets Since Last Successful Completion
+unique chan name: Dropped Set 21 Power Set 1
+unique chan name: Used stack(15)
+unique chan name: PCPUDTL012
+unique chan name: PCPM1 v21 idle
+unique chan name: io_event_id_17
+unique chan name: Scan Mode Any
+unique chan name: ap_wake_time_abs_14
+unique chan name: PNO BSSID Scan Count 2G
+unique chan name: PWR047
+unique chan name: No user input
+unique chan name: PNO SSID  Scan Off Ch Dur 2G
+unique chan name: mca2a.IRQ.TXA_Frame_Error
+unique chan name: PACC0_CPU2_SRAM
+unique chan name: MaxRetries
+unique chan name: ECPM v4 idle
+unique chan name: Rx HE Success 16
+unique chan name: Other Scan Count 2G
+unique chan name:     Core    (null)Read 
+unique chan name: GPU Discrete Power Zone Engaged
+unique chan name: PWR015
+unique chan name: Port 1 AER EP Cor Retry Timer Timeout     
+unique chan name: Scan Flag Low Priority
+unique chan name: PCPU1DTL23
+unique chan name: PCPUDTL1d
+unique chan name: CLVR_EXT_PWRS
+unique chan name: link 0 EP uncor(4)
+unique chan name: Rx HE Success 14
+unique chan name: Rx MPDU in SU AMPDU Usage 1
+unique chan name: Tg60a Sum
+unique chan name: aop_zero_host_time_[strt]_0
+unique chan name: PCPM1 v14 idle
+unique chan name: API accepted
+unique chan name: Tx HE Attempts 7
+unique chan name: PCPU1DTL2f
+unique chan name: Port 1 AER RC Unc TLP Prefix Blocked Error
+unique chan name: link 2 RC uncor(5)
+unique chan name: Tg37a Sum
+unique chan name: Avg Tx Phy Rate (Mbps)
+unique chan name: Gyro reports
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 8
+unique chan name: Tx SGI VHT Usage 9
+unique chan name: Report 5
+unique chan name: ECPM v4
+unique chan name: Rx MPDU in SU AMPDU Usage 20
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 32
+unique chan name: subframes(5)
+unique chan name: Tg19a Latest
+unique chan name: DEV095
+unique chan name: No Resources - NAN    - TS Requested
+unique chan name: PNO BSSID Scan Dur 5G
+unique chan name: PCPUDTL2c
+unique chan name: LanesEng
+unique chan name: aop_zero_frame_cnt_[strt]_16
+unique chan name: PCPU1DTL36
+unique chan name: OPRT1106
+unique chan name: Total number of OMIs scheduled
+unique chan name: link 3 EP uncor(2)
+unique chan name: link 3 EP uncor(9)
+unique chan name: Tx output throughput is below expected throughput
+unique chan name: Tg44a Latest
+unique chan name: 224
+unique chan name: Captured Images
+unique chan name: com.apple.trustedaccessory.dailyUpdate
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 6
+unique chan name: Rx VHT Success 8
+unique chan name: Tx TBPPDU
+unique chan name: DEV037
+unique chan name: PCPUDTL213
+unique chan name: C1PPT_EXT_TRG1
+unique chan name: Power Counter FSTP 39
+unique chan name: GPU UT Engagement centi-%
+unique chan name: Duration Since Last Enqueue At Last Check
+unique chan name: Rx good PLCP count
+unique chan name: PWR053
+unique chan name: Rx SGI VHT Usage 15
+unique chan name: OPRT0311
+unique chan name: Used stack(14)
+unique chan name: Tg35a Max
+unique chan name: Tx Short Preamble Frames
+unique chan name: DCS_F2
+unique chan name: PCPUDTL47
+unique chan name: ap-aop_time_delta_abs_[hist]_3
+unique chan name: WLAN Tx Preemption
+unique chan name: Tx HE Success 19
+unique chan name: Port 0 AER RC Cor Receiver Error          
+unique chan name: Port 0 AER RC Cor Corrected Internal Error
+unique chan name: AGX.Count_UT_Engagement_Perf_State_14
+unique chan name: Rx VHT Usage 1x1
+unique chan name: mca2a.ERR.TxUnderflowOnStart
+unique chan name: Tg3a Sum
+unique chan name: User Scan Cnt - since LinkUp
+unique chan name: PCPM v12 idle
+unique chan name: IOA2-AFNC-BW
+unique chan name: Tg19a Sum
+unique chan name: DEV066
+unique chan name: link 0 EP corr(0)
+unique chan name: Tx MCS Attempts 14
+unique chan name: AFI-LIMIT3-BWR
+unique chan name: Rx Management Frame matching RA
+unique chan name: CLK051
+unique chan name: mtp.TPM.FSM_FORCE_ONLY_ENTERED
+unique chan name: Duration Queued For Processing
+unique chan name: EVT021
+unique chan name: TXA Priority Taken
+unique chan name: spu_io_time_raw_[hist]_0
+unique chan name: ap-aop_time_delta_abs_[stop]_6
+unique chan name: ap_io_host_time_[hist]_6
+unique chan name: Rx MPDU in SU AMPDU Usage 64
+unique chan name: Tx VHT Attempts 3
+unique chan name: Rx MU-MIMO MCS Usage 3
+unique chan name: Non Doorbell Path Early Return
+unique chan name: CLVR_EXT_AFR
+unique chan name: PCPU1DTL08
+unique chan name: MGPU2_DTH_HWTRG
+unique chan name: PACC1_CPU3
+unique chan name: Rx Out Of Buffers
+unique chan name: PCPU0_EXT_TRG1
+unique chan name: BT antenna shared duration (ms)
+unique chan name: Tx Multi TID AMPDU
+unique chan name: Rx OFDMA MCS Usage 10
+unique chan name: Port 0 AER EP Unc ECRC Error              
+unique chan name: Tg21a Max
+unique chan name: PCPU1DTL38
+unique chan name: spu_READY
+unique chan name: Rx MCS Success 4
+unique chan name: Tx Block Ack Request
+unique chan name:                Log Calls     [Debug]
+unique chan name: DSA Fail Safe Mode Duration (ms)
+unique chan name: link 0 RC uncor(1)
+unique chan name: mca1a.IRQ.RXA_Overflow
+unique chan name: DEV250
+unique chan name: Rx MCS Success 6
+unique chan name:         First Level Interrupt Handler Time (MATUs)
+unique chan name: PCPUDTL19
+unique chan name: PCPU1DTL27
+unique chan name: Critical Beacon Loss
+unique chan name: link 2 EP uncor(2)
+unique chan name: Set 10 Bus Preserve
+unique chan name: PCPU1DTL20
+unique chan name: EACC_CPU0_SRAM
+unique chan name: OPRT0807
+unique chan name: PCIe Completions Count
+unique chan name: Tx MCS Success 10
+unique chan name: Tx MCS Usage 6x1
+unique chan name: AMCC RD+WR
+unique chan name: Tx SGI VHT Usage 3
+unique chan name: FAB_EXT_TRG0
+unique chan name: Completion Latency Bk
+unique chan name: PCPU1DTL3f
+unique chan name: Non Doorbell Path
+unique chan name:                         Tx MPDU Tid1
+unique chan name: Channel CCA  11
+unique chan name: spu_opal_reset
+unique chan name: Tag Scan Trace High
+unique chan name: Tag ADPS
+unique chan name: PWR060
+unique chan name: Success - STA    - TS NOT Requested
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 19
+unique chan name: EVT029
+unique chan name: Scan Phy Mode 11A
+unique chan name: spu_io_time_raw_[stop]_3
+unique chan name: OPRT1011
+unique chan name: mtp.TOUCH_ALGS.AFE_POWER_STATE_CB
+unique chan name: Tg44a Sum Count
+unique chan name: Sync Pending Queue Time
+unique chan name: Set 12 WL Slotted BSS
+unique chan name: Deauthed
+unique chan name: Tx VHT Success 18
+unique chan name: Total stack(15)
+unique chan name: subframes(6)
+unique chan name: Scan While Roam Cnt
+unique chan name: mtp.TPM.FSM_RUN_STATE_CHANGE
+unique chan name: Ant Grant LT 60ms
+unique chan name: Port 0 AER EP Unc TLP Prefix Blocked Error
+unique chan name: Delta TS: out before in
+unique chan name: spu_rtp_ctrl
+unique chan name: mtp.TPM.FSM_TOUCH_SUPERVISOR_ENABLE
+unique chan name: Channel CCA State  53
+unique chan name: Tx MPDU in AMPDU 60
+unique chan name: Bcn Offload Reject Count
+unique chan name: PCIe Tx Completions Count
+unique chan name: OPRT0307
+unique chan name: CTL Tx Packets
+unique chan name: mca0a.IRQ.DMA_A.TX_Fifo_Overflow
+unique chan name: CLK006
+unique chan name: Session Rx Bytes
+unique chan name: Tag PCI Trace
+unique chan name: byte_cnt_[hist]_11
+unique chan name: Available WLAN duration is too low
+unique chan name: OPRT0703
+unique chan name: link 3 EP uncor(4)
+unique chan name: Assoc Scan Dur 2G
+unique chan name: aop_brook
+unique chan name: PCPUDTL44
+unique chan name: OPRT0907
+unique chan name: Tg21a Min
+unique chan name: FirmwareFreePacket
+unique chan name: Mem Latency
+unique chan name: RSSI State
+unique chan name: mca2b.ERR.TxUnderflowOnStart
+unique chan name: ap-aop_time_delta_abs_[strt]_7
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_12
+unique chan name: AGX.UT_Not_Engaged_Perf_State_11
+unique chan name: PCPU000
+unique chan name: ap-aop_time_delta_abs_[strt]_19
+unique chan name: OtherErr Completions
+unique chan name: spu_io_time_raw_[strt]_9
+unique chan name: ap_io_host_time_[hist]_15
+unique chan name: Rx PLCP errors
+unique chan name: ECPU_EXT_TRG2
+unique chan name: Rx SGI VHT Usage 3
+unique chan name: link 3 RC corr(7)
+unique chan name: mtp.Z2SPI.MAX_PROTOCOL_ERROR_REACHED
+unique chan name: Rx Invalid Frame
+unique chan name: Negative Output DMA Margin
+unique chan name: IRQ disabled ti
+unique chan name: PWR016
+unique chan name: Tx MPDU in AMPDU 20
+unique chan name: mtp.BLACK_BOX.BAD_MODULE_ID
+unique chan name: PCPM v20
+unique chan name: Tx HE Success 6
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 45
+unique chan name: byte_cnt_[hist]_14
+unique chan name: ap-aop_time_delta_abs_[hist]_2
+unique chan name: Available WLAN Rx duration is too low
+unique chan name: Channel Count
+unique chan name: Tg21a Sum
+unique chan name: Tg63a Sum Count
+unique chan name: aop_zero_frame_cnt_[stop]_11
+unique chan name:     Wrapper (null)Read 
+unique chan name: Tx HE Success 23
+unique chan name: PCPUDTL14
+unique chan name: Tx Ack
+unique chan name: Max Fragments
+unique chan name: prc_repeat_coun
+unique chan name: mtp.HSP_SPI.SET_REPORT_FAILURE
+unique chan name: Rx OFDMA MCS Usage 9
+unique chan name: spu_io_time_raw_[stop]_16
+unique chan name: C1PPT_AD_SWTRG
+unique chan name: UMI Failed
+unique chan name: Tag Channel Switch
+unique chan name: DEV044
+unique chan name: Rx SGI MCS Usage 9
+unique chan name: DSA TxDC Ant 3 (%)
+unique chan name: Tx MCS Usage 3x1
+unique chan name: Tg53a Sum
+unique chan name: 42822
+unique chan name: AWDL Schedule State
+unique chan name: DEV347
+unique chan name: CDM Idle
+unique chan name: Channel CCA State 140
+unique chan name: DEV207
+unique chan name: Channel CCA State 161
+unique chan name: OPRT0215
+unique chan name: Num Host Scan Rejected
+unique chan name: PACC0_CPU4_SRAM
+unique chan name: Scan Results
+unique chan name: Rx MPDU in SU AMPDU Usage 59
+unique chan name: com.apple.appleBiometricSensor.powerMonitor.powerUpdate
+unique chan name: spu_platinum
+unique chan name: mtp.HSP_SPI.HIDSPI_IDLE_TIMER_REARM
+unique chan name: OPRT1103
+unique chan name: PCPU1DTL31
+unique chan name: mtp.AFE_BOOTLOADER.HW_OPEN_FAILURE
+unique chan name: PCPU1_AD_HWTRG
+unique chan name: Tx Management Frames
+unique chan name: Rx SU PPDU
+unique chan name: Tx HE Attempts 19
+unique chan name: DEV063
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 48
+unique chan name: Tg60a Latest
+unique chan name: Tag BSS Trans
+unique chan name: Slow WiFi Symptom
+unique chan name: PCPM1 v12 idle
+unique chan name: CLK040
+unique chan name: flipbook_delay
+unique chan name: WAKE0039
+unique chan name: mtp.HSP_SPI.POWER_OFF_HARDWARE_FAILURE
+unique chan name: mtp.AFE_PWR.RESET_CRASHED
+unique chan name: Channel CCA   2
+unique chan name: aop_host_time_[hist]_4
+unique chan name: aop_host_time_[hist]_5
+unique chan name: RC2 TX Deny Count
+unique chan name: ap-aop_time_delta_abs_[stop]_0
+unique chan name: voice_trigger
+unique chan name: Ant Grant LT 10ms
+unique chan name: Success - NAN    - TS Requested
+unique chan name: PCPM1 v8
+unique chan name: RawBrightness value
+unique chan name: ap_io_host_time_[hist]_5
+unique chan name: mtp.HSP_SPI.ACK_SENT
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 36
+unique chan name: Rx duplicate errors
+unique chan name:                         Rx MPDU Tid7
+unique chan name: OPRT1013
+unique chan name: Submission Packets
+unique chan name: PWR017
+unique chan name: OPRT1301
+unique chan name: link 3 EP uncor(11)
+unique chan name: mtp.HSP_SPI.TRANSFER_INVALID_TYPE
+unique chan name: Rx Frame Too Long
+unique chan name: TD/CS FIFO Error
+unique chan name: controller_start_time_abs
+unique chan name: Life Time Expired - AWDL   - TS NOT Requested
+unique chan name: Tx SGI VHT Usage 8
+unique chan name: ECPUDTL25
+unique chan name: ap-aop_time_delta_abs_[hist]_13
+unique chan name: Other Scan Cnt
+unique chan name: 2.4 GHz band
+unique chan name: mtp.ACT_MGR.MTP_TARGET_TRANSITION_BB
+unique chan name: Fer100ms
+unique chan name: Port 0 AER EP Unc Surprise Down Error     
+unique chan name: CLK029
+unique chan name: ORED_SPMI01_VWS
+unique chan name: prc
+unique chan name: Tx VHT Usage 3x1
+unique chan name: ExtOp-RD Count
+unique chan name: ap_wake_time_abs_19
+unique chan name: Deep Sleep Exit Delay
+unique chan name: spu_io_time_raw_[stop]_15
+unique chan name: Channel CCA   7
+unique chan name: PCPU0_DTH_SWTRG
+unique chan name: Tx VHT Attempts 12
+unique chan name: Tag RSDB PMGR Debug
+unique chan name: Cursor Graphics Latency
+unique chan name: PCPM v7 idle
+unique chan name: Channel CCA State 104
+unique chan name: Channel Noise State  44
+unique chan name: Rnr Scan Cnt
+unique chan name: Channel 2
+unique chan name: PWR077
+unique chan name: PCPM1 v7 idle
+unique chan name: Rx Trigger BFM Count
+unique chan name: PCPUDTL13
+unique chan name: PCPU1DTL37
+unique chan name: link 2 RC corr(1)
+unique chan name: SU MPDU Bytes
+unique chan name: SCODEC1
+unique chan name: OPRT1008
+unique chan name: gyro
+unique chan name: OPRT2202
+unique chan name: link 3 RC corr(5)
+unique chan name: mtp.AFE_PWR.ST_SET_OFF
+unique chan name: AGX.Min_UT_Engagement_Perf_State_10
+unique chan name: RSSI Changed
+unique chan name: Rx SGI VHT Usage 10
+unique chan name: DEV310
+unique chan name: ResetCount
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 42
+unique chan name: OPRT1208
+unique chan name: OPRT0912
+unique chan name: Serializing Failures
+unique chan name: IOA0 RD+WR
+unique chan name: OPRT0908
+unique chan name: SC No Blanking Channel Count
+unique chan name: Tx MCS Usage 7x1
+unique chan name: aop_host_time_[hist]_19
+unique chan name: MGPU2_AD_SWTRG
+unique chan name: Port 0 AER EP Unc Completer Abort         
+unique chan name: DEV337
+unique chan name: Responses
+unique chan name: Tx Action
+unique chan name: link 2 EP corr(3)
+unique chan name: awake_count
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_7
+unique chan name: Power Counter FSTP 5
+unique chan name: Sniff
+unique chan name: SPI reports
+unique chan name: PCPM v14
+unique chan name: FRG Kill Count
+unique chan name: Rx MPDU in SU AMPDU Usage 49
+unique chan name: Total stack(2)
+unique chan name: pdc_repeat_coun
+unique chan name: mtp.AFE_PWR.RESET_REQUEST_FAILURE
+unique chan name: Interface Rate Histogram
+unique chan name: Rx VHT Usage 5x1
+unique chan name: AppleSDXC Power State
+unique chan name: OPRT0512
+unique chan name: CLK043
+unique chan name: Tg60a Max
+unique chan name: Roam Scan Dur - since LinkUp
+unique chan name: AGX.Max_UT_Engagement_Perf_State_11
+unique chan name: PWR056
+unique chan name: MGPU0_DTH_SWTRG
+unique chan name: DUT Rx BCMC decrypt issue
+unique chan name: PCPU1DTL10
+unique chan name: AGX.Count_UT_Engagement_Perf_State_6
+unique chan name: AGX.Count_UT_Engagement_Perf_State_0
+unique chan name: DFS Proxy Mode CSA Rx from Peer
+unique chan name: Used stack(28)
+unique chan name: Tx HE Success 17
+unique chan name: Tx SGI VHT Usage 12
+unique chan name:                         Rx LOST MPDU NonBA Tid1
+unique chan name:                         Rx MPDU Tid1
+unique chan name: Port 1 AER RC Cor Bad DLLP                
+unique chan name: CLVR_EXT_MGPU2
+unique chan name: Rx replay errors
+unique chan name: OPRT1211
+unique chan name: mtp.HSP_SPI.HIDSPI_PADDING_LEN_KEY_SET_FAILURE
+unique chan name: Scan Type Active
+unique chan name: MGPU3_ADCLK_TRG
+unique chan name: Client Input position
+unique chan name: Port 0 AER RC Unc Surprise Down Error     
+unique chan name: OPRT0801
+unique chan name: PCPUDTL3c
+unique chan name: TXA Priority Duration
+unique chan name: Channel CCA  40
+unique chan name: OPRT0605
+unique chan name: PCPM1 v17 idle
+unique chan name: Doorbell Path Early Return
+unique chan name: Tx Deauth
+unique chan name: Number Power Ups
+unique chan name: Tx VHT Usage 9x1
+unique chan name: CLK052
+unique chan name: Alloc system memory
+unique chan name: PCPU010
+unique chan name: Request DQ Sync Path
+unique chan name: Tx VHT Success 20
+unique chan name: Tx HE Attempts 14
+unique chan name: Rx MCS Usage 3x1
+unique chan name: Num Roam Scan Req within 10sec
+unique chan name: PWR073
+unique chan name: Port 0 AER EP Unc Receiver Overflow       
+unique chan name: Port 0 Root Port Error Interrupt       
+unique chan name: EVT023
+unique chan name: PCPU1DTL09
+unique chan name: Used stack(13)
+unique chan name: PCIe Port 0 Link States
+unique chan name: AGX.UT_Not_Engaged_Perf_State_14
+unique chan name: Chip Buffer Unavailable  - NAN    - TS NOT Requested
+unique chan name: IOA0-AFNC-BW
+unique chan name: Rx decrypt errors
+unique chan name: ECPUDTL10
+unique chan name: link 2 EP corr(5)
+unique chan name: Zero EQ By Driver
+unique chan name: A2DP Buffer8 Ant Grant
+unique chan name: Total stack(25)
+unique chan name: Grp11 Misses
+unique chan name: ap-aop_time_delta_abs_[hist]_12
+unique chan name: PM Associated   Dur
+unique chan name: DSA Power Opt Mode Duration (ms)
+unique chan name: Grant Delay Larger than 4.5ms
+unique chan name: Tag PCI Error
+unique chan name: Tx MCS Usage 2x1
+unique chan name: Dynamic SDB Entry First Try
+unique chan name: PCPM1 v15
+unique chan name: link 0 RC corr(0)
+unique chan name: AGX.Count_UT_Engagement_Perf_State_10
+unique chan name: Rx VHT Success 12
+unique chan name: Tx VHT Success 10
+unique chan name: Port 0 AER EP Unc Uncorrected Internal Err
+unique chan name: PWR010
+unique chan name: Used stack(27)
+unique chan name: mca2a.IRQ.DMA_A.RX_Fifo_Underflow
+unique chan name: Port 1 AER EP Unc ECRC Error              
+unique chan name: PCPM v9
+unique chan name: PCPUDTL09
+unique chan name: mtp.AFE_PWR.PIN_SET_FAILURE
+unique chan name: aop_romeo_unplug_detected
+unique chan name: mtp.BOOT.CAL_LOAD_SUCCESS
+unique chan name: Tg17a Latest
+unique chan name: Temperature
+unique chan name: A2DP Buffer7 Ant Grant
+unique chan name: SOC_EXT_TRG2
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 22
+unique chan name: Tg33a Max
+unique chan name: OPRT2200
+unique chan name: ap-aop_time_delta_abs_[stop]_3
+unique chan name: 128
+unique chan name: Tx SGI MCS Usage 14
+unique chan name: Doorbell Async Path
+unique chan name: C1PPT_PPT_SWTRG
+unique chan name: spu_none
+unique chan name: Tx VHT Attempts 19
+unique chan name: Grp9 Hits
+unique chan name: PCPUDTL311
+unique chan name: CLK017
+unique chan name: io_event_id_8
+unique chan name: aop_zero_frame_cnt_[strt]_19
+unique chan name: DEV035
+unique chan name: mca2b.IRQ.RXB_Frame_Error
+unique chan name: Port 0 Unexpected Link Down            
+unique chan name: mtp.ACT_MGR.AFE_TARGET_TRANSITION_BB
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_0
+unique chan name: No Resources - NAN    - TS NOT Requested
+unique chan name: Tg1a Sum Count
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 21
+unique chan name: DEV192
+unique chan name: OPRT1112
+unique chan name: ap_io_host_time_[strt]_2
+unique chan name: Tx SGI MCS Usage 0
+unique chan name: flipbook_count
+unique chan name: mtp.ACT_MGR.AFE_INDEPENDENT_BB
+unique chan name: mtp.TOUCH_ALGS.RESET_REQUEST_PROCESS
+unique chan name: Tier2 Throttle Time
+unique chan name: Input packet dropped - no peer
+unique chan name: Power Counter FSTP 38
+unique chan name: MSR0
+unique chan name: AGX.Max_UT_Engagement_Perf_State_12
+unique chan name: aop_zero_host_time_[strt]_14
+unique chan name: mtp.HSP_SPI.HIDSPI_INTERRUPT_WAKE
+unique chan name: DEV343
+unique chan name: DEV045
+unique chan name: PACC0_CPU1
+unique chan name: com.apple.wifi.linkDebounceMetrics
+unique chan name: UMA HW Reserved Pages Distribution
+unique chan name: Tx MCS Success 9
+unique chan name: Rx FCS errors are too high
+unique chan name: Roam Failed
+unique chan name: Rx Bad DA MAC
+unique chan name: Tg63a Latest
+unique chan name: OPRT1010
+unique chan name: Port 1 AER EP Cor Corrected Internal Error
+unique chan name: mtp.DOCK.CHANNEL_RECEIVE_FAILURE
+unique chan name: Phy Switch Time
+unique chan name: mtp.HSP_SPI.INIT_FAILURE
+unique chan name: Tx SGI VHT Usage 19
+unique chan name: link 0 EP uncor(7)
+unique chan name: mtp.HSP_SPI.HIDSPI_WAKE_SIGNAL
+unique chan name: SOC-WrDis-Fltr Count
+unique chan name: Roam Success
+unique chan name: Dropped Set 13 PHY Entity
+unique chan name: Rx SGI VHT Usage 17
+unique chan name: mtp.ACT_MGR.AFE_DEPENDENT_BB
+unique chan name: Rx MCS Success 2
+unique chan name: Rx OFDMA MCS Usage 18
+unique chan name: PCPU1DTL13
+unique chan name: PWR080
+unique chan name: DEV140
+unique chan name: link 1 EP uncor(9)
+unique chan name: WLAN Duration too low
+unique chan name: Dropped Miscellaneous Completions
+unique chan name: PWR020
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 24
+unique chan name: CLVR_EXT_MGPU1
+unique chan name: Ant Grant GT 10ms
+unique chan name: Tx MCS Attempts 8
+unique chan name: MGPU0_PPT_TRG
+unique chan name: mtp.DOCK.GET_OUTBOX_SPACE_FAILURE
+unique chan name: link 2 EP corr(1)
+unique chan name: Rx VHT Usage 3x1
+unique chan name: WLAN Preempted
+unique chan name: Rx SGI MCS Usage 15
+unique chan name: CLK018
+unique chan name: Tx SGI VHT Usage 5
+unique chan name: Time Stamp Seed
+unique chan name: Rx HE Success 3
+unique chan name: ap_io_host_time_[strt]_13
+unique chan name: ap_wake_time_abs_6
+unique chan name: ap_io_host_time_[strt]_19
+unique chan name: MGPU2_DITHR_TRG
+unique chan name: link 3 EP corr(6)
+unique chan name: Rx MU-MIMO MCS Usage 10
+unique chan name: Tx VHT Usage 11x1
+unique chan name: mtp.TPM.BB_STOP
+unique chan name: Available duration for WLAN activity (ms)
+unique chan name: Tx SGI MCS Usage 7
+unique chan name: link 0 EP uncor(0)
+unique chan name: Tg0a Sum
+unique chan name: Color miss Count
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 16
+unique chan name: PCPUDTL4c
+unique chan name: Tx PHY errors
+unique chan name: PCPUDTL3e
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 35
+unique chan name: OPRT0510
+unique chan name: PWR007
+unique chan name: PCPU1DTL21
+unique chan name: mca0a.ERR.TxUnderflowOnStart
+unique chan name: MU MIMO MPDU Data
+unique chan name: Rx Invalid MAC Hdr
+unique chan name: AMCC0
+unique chan name: Rx MPDU in SU AMPDU Usage 36
+unique chan name: CLK062
+unique chan name: Tx NULL
+unique chan name: DEV365
+unique chan name: GPU Active Time
+unique chan name: Battery Voltage
+unique chan name: PCIe L1.2           Dur
+unique chan name: mtp.TPM.BB_ENTER_ACTIVE
+unique chan name: ap-aop_time_delta_abs_[hist]_8
+unique chan name: Tag PHY CAL Info
+unique chan name: Grp4 Misses
+unique chan name: DEV041
+unique chan name: Rx Data Frame matching RA
+unique chan name: MGPU1_EXT_TRG2
+unique chan name: Port 1 AER RC Unc Completer Abort         
+unique chan name: Tg49a Max
+unique chan name: CLK058
+unique chan name: Rx VHT Usage 8x2
+unique chan name: FAB_PPT_SWTRG
+unique chan name: BusPr-DatPrty Count
+unique chan name: OPRT1105
+unique chan name: DFS Proxy Mode AirPlay Failed
+unique chan name: PCPU1DTL05
+unique chan name: CLVR_EXT_FAB
+unique chan name: Zero DQ By Driver
+unique chan name: mtp.BLACK_BOX.BAD_BUFFER_SZ
+unique chan name: link 1 EP uncor(8)
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 37
+unique chan name: mtp.Z2SPI.ERR_REQ_BOOT
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 31
+unique chan name: ECPUDTL11
+unique chan name: Report 128
+unique chan name: PWR070
+unique chan name: No ACK Failure
+unique chan name: Channel CCA State 128
+unique chan name: PWR028
+unique chan name: DSA Util Ant 3 (%)
+unique chan name: Rx MCS Usage 1x1
+unique chan name: Command Max Active Time (us)
+unique chan name: ap_io_host_time_[hist]_10
+unique chan name: PCPM1 v7
+unique chan name: Other Scan Dur
+unique chan name: Tx Power Backoff
+unique chan name: EACC_CPU3
+unique chan name: Memless Render Failed
+unique chan name: ap_io_host_time_[hist]_3
+unique chan name:     Wrapper ARM Core    Master Read 
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 36
+unique chan name: mtp.AFE_MGR.PWR_REQ_ENQUEUE_FAILURE
+unique chan name: Report 3
+unique chan name: CCMP Decrypt Errors
+unique chan name: DEV039
+unique chan name: OPRT0701
+unique chan name: PCPM1 v10 idle
+unique chan name: OPRT2302
+unique chan name: UMA HW Mapped Pages Distribution
+unique chan name: Power Counter FSTP 20
+unique chan name: OPRT1206
+unique chan name: Tg19a Min
+unique chan name: IOA6-AFR-BW
+unique chan name: Command Max Pending Time (us)
+unique chan name: Rx VHT Success 17
+unique chan name: Power Counter FSTP 1
+unique chan name: Tx VHT Attempts 15
+unique chan name: Tag AWDL Warn
+unique chan name: ap_io_host_time_[strt]_5
+unique chan name: PWR013
+unique chan name: Rx OFDMA MCS Usage 7
+unique chan name: Channel CCA State  48
+unique chan name: Grp1 Hits
+unique chan name: PCPU1DTL1a
+unique chan name: Rx bytes
+unique chan name: apciec1 Write BW
+unique chan name: Link Changed
+unique chan name: DEV061
+unique chan name: spu_io_time_raw_[strt]_14
+unique chan name: OPRT0309
+unique chan name: Used stack(10)
+unique chan name: spu_activity_alarm
+unique chan name: ap_io_host_time_[strt]_0
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 25
+unique chan name: spu_io_time_raw_[strt]_13
+unique chan name: PCPUDTL2e
+unique chan name: io_event_id_11
+unique chan name: PCPU1DTL25
+unique chan name: DEV080
+unique chan name: Utiliztn
+unique chan name: Tx MCS Usage 4x1
+unique chan name: link 1 RC corr(2)
+unique chan name: Total stack(10)
+unique chan name: io_event_id_6
+unique chan name: Request DQ Async Path
+unique chan name: DUT Rx AMPDU duplicate issue
+unique chan name: IP timed out (NoCTL)
+unique chan name: AFR_EXT_TRG2
+unique chan name: Tx VHT Attempts 2
+unique chan name: Rx MU-MIMO MCS Usage 1
+unique chan name: OFDM Desense State
+unique chan name: Tg32a Sum
+unique chan name: Rx MPDU in SU AMPDU Usage 30
+unique chan name: link 3 EP uncor(1)
+unique chan name: GTP Dependent
+unique chan name: Rx MU-MIMO MCS Usage 0
+unique chan name: link 2 RC uncor(6)
+unique chan name: User Scan Dur
+unique chan name: Set 8 Preserve
+unique chan name: Rx MU-MIMO MCS Usage 11
+unique chan name: Grp23 Hits
+unique chan name: PCPUDTL04
+unique chan name: ap_io_host_time_[strt]_7
+unique chan name: CLK009
+unique chan name:     Wrapper Chip Common Master Read 
+unique chan name: CLK038
+unique chan name: DEV303
+unique chan name: Ready reports
+unique chan name: Request Dequeue Sync Path
+unique chan name: PACC0_CPU5
+unique chan name: byte_cnt_[hist]_2
+unique chan name: Channel CCA State  37
+unique chan name:     Wrapper SDIO        Slave  Read 
+unique chan name: CLK054
+unique chan name: Tx VHT Success 19
+unique chan name: Rx SGI MCS Usage 6
+unique chan name: C1PPT_EXT_TRG0
+unique chan name: PCPUDTL4e
+unique chan name: Read Failure Count
+unique chan name: ISPCPU Responses Received
+unique chan name: Submitted Tx packet count
+unique chan name: OPRT0700
+unique chan name: link 3 RC uncor(2)
+unique chan name: mtp.TPM.BB_ENTER_READY
+unique chan name: IOA1 WR
+unique chan name: ap_io_host_time_[strt]_9
+unique chan name: PCPU1DTL41
+unique chan name: link 1 RC corr(3)
+unique chan name: Tx No Buffer Error
+unique chan name: Int Status Mailbox DeepSleep Exit          Counter
+unique chan name: frame_count
+unique chan name: OPRT0612
+unique chan name: mtp.AFE_TRANSPORT.IR_ROUTE_INVALID
+unique chan name: Tx VHT Attempts 9
+unique chan name: MGPU2_EXT_TRG2
+unique chan name: link 1 EP uncor(6)
+unique chan name: link 1 EP uncor(5)
+unique chan name: Tx SGI VHT Usage 13
+unique chan name: Rx MCS Usage 7x1
+unique chan name: Interface OBSS CCA State
+unique chan name: Interface Interference CCA
+unique chan name: Tx VHT Attempts 21
+unique chan name: 132 5g 20MHz n
+unique chan name: AGX.UT_Not_Engaged_Perf_State_10
+unique chan name: AWAKE
+unique chan name: Returned Packets
+unique chan name: Since Last Enqueue How Many Failed Completions
+unique chan name: OPRT0812
+unique chan name: Rx VHT Success 0
+unique chan name: SPILL
+unique chan name: Tx SGI VHT Usage 10
+unique chan name: mtp.HSP_SPI.HIDSPI_INPUT_REPORT_HANDLER_FAILURE
+unique chan name: A2DP Buffer5 Ant Grant
+unique chan name: Port 1 AER RC Unc Unexpected Completion   
+unique chan name: DEV171
+unique chan name: PACC1_CPU1_SRAM
+unique chan name: A2DP Buffer3 Ant Grant
+unique chan name: Grp6 Hits
+unique chan name: link 3 RC uncor(0)
+unique chan name: Port 1 Enable Complete                 
+unique chan name: AGX.UT_Not_Engaged_Perf_State_9
+unique chan name: Active Tx Power Backedoff
+unique chan name: Tx MPDU in AMPDU 12
+unique chan name: com.apple.DriverKit-AppleBCMWLAN
+unique chan name: GPU CS0
+unique chan name: update count
+unique chan name: ap-aop_time_delta_abs_[strt]_4
+unique chan name: Rx Block Ack Request
+unique chan name: FRTS    Count
+unique chan name: AGX.Count_UT_Engagement_Perf_State_5
+unique chan name: PCPUDTL3d
+unique chan name: Num Scan Rejected Scan Blocked
+unique chan name: Tx output throughput from WiFi chipset (Mbps)
+unique chan name: EVT010
+unique chan name: AFR_DITHR_TRG
+unique chan name: DEV330
+unique chan name: link 0 RC uncor(11)
+unique chan name: aop_zero_frame_cnt_[stop]_13
+unique chan name: OPRT0403
+unique chan name: MGPU2_DTH_SWTRG
+unique chan name: Tier1 Throttle Time
+unique chan name: OPRT2601
+unique chan name: link 1 EP uncor(3)
+unique chan name: mtp.KB_TRANSPORT.CR_SET
+unique chan name: link 2 EP uncor(3)
+unique chan name: AGX.UT_Not_Engaged_Perf_State_7
+unique chan name: Num Rx Single MPDUs, legacy rates
+unique chan name: Port 0 AER EP Cor Bad TLP                 
+unique chan name: mtp.BLACK_BOX.UNKNOWN
+unique chan name: CLK020
+unique chan name: Rx Retry bit set
+unique chan name: mtp.TPM.BB_ENTER_ANTICIPATE
+unique chan name: Shared Data Queue full, retry
+unique chan name: GPU Power Zone Filter 2
+unique chan name: Tx MPDU in AMPDU 6
+unique chan name: Channel Width hange request txed successfully
+unique chan name: Total Resets
+unique chan name: WLC_E_LINK
+unique chan name: Tag Scan Summary
+unique chan name: Port 0 AER RC Cor Advisory Non-Fatal Error
+unique chan name: mtp.AFE_TRANSPORT.CR_SET
+unique chan name: High UCode Latency
+unique chan name: link 3 EP corr(0)
+unique chan name: Channel CCA 108
+unique chan name: Wakes
+unique chan name: Interface IBSS CCA State
+unique chan name: MGPU0_PPT_HWTRG
+unique chan name: Port 1 AER RC Unc Poisoned TLP            
+unique chan name: Tg51a Max
+unique chan name: Tx RU size 2x996
+unique chan name: DISPEXT1
+unique chan name: Rx VHT Usage 7x2
+unique chan name: Rx MCS Success 14
+unique chan name: DSA TxDC Ant 0 (%)
+unique chan name: Rx SGI VHT Usage 2
+unique chan name: SC Tx Blanking Count AC BT Tx Bin 3
+unique chan name: Scan Internal Done
+unique chan name: OPRT0313
+unique chan name: Rx dynamic Frgamented packets
+unique chan name: Total stack(26)
+unique chan name: Used stack(24)
+unique chan name: IOA4-AFNC-BW
+unique chan name: drift_event_count
+unique chan name: Tx RU size 996
+unique chan name: Tx HE Attempts 11
+unique chan name: AMCC RD
+unique chan name: PCPM1 v13
+unique chan name: PCPU1DTL010
+unique chan name: PCPUDTL2d
+unique chan name: OPRT1109
+unique chan name: AWDL    PScan Dur
+unique chan name: Cached Peers No Infra
+unique chan name: Other Scan Off Ch Dur 2G
+unique chan name: PACC1_CPU
+unique chan name: mtp.Z2SPI.ERR_CHECKSUM
+unique chan name: FWFreePkt Completions
+unique chan name: sound_analysis
+unique chan name: Rx MPDU in SU AMPDU Usage 42
+unique chan name: PHY Search Count
+unique chan name: PCPU1DTL2a
+unique chan name: OPRT0710
+unique chan name: mtp.KB_TRANSPORT.CR_GET_INPUT_FAILURE
+unique chan name: Port 0 Suspend Complete                
+unique chan name: AGX.UT_Not_Engaged_Perf_State_0
+unique chan name: BSSID Changed
+unique chan name: MGPU0_EXT_TRG3
+unique chan name: OPRT0906
+unique chan name: DEV308
+unique chan name: Send To BPF Tap
+unique chan name: aop_host_time_[hist]_7
+unique chan name:                               Log Calls
+unique chan name: AFR_PPT_HWTRG
+unique chan name: 44100 Hz
+unique chan name: Channel CCA State 100
+unique chan name: API per-event rate exceeded
+unique chan name: DEV344
+unique chan name: Join Failed
+unique chan name: PWRCTRL
+unique chan name: PCPM v12
+unique chan name: OPRT0202
+unique chan name: mtp.TOUCH_ALGS.CR_PROCESS
+unique chan name: MGPU0_EXT_TRG2
+unique chan name: mtp.TPM.BB_LID_CLOSED
+unique chan name: 
+unique chan name: Tag PFN Info
+unique chan name: Invalid AF
+unique chan name: Throughput test baseline
+unique chan name: PCPU030
+unique chan name: PCPUDTL4d
+unique chan name: aop_zero_host_time_[stop]_7
+unique chan name: link 2 EP uncor(1)
+unique chan name: spu_mesa_reset
+unique chan name: OPRT0608
+unique chan name: Rx HE Success 21
+unique chan name: SOC_VMIN
+unique chan name: Set 6
+unique chan name: PNO BSSID Scan Off Ch Dur 5G
+unique chan name: PCIe L1.1           Dur
+unique chan name: Other Scan Dur 5G
+unique chan name: PWR035
+unique chan name: CLK033
+unique chan name: ECPM v6 idle
+unique chan name: SCO
+unique chan name: Rx Packets
+unique chan name: DISPEXT0 RD+WR
+unique chan name: mtp.AFE_TRANSPORT.CR_INPUT_REPORT_FAILURE
+unique chan name: apciec0 Read BW
+unique chan name: Power States
+unique chan name: ap_wake_time_abs_1
+unique chan name: P1 DLink Write
+unique chan name: CTLM Index
+unique chan name: Set 29 BCM Trace
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 40
+unique chan name: OPRT0514
+unique chan name: DEV043
+unique chan name: Port 0 AER RC Cor Bad TLP                 
+unique chan name: Rx RU size 484
+unique chan name: link 1 EP uncor(1)
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 6
+unique chan name: link 1 RC corr(6)
+unique chan name: DEV172
+unique chan name: ap-aop_time_delta_abs_[stop]_9
+unique chan name: Rx Giant
+unique chan name: io_event_id_18
+unique chan name: PCPU1DTL3b
+unique chan name: CLK037
+unique chan name: Success - STA    - TS Requested
+unique chan name: Peer Count
+unique chan name: Tx Beacon
+unique chan name: Aggregate Count
+unique chan name: Tx Probe Request
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 59
+unique chan name: MGPU1_EXT_TRG0
+unique chan name: Grp16 Misses
+unique chan name: Rx HE Success 9
+unique chan name: PCPUDTL4b
+unique chan name: BK Tx Packets
+unique chan name: Rx HE Success 12
+unique chan name: DEV353
+unique chan name: Tx HE Success 12
+unique chan name: blue
+unique chan name: Rx Trigger BSRP
+unique chan name: CLK050
+unique chan name: Grp18 Hits
+unique chan name: mtp.TPM.BB_CLICK_DETECTED_FORCE_ONLY
+unique chan name: mtp.AFE_BOOTLOADER.CHIP_BOOT_HINT_FAILURE
+unique chan name: DSA Power Opt while TxDC Throttling Mode Duration (ms)
+unique chan name: PCPU120
+unique chan name: Port 1 AER RC Cor REPLAY_NUM Rollover     
+unique chan name: ap-aop_time_delta_abs_[stop]_11
+unique chan name: Tx SGI MCS Usage 3
+unique chan name: Rx SGI MCS Usage 11
+unique chan name: spu_io_time_raw_[stop]_6
+unique chan name: Chip Buffer Unavailable  - NAN    - TS Requested
+unique chan name: link 3 EP corr(7)
+unique chan name: mtp.AFE_BOOTLOADER.SPI_CLOCK_POLARITY_KEY_SET_FAILURE
+unique chan name: frm_tim_count
+unique chan name: spu_io_time_raw_[hist]_9
+unique chan name: WiFi Session Duration-sec
+unique chan name: PCIe D3 Suspend     Dur
+unique chan name: CLK036
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 30
+unique chan name: ORED_SPMI41_VWS
+unique chan name: Radio Rx Dur
+unique chan name: Port 1 AER EP Unc Completer Abort         
+unique chan name: aop_host_time_[hist]_18
+unique chan name: Used stack(16)
+unique chan name: PNO Scan Cnt - since LinkUp
+unique chan name: DISPEXT1 WR
+unique chan name: PSMx Watchdogs
+unique chan name: Rx MU-MIMO MCS Usage 16
+unique chan name: GPU_PPM
+unique chan name: DEV240
+unique chan name: DCS-BWR
+unique chan name: power
+unique chan name: Port 1 AER RC Unc Malformed TLP           
+unique chan name: Num Location Scan Req-10sec roam
+unique chan name: PCPM v14 idle
+unique chan name: PCPU1DTL30
+unique chan name: Power Counter FSTP 34
+unique chan name: mtp.Z2SPI.ERR_OVERRUN
+unique chan name: AP Tx data stall
+unique chan name: PCPU1DTL311
+unique chan name: Total SPI Errors
+unique chan name: Total Number of UMA Pools
+unique chan name: MessageClient Sent
+unique chan name: DEV280
+unique chan name: spu_sedentary_alarm
+unique chan name: Tx NSTS change request
+unique chan name: PWR027
+unique chan name: BusPr-Disconnect Count
+unique chan name: Power Counter FSTP 28
+unique chan name: DEV075
+unique chan name: Rx SGI VHT Usage 13
+unique chan name: UserBrightness value
+unique chan name: PCPUDTL30
+unique chan name: MGPU0_EXT_TRG1
+unique chan name: PCPUDTL10
+unique chan name: AGX.Min_UT_Engagement_Perf_State_7
+unique chan name: PWR066
+unique chan name:  44 5g 20MHz n
+unique chan name:  85 6g 20MHz n
+unique chan name: link 3 RC uncor(6)
+unique chan name: Rx MCS Success 1
+unique chan name: Port 1 AER RC Unc Uncorrected Internal Err
+unique chan name: PCPU1
+unique chan name: link 3 RC corr(2)
+unique chan name: apciec2 Write BW
+unique chan name: AGX.Min_UT_Engagement_Perf_State_8
+unique chan name: AMPDU DELBA sent
+unique chan name: OPRT0516
+unique chan name: Port 1 AER EP Unc TLP Prefix Blocked Error
+unique chan name: Dropped Set AMT
+unique chan name: link 0 EP corr(2)
+unique chan name: OPRT1107
+unique chan name: DUT Tx PHY issue
+unique chan name: OPRT0808
+unique chan name: ORED_SPMI40_VWS
+unique chan name: Rx Dissassoc
+unique chan name: Tx HE Attempts 2
+unique chan name: AWDL       Aw Dur
+unique chan name: PACC0_CPU5_SRAM
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 29
+unique chan name: Num Host Scan Req While Moving
+unique chan name: Tx SGI VHT Usage 16
+unique chan name: BTDuration(s)
+unique chan name: OPRT0410
+unique chan name: Num Host Scan Req-Low Prio Override
+unique chan name: Rx HE Success 11
+unique chan name: DEV046
+unique chan name: Beacon Lost
+unique chan name: mtp.TL_SCM.IFACE_REGISTER_OUT_OF_BOUND
+unique chan name: Channel CCA State 108
+unique chan name: Tx VHT Usage 0x2
+unique chan name: mtp.HSP_SPI.NAK_SENT
+unique chan name: aop_host_time_[hist]_6
+unique chan name: Tag Power Stats Error
+unique chan name: Tg60a Min
+unique chan name: DISPEXT2 RD+WR
+unique chan name: PCPU1_ADCLK_TRG
+unique chan name: Port 1 Suspend Complete                
+unique chan name: mtp.KB_TRANSPORT.CR_GET_INPUT
+unique chan name: OPRT0805
+unique chan name: Grp6 Misses
+unique chan name: ap_io_host_time_[strt]_10
+unique chan name: aop_zero_host_time_[stop]_10
+unique chan name: DEV072
+unique chan name: Tg63a Max
+unique chan name: mca1a.ERR.TxUnderflowOnStart
+unique chan name: Segment Dtor Count
+unique chan name: MGPU0_DTH_HWTRG
+unique chan name: PCPU1DTL24
+unique chan name: Duty cycle
+unique chan name: spu_io_time_raw_[stop]_18
+unique chan name: PCIe DeepSleep      Count
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_3
+unique chan name: BE Tx Packets
+unique chan name: Sniff Deny Count
+unique chan name: DEV307
+unique chan name: OPRT0606
+unique chan name: Tier3 Throttle Time
+unique chan name: Report 16
+unique chan name: Tx Dissassoc
+unique chan name: C1PPT_EXT_TRG3
+unique chan name: Tx MCS Attempts 12
+unique chan name: LTR
+unique chan name:  69 6g 20MHz n
+unique chan name: Report 14
+unique chan name: Tx VHT Usage 4x1
+unique chan name: DISPEXT3 RD+WR
+unique chan name: mtp.HSP_SPI.HIDSPI_MAX_INPUT_LEN_KEY_SET_FAILURE
+unique chan name: mtp.Z2SPI.ERR_COMMAND
+unique chan name: ap-aop_time_delta_abs_[strt]_16
+unique chan name: Tx SGI VHT Usage 7
+unique chan name: Action Frames Queue Fill State
+unique chan name: User Scan Off Ch Dur - since LinkUp
+unique chan name: Rx MCS Success 8
+unique chan name: PCPUDTL02
+unique chan name: link 1 EP corr(1)
+unique chan name: io_event_id_10
+unique chan name: Tx MPDU in AMPDU 27
+unique chan name: Scan While Roam Cnt - since LinkUp
+unique chan name: MU MIMO MPDU Bytes
+unique chan name: aop_host_time_[hist]_3
+unique chan name: Failed Completions Since Last Check
+unique chan name: Assoc Ready
+unique chan name: Freed
+unique chan name: aop_zero_host_time_[stop]_2
+unique chan name: DEV252
+unique chan name: mtp.AFE_BOOTLOADER.SPI_CLOCK_PHASE_KEY_SET_FAILURE
+unique chan name: aop_host_time_[hist]_11
+unique chan name: PWR037
+unique chan name: Chip Mode error - STA    - TS NOT Requested
+unique chan name:     Wrapper PCIe Gen2   Master Read 
+unique chan name: com.apple.xnu.accounting_health
+unique chan name: io_event_id_2
+unique chan name: GPUDVDH
+unique chan name: Tag WL Error
+unique chan name: Radio Rx Multicast Total Pkts
+unique chan name: ExtOp-NoACK Count
+unique chan name: green
+unique chan name: PCPU1DTL14
+unique chan name: ECPU000
+unique chan name: ECPU_PPT_SWTRG
+unique chan name: link 0 EP corr(1)
+unique chan name: Tx HE Attempts 16
+unique chan name: Num Host Scan Req-Low Latency
+unique chan name: OPRT0002
+unique chan name: PCPM v19 idle
+unique chan name: aop_zero_host_time_[strt]_1
+unique chan name: SC Tx Blanking Upper Bound Bin 2
+unique chan name: Channel 1
+unique chan name: Power State
+unique chan name: ECPU_ADCLK_TRG
+unique chan name: PCPM1 v11
+unique chan name: SOC_DITHR_TRG
+unique chan name: mtp.TPM.BB_TOUCH_ALIVE
+unique chan name: ap-aop_time_delta_abs_[hist]_0
+unique chan name: PCPU1DTL1e
+unique chan name: Tx Duty Cycle (%)
+unique chan name: User Scan Dur 5G
+unique chan name: Power Counter FSTP 32
+unique chan name: Rx MPDU in SU AMPDU Usage 25
+unique chan name: MGPU2_PPT_SWTRG
+unique chan name: PCPUDTL05
+unique chan name: link 2 EP uncor(7)
+unique chan name: link 2 EP uncor(0)
+unique chan name: Rx Ack
+unique chan name: CAChannel1
+unique chan name: Tx Header Cache Hit
+unique chan name: Core 1 RSSI value
+unique chan name:  11 2g 20MHz n
+unique chan name: io_event_id_7
+unique chan name: OPRT0211
+unique chan name: Rx MCS Success 12
+unique chan name: spu_io_time_raw_[hist]_2
+unique chan name: Tx RU size 106
+unique chan name: Tx Reassoc Response
+unique chan name: Tag KM Error
+unique chan name: DCS-BW
+unique chan name: aop_zero_host_time_[strt]_9
+unique chan name: OPRT0518
+unique chan name: Used stack(30)
+unique chan name: frm_tim_max_us
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 28
+unique chan name: OPRT0105
+unique chan name: Atleast one tx queue is mostly full
+unique chan name: DSA TxDC Ant 1 (%)
+unique chan name: DEV112
+unique chan name: Unknown Restarts
+unique chan name: Successfull Completions Since Last Check
+unique chan name: Tx MPDU in AMPDU 49
+unique chan name: 161 5g 80MHz u
+unique chan name: MGPU2_PPT_TRG
+unique chan name: mtp.AFE_BOOTLOADER.FW_LOAD_FAILURE
+unique chan name: UncalMilliNits value
+unique chan name: Tx MCS Attempts 6
+unique chan name: spu_io_time_raw_[strt]_17
+unique chan name: PCPU1DTL19
+unique chan name: byte_cnt_[hist]_12
+unique chan name: Tx MCS Attempts 1
+unique chan name: EVT214
+unique chan name: ECPM v2 idle
+unique chan name: Tg49a Latest
+unique chan name: Memory Free Requests
+unique chan name: Antenna Grants
+unique chan name: mca2a.ERR.TxUnderflowAligned
+unique chan name: PACC1_CPM
+unique chan name: DPQ Barrier In
+unique chan name: Tx Auth
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 4
+unique chan name: IOA3-AFNC-BW
+unique chan name: Dequeue Count
+unique chan name: OPRT0502
+unique chan name: Tg1a Latest
+unique chan name: ap_io_host_time_[stop]_1
+unique chan name: Tx MCS Attempts 5
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 13
+unique chan name: Grp2 Misses
+unique chan name: mtp.HSP_SPI.HIDSPI_IDLE_TIMER_SLEEP_FAILURE
+unique chan name: MGPU1_AD_SWTRG
+unique chan name: CS FIFO Full
+unique chan name: mtp.HSP_SPI.SPI_MISSING_CONFIG
+unique chan name: link 0 RC uncor(0)
+unique chan name: Tx HE Success 0
+unique chan name: Rx OFDMA MCS Usage 21
+unique chan name: ECPM v1 idle
+unique chan name: Rx MCS Success 9
+unique chan name: EVT230
+unique chan name: OPRT0904
+unique chan name: Total stack(28)
+unique chan name: Tg21a Sum Count
+unique chan name: PCIe L2 Entry       Count
+unique chan name: OPRT0406
+unique chan name: Rx MU-MIMO MCS Usage 2
+unique chan name: BatteryCycleCount
+unique chan name: Report 8
+unique chan name: AFI-LIMIT2-BWR
+unique chan name: mtp.KB_TRANSPORT.CR_GET_FAILURE
+unique chan name: OPRT0414
+unique chan name: mtp.AFE_TRANSPORT.START_FAILURE
+unique chan name: link 2 RC uncor(9)
+unique chan name: Port 1 AER EP Unc Uncorrected Internal Err
+unique chan name: Rx VHT Success 5
+unique chan name: ESCO Traffic Indication
+unique chan name: mtp.AFE_PWR.HASCHANGED_ON_FAILURE
+unique chan name: Since Last Enqueue How Many Successfull Completions
+unique chan name: AGX.UT_Not_Engaged_Perf_State_1
+unique chan name: ap_io_host_time_[stop]_3
+unique chan name: FWFreePkt
+unique chan name: Rx MCS Success 5
+unique chan name: PWR076
+unique chan name: Rx MPDU in SU AMPDU Usage 44
+unique chan name: Causal Count
+unique chan name: Port 1 AER EP Cor Advisory Non-Fatal Error
+unique chan name: PCPUDTL211
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 37
+unique chan name: CLK010
+unique chan name: No Resources
+unique chan name: link 0 EP uncor(9)
+unique chan name:  10 2g 20MHz n
+unique chan name: Rx RU size 26
+unique chan name: OPRT0318
+unique chan name: Connections  Dur
+unique chan name: AFR_VMAX
+unique chan name: Tx VHT Success 9
+unique chan name: OPRT0104
+unique chan name: Tx VHT Success 6
+unique chan name: GPUPH
+unique chan name: ap-aop_time_delta_abs_[stop]_17
+unique chan name: PCPU1DTL16
+unique chan name: OPRT1205
+unique chan name: DEV304
+unique chan name: MSDU successfully transmits > 1 attempt
+unique chan name: DEV194
+unique chan name: AMPDU Rx Duplicate errors
+unique chan name: AGX.Min_UT_Engagement_Perf_State_1
+unique chan name: TKIP ICV Error Count
+unique chan name: Processed On Thread
+unique chan name: DSA Util Ant 2 (%)
+unique chan name: AFR_EXT_TRG0
+unique chan name: Port 1 Disable Request                 
+unique chan name: mtp.TPM.BB_ENTER_FORCE_ONLY
+unique chan name: Rx Fils Ignored Cnt
+unique chan name: TXA Timeout Count
+unique chan name: DEV034
+unique chan name: OPRT0803
+unique chan name: PCPU1DTL111
+unique chan name: mtp.AFE_BOOTLOADER.HW_PROCESS_CONFIG_FAILURE
+unique chan name: Port 1 AER EP Cor REPLAY_NUM Rollover     
+unique chan name: PCPU1DTL17
+unique chan name: Remote Peer Unavailable - STA    - TS Requested
+unique chan name: PCPU1DTL413
+unique chan name: Number of Rx Good PLCPs received
+unique chan name: ECPM v5 idle
+unique chan name: Min of Minimum UMA Allocation Size
+unique chan name: NSS State
+unique chan name: Tx MPDU in AMPDU 1
+unique chan name: Rx MPDU in SU AMPDU Usage 16
+unique chan name:                         Rx LOST MPDU BA Tid2
+unique chan name: Rx MU-MIMO MCS Usage 8
+unique chan name: MGPU3_DTH_SWTRG
+unique chan name: aop_zero_frame_cnt_[strt]_15
+unique chan name: OPRT0506
+unique chan name: mtp.TOUCH_ALGS.FRAME_DROP
+unique chan name:                Log Calls      [Warn]
+unique chan name: Tx MPDU in AMPDU 50
+unique chan name: Tg3a Max
+unique chan name: Frames dropped
+unique chan name: OPRT0501
+unique chan name: ap_wake_time_abs_8
+unique chan name: mca1a.IRQ.DMA_A.TX_Fifo_Overflow
+unique chan name: Path Unmute Requests
+unique chan name: Channel Utilization State
+unique chan name: PSM Watchdogs
+unique chan name: MGPU3_AD_HWTRG
+unique chan name: Critical PHY Cal
+unique chan name: DEV153
+unique chan name: Used stack(19)
+unique chan name: Rx decrypt errors are too high
+unique chan name: Life Time Expired - STA    - TS Requested
+unique chan name: VI Tx Packets
+unique chan name: Tx MCS Usage 3x2
+unique chan name: mtp.TL_SCM.SEND_INPUT_FAILURE
+unique chan name: aop_zero_frame_cnt_[strt]_18
+unique chan name: ECPUDTL05
+unique chan name: ap_io_host_time_[strt]_11
+unique chan name: Tx MPDU in AMPDU 2
+unique chan name: RC2 coex durations (ms)
+unique chan name: PCPUDTL0c
+unique chan name: PCPU1DTL312
+unique chan name: PCPU020
+unique chan name: CDM Round robin
+unique chan name: byte_cnt_[hist]_8
+unique chan name: SNR
+unique chan name: PCPM v8 idle
+unique chan name: PCPU1DTL03
+unique chan name: aop_host_time_[hist]_17
+unique chan name: spu_io_time_raw_[strt]_12
+unique chan name: User Scan Off Ch Dur
+unique chan name: Port 1 AER RC Unc Unsupported Request     
+unique chan name: Tx VHT Attempts 17
+unique chan name: Tx VHT Success 7
+unique chan name: Report 83
+unique chan name: AWDLUse(%)
+unique chan name: Rx MPDU in SU AMPDU Usage 24
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 16
+unique chan name: CLK001
+unique chan name: Segment Count
+unique chan name: TKIP Local MIC Failures
+unique chan name: aop_zero_host_time_[strt]_4
+unique chan name: Exit Count
+unique chan name: PCPUDTL1c
+unique chan name: spu_queue_overflow_ep
+unique chan name: OPRT0604
+unique chan name: Accumulated LPAS/WoW Dur-sec
+unique chan name: ECPUDTL31
+unique chan name: IOA5 WR
+unique chan name: Hybrid
+unique chan name: Tx MPDU in AMPDU 33
+unique chan name: Scan Phy Mode 11G
+unique chan name: mtp.AFE_BOOTLOADER.HW_MISSING_CONFIG
+unique chan name: AGX.Min_UT_Engagement_Perf_State_3
+unique chan name: Scan Type Low span
+unique chan name: JPEG
+unique chan name: Port 1 AER EP Unc Receiver Overflow       
+unique chan name: Rx Upr Processed Cnt
+unique chan name: link 3 RC corr(3)
+unique chan name: aop_zero_host_time_[drift]
+unique chan name: mtp.COMM.INTERFACE_IS_NOT_VALID
+unique chan name: OPRT0515
+unique chan name: Tx HE Attempts 8
+unique chan name: Rx HE Success 4
+unique chan name: PCPU1DTL0b
+unique chan name: Port 1 Deep Sleep Entry                
+unique chan name: Tag WL Assoc Log
+unique chan name: com.apple.xnu.mlock_failures
+unique chan name: Tx MPDU in AMPDU 37
+unique chan name: Tx MPDU in AMPDU 34
+unique chan name: No Resources Completions
+unique chan name: Rx MCS Usage 6x2
+unique chan name: PCPM v16 idle
+unique chan name: Rx PHY PER is too high
+unique chan name: Set 7
+unique chan name: Port 1 Link Up                         
+unique chan name: PCPU1DTL12
+unique chan name: Rx Bad PLCP
+unique chan name: OPRT0610
+unique chan name: Rx SGI MCS Usage 14
+unique chan name: OPRT1104
+unique chan name: Segment Prepare Errors
+unique chan name:   3 2g 20MHz n
+unique chan name: Tx VHT Usage 5x2
+unique chan name: mtp.AFE_TRANSPORT.CR_INPUT_REPORT
+unique chan name: ap_io_host_time_[strt]_12
+unique chan name: CTS Rxd in response to RTS
+unique chan name: Commander Problems
+unique chan name: ALS reports
+unique chan name: OPRT0903
+unique chan name: aop_zero_frame_cnt_[stop]_12
+unique chan name:   4 2g 20MHz n
+unique chan name: PCPM v18 idle
+unique chan name: Number SAC Action4 FreqArray1
+unique chan name: PCIe D2H Doorbell Count
+unique chan name: PNO SSID  Scan Dur
+unique chan name: Max Tx queue full duration (ms) across all AC's
+unique chan name: ap_wake_time_abs_2
+unique chan name: Tx PHY CRS
+unique chan name: link 0 EP corr(3)
+unique chan name: Port 1 Suspend Request                 
+unique chan name: ORED_SPMI10_VWS
+unique chan name: spu_io_time_raw_[drift]
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_2
+unique chan name: ap_io_host_time_[hist]_1
+unique chan name: Tx MPDU in AMPDU 31
+unique chan name: Core 0 RSSI value
+unique chan name: PCPUDTL1a
+unique chan name: mtp.AFE_TRANSPORT.CR_GET_FAILURE
+unique chan name: Connections Made
+unique chan name: Rx MU-MIMO MCS Usage 22
+unique chan name: Rx MU-MIMO MCS Usage 9
+unique chan name: Number SAC Action0
+unique chan name: Channel CCA 120
+unique chan name: Periodic Audio Deny Count
+unique chan name: Time since last measurement (ms)
+unique chan name: PWR061
+unique chan name: Port 1 AER EP Unc Malformed TLP           
+unique chan name: OPRT0711
+unique chan name: Tag ECounters Time Data
+unique chan name: Power Counter FSTP 9
+unique chan name: apl_sum
+unique chan name: PACC1_CPU0
+unique chan name: Port 0 AER RC Unc Unexpected Completion   
+unique chan name: PCPU1DTL4b
+unique chan name: Port 0 Disable Request                 
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_11
+unique chan name: spu_io_time_raw_[stop]_11
+unique chan name: byte_cnt_[hist]_13
+unique chan name: No Remote Peer
+unique chan name: CLK023
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 50
+unique chan name: DEV158
+unique chan name: Tx Discard Not Associated
+unique chan name: SC Tx Blanking Count Total Bin 1
+unique chan name: Tx MCS Usage 2x2
+unique chan name: PWR068
+unique chan name: Tg44a Max
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 12
+unique chan name: Tx VHT Success 4
+unique chan name: PNO BSSID Scan Off Ch Dur 2G
+unique chan name: bl_update_count
+unique chan name: OPRT1302
+unique chan name: using_nominal_timestamps
+unique chan name: Tx MCS Usage 5x1
+unique chan name: aop_zero_frame_cnt_[strt]_9
+unique chan name: PNO BSSID Scan Dur
+unique chan name: Success - SoftAP - TS NOT Requested
+unique chan name: Tag NAT Warn
+unique chan name: OPRT1303
+unique chan name: PCPU1DTL113
+unique chan name: DUT Rx PHY issue
+unique chan name: ECPUDTL23
+unique chan name: EACC_CPM
+unique chan name:                         Rx LOST MPDU BA Tid0
+unique chan name: CLK016
+unique chan name: ap_wake_time_abs_0
+unique chan name: link 2 RC uncor(1)
+unique chan name: ECPUDTL24
+unique chan name: Duplicate Rx AMPDU
+unique chan name: SOCHOT1
+unique chan name: Scan Flag No Blacklist
+unique chan name: DEV350
+unique chan name: Port 0 AER RC Unc Malformed TLP           
+unique chan name: Link Quality Metric State
+unique chan name: Tag AWDL Error
+unique chan name: SOC_PPT_TRG
+unique chan name: link 3 EP uncor(5)
+unique chan name: ap_io_host_time_[stop]_5
+unique chan name: PNO BSSID Scan Count
+unique chan name: spu_io_time_raw_[stop]_2
+unique chan name: AFNC4-RD-BWR
+unique chan name: Soft AP
+unique chan name: OPRT0415
+unique chan name: mtp.AFE_BOOTLOADER.SPI_CS_SETUP_TIME_KEY_SET_FAILURE
+unique chan name: Max
+unique chan name: OPRT0206
+unique chan name: Auth Success
+unique chan name: Rx MPDU in SU AMPDU Usage 7
+unique chan name: Power Counter FSTP 12
+unique chan name: force_reloads
+unique chan name: Rx MPDU in SU AMPDU Usage 14
+unique chan name: ECPU_EXT_TRG1
+unique chan name: Port 0 Deep Sleep Entry                
+unique chan name: Peak heap alloc
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 27
+unique chan name: Tx MPDU in AMPDU 22
+unique chan name: Channel CCA 144
+unique chan name: A2DP Deny Count
+unique chan name: DEV254
+unique chan name: Other
+unique chan name: AES H2F
+unique chan name: PCPM1 v11 idle
+unique chan name: DISPEXT0
+unique chan name: PCPU1DTL3c
+unique chan name: IOA4 RD+WR
+unique chan name: User Scan Cnt
+unique chan name: Decision Map
+unique chan name: RC2 TX Req Count
+unique chan name: PCPUDTL43
+unique chan name: ap_wake_time_abs_11
+unique chan name: IO Error
+unique chan name: Accel reports
+unique chan name: PCPM1 v9 idle
+unique chan name: Q-TICKS-1
+unique chan name: link 0 EP uncor(10)
+unique chan name: Tx HE Success 14
+unique chan name: GPU Power Filter
+unique chan name: Tx SGI VHT Usage 17
+unique chan name:         Log Calls Dropped CC Filters
+unique chan name: OPRT0000
+unique chan name: API calls
+unique chan name: Deauth Received
+unique chan name: Rx MU-MIMO MCS Usage 13
+unique chan name: Available Admission Capacity
+unique chan name: mtp.COMM.SEND_INPUT_FAILURE
+unique chan name: spu_gesture
+unique chan name: Tg53a Sum Count
+unique chan name: Port 0 AER EP Unc Flow Ctrl Protocol Error
+unique chan name: PWR069
+unique chan name: Failure  - AWDL   - TS NOT Requested
+unique chan name: ap_io_host_time_[hist]_13
+unique chan name: instant_energy
+unique chan name: mtp.Z2SPI.CR_GET_INFO_RETRY
+unique chan name: Rx MCS Success 3
+unique chan name: Data Delay Count
+unique chan name: Tx HE Success 11
+unique chan name: Power Counter FSTP 11
+unique chan name: Tg32a Sum Count
+unique chan name: Rx MCS Success 13
+unique chan name: Channel CCA State 112
+unique chan name: PCPUDTL2f
+unique chan name: OPRT1009
+unique chan name: DMA C2P
+unique chan name: Command Max Outbound Time (us)
+unique chan name: Rx HE Success 18
+unique chan name: Tx VHT Attempts 4
+unique chan name: Tx HE Success 1
+unique chan name: Duration Since Last Successful Completion
+unique chan name: Tx VHT Success 13
+unique chan name: spu_io_time_raw_[hist]_4
+unique chan name: mtp.HSP_SPI.SPI_CS_SETUP_TIME_KEY_SET_FAILURE
+unique chan name: BlockACK requests received
+unique chan name: Tx MPDU in AMPDU 32
+unique chan name: FAB_VMIN
+unique chan name: Rx MPDU in SU AMPDU Usage 11
+unique chan name: Tx SGI VHT Usage 11
+unique chan name: Port 1 AER RC Unc Surprise Down Error     
+unique chan name: Tx VHT Success 21
+unique chan name: PCPM1 v12
+unique chan name: mtp.TOUCH_ALGS.FRAME_RECEIVE_FAILURE
+unique chan name: Failure  - NAN    - TS NOT Requested
+unique chan name: Rx VHT Usage 8x1
+unique chan name: Total Successfull Completions
+unique chan name: Channel CCA State  36
+unique chan name: ap_io_host_time_[stop]_10
+unique chan name: PACC0_CPU
+unique chan name: Zero start byte transfers
+unique chan name: Average Sum Count
+unique chan name: Rx RU size 52
+unique chan name: Spurious Interrupts
+unique chan name: PCPM v17 idle
+unique chan name: spu_io_time_raw_[stop]_13
+unique chan name: ECPUDTL03
+unique chan name: Port 0 Disable LTSSM Off               
+unique chan name: Tg49a Sum
+unique chan name: Throttle Counter IVDM 
+unique chan name: MSDU failed due to exceeded transmits
+unique chan name: Rx MPDU in AMPDU in 26 Tone RU
+unique chan name: Tx frame count is too low for LQM analysis
+unique chan name: PCIe L1.2 Entry     Count
+unique chan name: OPRT0412
+unique chan name: AFR_DTH_SWTRG
+unique chan name: byte_cnt_[hist]_0
+unique chan name: 157 5g 20MHz n
+unique chan name: AFI-BW
+unique chan name: Port 0 AER EP Cor Corrected Internal Error
+unique chan name: DEV110
+unique chan name: AMCC WR
+unique chan name: Tx MPDU in AMPDU 29
+unique chan name: Rx SGI VHT Usage 14
+unique chan name: EVT027
+unique chan name: PCPUDTL34
+unique chan name: 116 5g 20MHz n
+unique chan name:                         Rx LOST MPDU NonBA Tid3
+unique chan name: Commander Quiesce
+unique chan name: VO Tx Bytes
+unique chan name: aop_zero_frame_cnt_[stop]_9
+unique chan name: Channel CCA  56
+unique chan name: Tx Header Cache Miss
+unique chan name: Rx MPDU in SU AMPDU Usage 50
+unique chan name: CLK061
+unique chan name: mtp.ACT_MGR.UP_CLICK_BB
+unique chan name: Chip Mode error - STA    - TS Requested
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 23
+unique chan name: Tx VHT Usage 5x1
+unique chan name: AGX.Min_UT_Engagement_Perf_State_12
+unique chan name: ECPUDTL20
+unique chan name: BlockACK Requests sent
+unique chan name: PWR074
+unique chan name:   9 2g 20MHz n
+unique chan name: PWR001
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 11
+unique chan name: DEV132
+unique chan name: DEV060
+unique chan name: EVT028
+unique chan name: Pending Retained Items
+unique chan name: DQ Action
+unique chan name: Tx MPDU in AMPDU in 106 Tone RU
+unique chan name: Successfully completed Tx bytes
+unique chan name: Remote Peer Unavailable - AWDL   - TS NOT Requested
+unique chan name: Spill Buffer Metadata Usage
+unique chan name: ECPUDTL02
+unique chan name: Tx Data Frames
+unique chan name: spu_io_time_raw_[strt]_16
+unique chan name: link 0 RC uncor(4)
+unique chan name: CLK027
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 12
+unique chan name: No Buffers Completions
+unique chan name: Rx SGI VHT Usage 16
+unique chan name: Channel CCA 116
+unique chan name: PCPU1_DTH_SWTRG
+unique chan name: Tag Scan Warn
+unique chan name: PCPU1DTL01
+unique chan name: Sleep cycles with active streams
+unique chan name: Datapath Events Processed
+unique chan name: DEEP_WAIT
+unique chan name: Report 251
+unique chan name: Given Up
+unique chan name: Rx MPDU in SU AMPDU Usage 43
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 20
+unique chan name: byte_cnt_[hist]_4
+unique chan name: Miscellaneous Drops
+unique chan name: Number SAC Action2 FreqArray2
+unique chan name: Report 210
+unique chan name: Path Off HI Requests
+unique chan name: mtp.TOUCH_ALGS.STREAM_CB
+unique chan name: OPRT1002
+unique chan name: MGPU1_ADCLK_TRG
+unique chan name: RSSI (dB)
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 18
+unique chan name: com.apple.AppleVideoDecoder.SessionStatistics
+unique chan name: mtp.KB_TRANSPORT.STM_RESET_SIGNAL_FAILURE
+unique chan name: PhyMode State
+unique chan name:   1 6g 20MHz n
+unique chan name: PHY Active Duration
+unique chan name: OPRT1108
+unique chan name: Total stack(8)
+unique chan name: Tg17a Sum
+unique chan name: spu_io_time_raw_[strt]_11
+unique chan name: ap_io_host_time_[strt]_15
+unique chan name:                         Rx LOST MPDU NonBA Tid6
+unique chan name:                         Rx LOST MPDU NonBA Tid7
+unique chan name: apciec2 Read BW
+unique chan name: Tx MCS Usage 4x2
+unique chan name: Partial Dequeue By Driver
+unique chan name: Scan Type Low power
+unique chan name: Total stack(22)
+unique chan name: A2DP Buffer6 Ant Grant
+unique chan name: Tx MCS Usage 5x2
+unique chan name:  52 5g 20MHz n
+unique chan name: Radio Rx Broadcast Dur
+unique chan name: ORED_SPMI50_VWS
+unique chan name: PCPUDTL412
+unique chan name: Average Tx latency (ms)
+unique chan name: PACC0_CPU0
+unique chan name: DEV315
+unique chan name: mtp.KB_TRANSPORT.KB_IR_EARLY
+unique chan name: ap_io_host_time_[hist]_8
+unique chan name: DEV208
+unique chan name: Tier3 BW Scale Factor
+unique chan name: mtp.AFE_PWR.ST_GET
+unique chan name: Rx Non Data
+unique chan name: Rx OFDMA MCS Usage 5
+unique chan name: Rx MPDU in SU AMPDU Usage 61
+unique chan name: Tg32a Latest
+unique chan name: Report 255
+unique chan name: PCPM1 v18 idle
+unique chan name: Partial Dequeue By AQM
+unique chan name: link 2 RC corr(3)
+unique chan name: apciec0 Write BW
+unique chan name: PNO SSID  Scan Dur 2G
+unique chan name: PCPM v6
+unique chan name: OPRT1201
+unique chan name: Rx Data Frame Multicast
+unique chan name: ISPCPU Log Messages
+unique chan name: OPRT0405
+unique chan name: mtp.AFE_PWR.ST_GET_FAILURE
+unique chan name:                Log Calls    [Notice]
+unique chan name: DEV309
+unique chan name: Peer Infra Channel
+unique chan name: Chip Mode Error
+unique chan name: Rx MPDU in SU AMPDU Usage 21
+unique chan name: spu_aggregate_dictionary
+unique chan name: Confirmed count
+unique chan name: Num Normal Prio Req While Stationary
+unique chan name: Life Time Expired - SoftAP - TS Requested
+unique chan name: ECPU030
+unique chan name: mtp.HSP_SPI.SPI_CLOCK_FREQUENCY_KEY_SET_FAILURE
+unique chan name: RC1 coex durations (ms)
+unique chan name: Tx VHT Usage 1x1
+unique chan name: OPRT0702
+unique chan name: PCPU1DTL0d
+unique chan name: ServoCE0
+unique chan name: AirPlay Sessions Qualifying Dynamic SDB
+unique chan name: PCPUDTL2a
+unique chan name: PCPU1DTL212
+unique chan name: Medium available WLAN duration
+unique chan name: Rx MPDU in SU AMPDU Usage 63
+unique chan name: Used stack(23)
+unique chan name: Successfully TXed CTS2A
+unique chan name: Tx SGI MCS Usage 8
+unique chan name: PCPUDTL27
+unique chan name: PCPU1DTL4e
+unique chan name: Set 13 PHY Entity
+unique chan name: DEV306
+unique chan name: SOCHOT0
+unique chan name: Home Channel Qual Changed
+unique chan name: OPRT0511
+unique chan name: EVT024
+unique chan name: Rx VHT Usage 3x2
+unique chan name: DEV205
+unique chan name: RC2 Critical Max Duration
+unique chan name:  40 5g 20MHz n
+unique chan name: PCPUDTL2b
+unique chan name: AGX.Min_UT_Engagement_Perf_State_0
+unique chan name: ap_io_host_time_[stop]_16
+unique chan name: spu_io_time_raw_[hist]_17
+unique chan name: Number SAC Action4
+unique chan name: Rx SGI VHT Usage 6
+unique chan name: PPM
+unique chan name: PM Protection Success
+unique chan name: Rx SGI MCS Usage 2
+unique chan name: MaxRetries Completions
+unique chan name: link 0 EP uncor(8)
+unique chan name: OPRT1000
+unique chan name: PCPU1DTL28
+unique chan name: Commander Pause
+unique chan name: Set 21 Power Set 1
+unique chan name: link 0 RC uncor(3)
+unique chan name: DISP_EXT_VMIN
+unique chan name: Dropped Set 29 BCM Trace
+unique chan name: Tx Probe Response
+unique chan name: Power Counter FSTP 18
+unique chan name: Dropped Set 6
+unique chan name: mtp.TOUCH.INPUT_REPORT_SEND_FAILURE
+unique chan name: Tx HE Attempts 5
+unique chan name: Interface OBSS CCA
+unique chan name: PCPU0_EXT_TRG3
+unique chan name: 202
+unique chan name: MGPU3_EXT_TRG0
+unique chan name: Tg49a Min
+unique chan name: Tg63a Sum
+unique chan name: spu_io_time_raw_[hist]_14
+unique chan name: WLC_E_PFN_NET_FOUND
+unique chan name:  36 5g 20MHz n
+unique chan name: Tx MCS Usage 1x2
+unique chan name: Used stack(25)
+unique chan name: PCPU1DTL412
+unique chan name: Consecutive DPS Detected
+unique chan name: drift_detect
+unique chan name: WatchdogResetCount
+unique chan name: Tag Enhanced TS
+unique chan name: Rx MCS Usage 0x2
+unique chan name: PCPUDTL0b
+unique chan name: ap-aop_time_delta_abs_[strt]_8
+unique chan name: Channel Noise  44
+unique chan name: Rx MPDU in SU AMPDU Usage 12
+unique chan name: Rx CRC Glitch
+unique chan name: mtp.HSP_SPI.HIDSPI_IFACE_ID_KEY_SET_FAILURE
+unique chan name: io_event_id_13
+unique chan name: ap-aop_time_delta_abs_[hist]_19
+unique chan name: Channel CCA State   9
+unique chan name: mtp.TOUCH_ALGS.FORCE_DATA_INVALID_CB
+unique chan name: Tx HE Attempts 6
+unique chan name: link 0 EP uncor(3)
+unique chan name: PCPU1DTL012
+unique chan name: link 1 RC uncor(3)
+unique chan name: Set ECounters
+unique chan name: Other Scan Count 5G
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 13
+unique chan name: PCPU1DTL18
+unique chan name: BK Tx Bytes
+unique chan name: FAB_AD_HWTRG
+unique chan name: Tag PCI Warn
+unique chan name: DEV054
+unique chan name: Reassoc Success
+unique chan name: Wake count
+unique chan name: Dequeue Throttled Max Time
+unique chan name: PWR034
+unique chan name: SOC_PPT_SWTRG
+unique chan name: DEV107
+unique chan name: Rx SGI MCS Usage 10
+unique chan name: OPRT0419
+unique chan name: AGX.Min_UT_Engagement_Perf_State_11
+unique chan name: PMU_RC
+unique chan name: Rx MPDU in SU AMPDU Usage 60
+unique chan name: PWR062
+unique chan name: Rx Bytes
+unique chan name: Tx SGI VHT Usage 6
+unique chan name: CLK046
+unique chan name: CLK049
+unique chan name: ECPU_AD_HWTRG
+unique chan name: ap_io_host_time_[stop]_2
+unique chan name: PCPU1DTL0e
+unique chan name: Grant
+unique chan name: Rx OFDMA MCS Usage 3
+unique chan name: Rx No SCB
+unique chan name: Queue Flags
+unique chan name: 204
+unique chan name: CLK034
+unique chan name: MGPU3_DITHR_TRG
+unique chan name: PWR079
+unique chan name: Tx HE Attempts 13
+unique chan name: ap_io_host_time_[strt]_1
+unique chan name: spu_io_time_raw_[strt]_5
+unique chan name: PCPUDTL0f
+unique chan name: Diag
+unique chan name: Tx MPDU in AMPDU 21
+unique chan name: CLK048
+unique chan name: Num Low Prio Req While Stationary
+unique chan name:                         Tx MPDU Tid0
+unique chan name:     Wrapper PCIe Gen2   Slave  Read 
+unique chan name: PCPUDTL48
+unique chan name: No ACK
+unique chan name: Tx VHT Attempts 11
+unique chan name: OPRT1202
+unique chan name: apciec1 Energy
+unique chan name: mtp.HSP_SPI.HIDSPI_WAKE_NOTIFICATION
+unique chan name: DUT Rx overflow issue
+unique chan name: Invalid
+unique chan name: Channel CCA  85
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 46
+unique chan name: DEV346
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 9
+unique chan name: MPDU Rx
+unique chan name: MGPU2_AD_HWTRG
+unique chan name: PCPU1DTL410
+unique chan name: OPRT0507
+unique chan name: mtp.HSP_SPI.HIDSPI_BUSY_DELAY_MS_KEY_SET_FAILURE
+unique chan name: DEV116
+unique chan name: Async Pending Queue Time
+unique chan name: EACC_CPM_SRAM
+unique chan name: Number SAC Action2 FreqArray1
+unique chan name: Peers Added
+unique chan name: Report 10
+unique chan name: DEV059
+unique chan name: OPRT0306
+unique chan name: Tx Retransmissions
+unique chan name: SU MPDU Data
+unique chan name: ECPM v3 idle
+unique chan name: nits_accum
+unique chan name: EVT234
+unique chan name: Channel CCA 140
+unique chan name: PCPU1DTL3d
+unique chan name: DEV156
+unique chan name: PWR003
+unique chan name: Grp10 Misses
+unique chan name: Tx MPDU in AMPDU 53
+unique chan name: aop_cblite
+unique chan name: OPRT0217
+unique chan name: ORED_SPMI31_VWS
+unique chan name: Tx CTS
+unique chan name: aop_wombat
+unique chan name: red
+unique chan name: spu_io_time_raw_[hist]_1
+unique chan name: mtp.AFE_TRANSPORT.IR_ROUTE_SUPERVISOR_TRIGGER
+unique chan name: DEV367
+unique chan name: Tier0 Throttle Time
+unique chan name:                         Rx MPDU Tid6
+unique chan name:                Log Calls      [Spam]
+unique chan name: STRESS-0
+unique chan name: DRAM0
+unique chan name: IOA5-AFR-BW
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 39
+unique chan name: link 2 EP corr(2)
+unique chan name: Port 1 AER EP Unc Unsupported Request     
+unique chan name: WEP ICV Error Count
+unique chan name: BusPr-Contention Count
+unique chan name: DISP_INT_VNOM
+unique chan name: Rx CTS to Other
+unique chan name: Rx OFDMA MCS Usage 19
+unique chan name: PCIe Submissions Count
+unique chan name: Delayed Tx bytes from last measurement
+unique chan name: Tg37a Sum Count
+unique chan name: PWR081
+unique chan name: Grp24 Misses
+unique chan name: eSCO
+unique chan name: mca1a.IRQ.DMA_A.RX_Fifo_Underflow
+unique chan name: Total memory of UMA HW Pools
+unique chan name: Request Dequeue Async Path
+unique chan name: Port 0 AER RC Unc TLP Prefix Blocked Error
+unique chan name: Sync Changes
+unique chan name: Tx HE Attempts 4
+unique chan name: Total stack(12)
+unique chan name: Total stack(29)
+unique chan name: SC Tx Blanking Count Total Bin 2
+unique chan name: subframes(3)
+unique chan name: Tx MCS Success 15
+unique chan name: PWR048
+unique chan name: P0 DLink Read
+unique chan name: Inquity Scan
+unique chan name: EACC_CPU3_SRAM
+unique chan name: Packet Failures
+unique chan name: OPRT1311
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 40
+unique chan name: Rx VHT Success 20
+unique chan name: Scan Mode Unknown
+unique chan name: Rx MPDU in AMPDU in 106 Tone RU
+unique chan name: Core Block Slot
+unique chan name: OPRT2401
+unique chan name: Tx MPDU in AMPDU 28
+unique chan name: DEV091
+unique chan name: Rx MCS Usage 5x2
+unique chan name: Channel CCA 157
+unique chan name: EVT235
+unique chan name: Grp8 Misses
+unique chan name: Port 0 AER EP Unc Unexpected Completion   
+unique chan name: Channel CCA State  12
+unique chan name: Used stack(8)
+unique chan name: Tx VHT Attempts 8
+unique chan name:  48 5g 20MHz n
+unique chan name: Chip Mode error - AWDL   - TS Requested
+unique chan name: MGPU3_EXT_TRG2
+unique chan name: PCPU1DTL48
+unique chan name: bytes_read
+unique chan name: WiFi Session Duration
+unique chan name: Rx VHT Success 21
+unique chan name: AGX.Max_UT_Engagement_Perf_State_4
+unique chan name: Tx MCS Success 1
+unique chan name: AP Rx PHY issue
+unique chan name: Tx MPDU in AMPDU 46
+unique chan name: Channel CCA   3
+unique chan name: Rx VHT Usage 4x1
+unique chan name: aop_zero_host_time_[stop]_0
+unique chan name: mtp.DOCK.CHANNEL_INIT_FAILURE
+unique chan name: Rx HE Success 20
+unique chan name: DUT Rx decrypt issue
+unique chan name: Port 1 AER RC Unc Atomic OP Egress Blocked
+unique chan name: Rx RU size 996
+unique chan name: Rx MPDU in SU AMPDU Usage 17
+unique chan name: mtp.AFE_TRANSPORT.STOP_FAILURE
+unique chan name: nits_sum
+unique chan name: ap_io_host_time_[strt]_17
+unique chan name: Driver Availability
+unique chan name: spu_rtp_hr
+unique chan name: Input Processed Immediately
+unique chan name: byte_cnt_[hist]_15
+unique chan name: Grp9 Misses
+unique chan name: CDM Alloc New
+unique chan name: MGPU3_AD_SWTRG
+unique chan name: MilliNits value
+unique chan name: PCPM v9 idle
+unique chan name: ap-aop_time_delta_abs_[stop]_4
+unique chan name: Rx VHT Success 7
+unique chan name: mtp.HSP_SPI.HIDSPI_SCM_TRANSFER_FAILURE
+unique chan name: AGX.Max_UT_Engagement_Perf_State_7
+unique chan name: Rx Control Or Mgmt
+unique chan name: DEV256
+unique chan name: PCPU1DTL02
+unique chan name: Roam Scan Cnt
+unique chan name: OPRT1307
+unique chan name: Port 1 Root Port Error Interrupt       
+unique chan name: Other Scan Off Ch Dur
+unique chan name: TxFailure
+unique chan name: Rx SGI MCS Usage 4
+unique chan name: AWDLDuration(s)
+unique chan name: mca0a.ERR.TxUnderflowAligned
+unique chan name: PCIe Port 1 Link States
+unique chan name: Rx VHT Success 14
+unique chan name: Tx MCS Success 3
+unique chan name: PWR042
+unique chan name: PCIe Active         Dur
+unique chan name: DUT Rx AMPDU TxBA mismatch issue
+unique chan name: DPS Symptom
+unique chan name: PNO BSSID Scan Off Ch Dur
+unique chan name: AGX.Max_UT_Engagement_Perf_State_8
+unique chan name: Channel Noise State  60
+unique chan name: Tx Status Error
+unique chan name: OPRT0300
+unique chan name: Port 0 AER RC Unc Poisoned TLP            
+unique chan name: A2DP High Watermark Count
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 22
+unique chan name: Queue State
+unique chan name: link 2 EP corr(0)
+unique chan name: PCPUDTL39
+unique chan name: Rx Assoc Response
+unique chan name: PCPU1DTL11
+unique chan name: User Scan Off Ch Dur 5G
+unique chan name: PCPUDTL24
+unique chan name: PCPM1 v17
+unique chan name: OPRT0504
+unique chan name: ORED_SPMI51_VWS
+unique chan name: aop_zero_host_time_[stop]_14
+unique chan name: Scan Flag AWDL Piggyback
+unique chan name: LQM RSSI value
+unique chan name:   5 2g 20MHz n
+unique chan name: SC Tx Blanking Count MC Tx Bin 3
+unique chan name: Tx latency is too high
+unique chan name: Tx SGI VHT Usage 18
+unique chan name: 124 5g 20MHz n
+unique chan name: Allocated Shared Memory
+unique chan name: DISPEXT0 WR
+unique chan name: Link 3 states
+unique chan name: Dropped Set ECounters
+unique chan name: PCPU1_EXT_TRG1
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 38
+unique chan name: 210
+unique chan name: ap-aop_time_delta_abs_[strt]_6
+unique chan name: GPU Power Zone Filter 0
+unique chan name: OPRT0003
+unique chan name: PWR064
+unique chan name: Tx MPDU in AMPDU 25
+unique chan name: PCPU1DTL40
+unique chan name: 100 5g 20MHz n
+unique chan name: CLK032
+unique chan name: link 1 RC corr(7)
+unique chan name: 128 5g 20MHz n
+unique chan name: Power Counter FSTP 21
+unique chan name: media_count
+unique chan name: Dropped
+unique chan name: OPRT0314
+unique chan name: PWR039
+unique chan name: DEV249
+unique chan name: OPRT0302
+unique chan name: UMI Pending
+unique chan name: apciec1 Link States
+unique chan name: DISPEXT2 RD
+unique chan name: link 2 RC uncor(0)
+unique chan name: byte_cnt_[hist]_5
+unique chan name: IVDM: Min Active Throttle Percent
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 52
+unique chan name: Rx MPDU in SU AMPDU Usage 22
+unique chan name: PCPU1_AD_SWTRG
+unique chan name: Grp7 Hits
+unique chan name: mca2a.IRQ.DMA_A.TX_Fifo_Overflow
+unique chan name: Tg60a Sum Count
+unique chan name: Life Time Expired - NAN    - TS Requested
+unique chan name: AGX.Count_UT_Engagement_Perf_State_7
+unique chan name: spu_io_time_raw_[hist]_5
+unique chan name: TXA Set On
+unique chan name: Grp17 Misses
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_14
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 17
+unique chan name: AFI-LIMIT0-BWR
+unique chan name: Channel CCA State  44
+unique chan name: PCPM1 v13 idle
+unique chan name: Rx SGI VHT Usage 21
+unique chan name: Rx SGI VHT Usage 20
+unique chan name: OPRT0513
+unique chan name: PCPM v11
+unique chan name: mtp.ACT_MGR.HOST_UNCONTROL_REQUESTED_BB
+unique chan name: ap-aop_time_delta_abs_[hist]_16
+unique chan name: Tx HE Success 15
+unique chan name: BusPr-ExtColl Count
+unique chan name: apciec0 Energy
+unique chan name: Port 1 AER EP Cor Bad DLLP                
+unique chan name: DSA No Opt Mode Duration (ms)
+unique chan name: PCPUDTL112
+unique chan name: VLane Write
+unique chan name: Output
+unique chan name: io_event_id_9
+unique chan name: Dropped Set 7
+unique chan name: Phy Calibration
+unique chan name: Channel CCA State  13
+unique chan name: Channel CCA 161
+unique chan name: DEV133
+unique chan name: link 1 EP corr(0)
+unique chan name: Rx MPDU in SU AMPDU Usage 51
+unique chan name: Assoc Scan Dur
+unique chan name: OPRT0316
+unique chan name: Channel CCA 136
+unique chan name: mtp.HSP_SPI.TRANSFER_RECEIVED
+unique chan name:     Core    PCIe Gen2          Read 
+unique chan name: PCPM v21 idle
+unique chan name: Critical Rate Recovery
+unique chan name: Tx MPDU in AMPDU 59
+unique chan name: Tx MCS Attempts 13
+unique chan name: FAB_DTH_SWTRG
+unique chan name: PCPUDTL312
+unique chan name: Port 0 Enable Complete                 
+unique chan name: Grp23 Misses
+unique chan name: UVWarn Instances
+unique chan name: Tg33a Min
+unique chan name: BLE
+unique chan name: Tx HE Attempts 17
+unique chan name: RequeueCount
+unique chan name: PCIe Rx Completions Count
+unique chan name: PCPU1DTL42
+unique chan name: DISPINT RD
+unique chan name: mtp.TPM.BB_LID_OPENED
+unique chan name: AGX.Min_UT_Engagement_Perf_State_14
+unique chan name:                Log Calls     [Alert]
+unique chan name: Scan Done
+unique chan name: PCPM v6 idle
+unique chan name: PM Unassociated Dur
+unique chan name: Tx VHT Usage 0x1
+unique chan name: Rx RTS to Other
+unique chan name: Tx HE Success 9
+unique chan name: SLP_DDR
+unique chan name: DEV077
+unique chan name: Completion Latency Vi
+unique chan name: dmaTransferTime
+unique chan name: Tx MCS Attempts 0
+unique chan name: Power Counter FSTP 24
+unique chan name: Channel CCA  12
+unique chan name: OPRT1306
+unique chan name: link 2 EP uncor(5)
+unique chan name: ap-aop_time_delta_abs_[stop]_15
+unique chan name: PCPU1DTL26
+unique chan name: aop_zero_host_time_[strt]_7
+unique chan name: mtp.TPM.FSM_READY_ENTERED
+unique chan name: Tag PwrStats Scan
+unique chan name: Total Restarts
+unique chan name: Cached Peers Different Infra
+unique chan name: ECPUDTL33
+unique chan name: Tx HE Success 7
+unique chan name: reloads
+unique chan name: NoACK Completions
+unique chan name: Rx OFDMA MCS Usage 4
+unique chan name: Bcn Offload Duration
+unique chan name: audio
+unique chan name: Spill Buffer Unused Blocks per Task
+unique chan name: OPRT0600
+unique chan name: MGPU1_PPT_TRG
+unique chan name: Rx MPDU in SU AMPDU Usage 32
+unique chan name: Failure  - STA    - TS Requested
+unique chan name: Rx Good PLCP
+unique chan name: MGPU0_AD_SWTRG
+unique chan name: MIE factor
+unique chan name: CLVR_EXT_ANE
+unique chan name: Channel CCA   8
+unique chan name: OPRT2301
+unique chan name: PCPU1DTL46
+unique chan name: IOA7 WR
+unique chan name: Scan Type Background
+unique chan name:                         Rx LOST MPDU BA Tid4
+unique chan name: Tx MPDU in AMPDU 55
+unique chan name: IOA0 RD
+unique chan name: SYS_SLP_DDR
+unique chan name: Ring shrunk
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 4
+unique chan name: Tx MPDU in AMPDU 24
+unique chan name: PCPU1DTL1d
+unique chan name: PNO SSID  Scan Count
+unique chan name: Rx Management Frame Multicast
+unique chan name: DEV069
+unique chan name: Rx Assoc Request
+unique chan name: Tx FIFO Underflows
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 24
+unique chan name: mtp.HSP_SPI.POWER_ON_HARDWARE_FAILURE
+unique chan name: Tx HE Success 22
+unique chan name: RSSI is high
+unique chan name: ECPUDTL15
+unique chan name: Rx SGI MCS Usage 13
+unique chan name: mtp.BOOT.UNEXPECTED_CAL_BLOB
+unique chan name: Rx SGI VHT Usage 0
+unique chan name: Non-causal Count
+unique chan name: ORED_SPMI21_VWS
+unique chan name: OPRT0418
+unique chan name: PCIe L1 Entry       Count
+unique chan name: DEV316
+unique chan name: Data Buffer Full
+unique chan name: Tx VHT Usage 8x1
+unique chan name: mtp.TOUCH_ALGS.LID_CLOSED_CB
+unique chan name: IVDM: Max Throttle Percent       
+unique chan name: PCPU0_AD_SWTRG
+unique chan name: Rx MCS Usage 6x1
+unique chan name: Channel 3
+unique chan name: PACC1_CPU3_SRAM
+unique chan name: IOA6 RD
+unique chan name: ap-aop_time_delta_abs_[hist]_1
+unique chan name: Segment Ctor Count
+unique chan name: 144 5g 20MHz n
+unique chan name: Sys100ms
+unique chan name: ECPUDTL32
+unique chan name: Used stack(26)
+unique chan name: Tx Packets
+unique chan name: Sidecar State
+unique chan name: max_drift_time_delta
+unique chan name: Datapath Events Sent Up
+unique chan name: Total time elapsed
+unique chan name: Rx MU-MIMO MCS Usage 12
+unique chan name: OPRT0212
+unique chan name: STRESS-1
+unique chan name: mtp.AFE_PWR.RESET
+unique chan name: DEV073
+unique chan name: Rx HE Success 22
+unique chan name: mtp.HSP_SPI.ERR_RECEIVED
+unique chan name: Tx MPDU in AMPDU 30
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 34
+unique chan name: Channel CCA 153
+unique chan name: OPRT0103
+unique chan name: Scan Phy Mode 11B
+unique chan name: Rx MCS Usage 7x2
+unique chan name: AGX.Count_UT_Engagement_Perf_State_12
+unique chan name: 117
+unique chan name: DEV122
+unique chan name: Completion Latency Be
+unique chan name: Tx MPDU in AMPDU 26
+unique chan name: mtp.TOUCH_ALGS.FRAME_PROCESS
+unique chan name: spu_io_time_raw_[strt]_2
+unique chan name: PCPU1DTL2d
+unique chan name: link 2 EP uncor(9)
+unique chan name: Port 0 AER RC Unc Completer Abort         
+unique chan name: Rx OFDMA MCS Usage 13
+unique chan name: Tx MPDU in AMPDU 48
+unique chan name: Tg44a Min
+unique chan name: Power Counter FSTP 33
+unique chan name: Set 17 RTE Console Buffer
+unique chan name: Channel CCA State   3
+unique chan name: Used stack(17)
+unique chan name: Rx SGI VHT Usage 19
+unique chan name: 120 5g 20MHz n
+unique chan name: mtp.HSP_SPI.HIDSPI_SUSPEND_RESUME_FAILURE
+unique chan name: Tx MCS Success 2
+unique chan name: CLK019
+unique chan name: DEV190
+unique chan name: ap-aop_time_delta_abs_[stop]_10
+unique chan name: ap_wake_time_abs_17
+unique chan name: ECPUDTL04
+unique chan name: CCA is low
+unique chan name: AGX
+unique chan name: DEV138
+unique chan name: Decrypt Error
+unique chan name: link 2 RC corr(4)
+unique chan name: Report 68
+unique chan name: EACC_CPU0
+unique chan name: PWR046
+unique chan name: Tg37a Max
+unique chan name: Rx MPDU in SU AMPDU Usage 8
+unique chan name: Num Host Scan Rejected While Moving
+unique chan name: link 2 RC uncor(11)
+unique chan name: CLK063
+unique chan name: PWR009
+unique chan name: mtp.ACT_MGR.MTP_HOST_PENDING_TARGET_TRANSITION_BB
+unique chan name: Decrypt Success Count
+unique chan name: Tx packet (FW reported) count
+unique chan name: 166
+unique chan name: OPRT0705
+unique chan name: Rx SGI MCS Usage 5
+unique chan name: Port 0 Disable Hardware Off            
+unique chan name: AFR_EXT_TRG1
+unique chan name: OPRT0913
+unique chan name: OPRT1207
+unique chan name: Rx VHT Usage 2x2
+unique chan name: ECPM v1
+unique chan name: Rx CTS to MAC
+unique chan name: LTE Restricted Channels Used
+unique chan name: EACC_CPU2_SRAM
+unique chan name: Chip Buffer Unavailable  - STA    - TS Requested
+unique chan name: PCPUDTL03
+unique chan name: mtp.Z2SPI.ERR_GET_STATUS
+unique chan name: mtp.KB_TRANSPORT.STM_RESET_SIGNAL
+unique chan name: spu_io_time_raw_[hist]_6
+unique chan name:  12 2g 20MHz n
+unique chan name: DM Kill Count
+unique chan name: SC Tx Blanking Count MC Tx Bin 4
+unique chan name: aop_threshold_als
+unique chan name: Throttle Counter HWPI 
+unique chan name: PWR006
+unique chan name: DEV109
+unique chan name: Channel CCA  60
+unique chan name: PWR018
+unique chan name: spu_rtp_lisa
+unique chan name: Tag Notify Error
+unique chan name: AMPDU Rx Out-of-Sequence errors
+unique chan name: Total heap
+unique chan name: PCPM v15 idle
+unique chan name: Duration Since Last Enqueue
+unique chan name: Rx HE Success 23
+unique chan name: Rx VHT Success 4
+unique chan name: OPRT0200
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 26
+unique chan name: CLK056
+unique chan name: Radio Rx Multicast Bytes
+unique chan name: Power Counter FSTP 36
+unique chan name: Tx MPDU in AMPDU 8
+unique chan name: DISPINT RD+WR
+unique chan name: Power Counter FSTP 7
+unique chan name: Spill Buffer Usage
+unique chan name: Rx Runt
+unique chan name: link 3 EP corr(5)
+unique chan name: DSA Status
+unique chan name: AppleSDXCBlockStorageDevice Power State
+unique chan name: aop_zero_host_time_[strt]_3
+unique chan name: spu_io_time_raw_[strt]_19
+unique chan name: RC2 RX Req Count
+unique chan name: Coex activity
+unique chan name: Tag STF ARBITRATOR Error
+unique chan name: DISPEXT3 WR
+unique chan name: Port 0 AER EP Unc Unsupported Request     
+unique chan name: mtp.TOUCH_ALGS.INPUT_DETECTION_CB
+unique chan name: MGPU1_EXT_TRG3
+unique chan name: mtp.TPM.BB_START
+unique chan name: Tg5a Sum
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 7
+unique chan name: mtp.TPM.BB_ACTIVE_TIMEOUT
+unique chan name: ECPU
+unique chan name: SOC_DTH_HWTRG
+unique chan name: Tx MCS Usage 1x1
+unique chan name: ECPUDTL22
+unique chan name: Tx VHT Usage 1x2
+unique chan name: DEV117
+unique chan name: Cached Peers On 24G
+unique chan name: CLK008
+unique chan name: DEV329
+unique chan name: Critical Aggregate
+unique chan name: Rx VHT Usage 0x2
+unique chan name: Roam Scan Dur
+unique chan name: RC2 RX Deny Count
+unique chan name: link 1 EP uncor(10)
+unique chan name: ECPUDTL13
+unique chan name: Lisa reports
+unique chan name: ECPUDTL34
+unique chan name: Tx MPDU in AMPDU 4
+unique chan name: PWR075
+unique chan name: PACC0_CPU2
+unique chan name: OPRT1006
+unique chan name: TVPM Updates
+unique chan name: FENDER
+unique chan name: Rx PS Poll
+unique chan name: PWR032
+unique chan name: Rx Trigger GCR MU BAR
+unique chan name: OPRT0100
+unique chan name: com.apple.wifi.dsaStats.slice1
+unique chan name: PWR045
+unique chan name: OPRT2600
+unique chan name: PCPU0_DITHR_TRG
+unique chan name: aop_impact
+unique chan name: DEV120
+unique chan name: SSID Changed
+unique chan name: PCPM v10 idle
+unique chan name: CLVR_EXT_MGPU3
+unique chan name: OPRT0901
+unique chan name: io_event_id_12
+unique chan name: Tx SGI MCS Usage 15
+unique chan name: Rx frame count is too low for LQM analysis
+unique chan name: Rx NULL
+unique chan name: Rx SGI VHT Usage 5
+unique chan name: PCPU1DTL4a
+unique chan name: PHY Watchdogs
+unique chan name: byte_cnt_[hist]_18
+unique chan name: ap_io_host_time_[hist]_17
+unique chan name: Chip Mode Error Completions
+unique chan name: Rx SGI VHT Usage 8
+unique chan name: Rx MU-MIMO MCS Usage 7
+unique chan name: Failed
+unique chan name: OPRT0900
+unique chan name: EVT231
+unique chan name: client_reads
+unique chan name: spu_reset_slave
+unique chan name: link 2 EP uncor(4)
+unique chan name: OPRT0205
+unique chan name: Throttle Counter Total
+unique chan name: Rx VHT Success 6
+unique chan name: Rx VHT Usage 10x2
+unique chan name: Tx RU size 52
+unique chan name: spu_io_time_raw_[stop]_12
+unique chan name: spu_io_time_raw_[hist]_15
+unique chan name: OPRT0304
+unique chan name: AGX.UT_Not_Engaged_Perf_State_13
+unique chan name: Report 243
+unique chan name: Roam Scan Count
+unique chan name: mtp.HSP_SPI.BUSY_RECEIVED
+unique chan name: Channel Noise  60
+unique chan name: PCPU0_DTH_HWTRG
+unique chan name: Link Quality Metric
+unique chan name:     Wrapper (null)Write
+unique chan name: Rx MPDU in SU AMPDU Usage 3
+unique chan name: Tg53a Max
+unique chan name: Life Time Expired - NAN    - TS NOT Requested
+unique chan name: Remote Peer Unavailable - NAN    - TS NOT Requested
+unique chan name: P1 DLink Read
+unique chan name: PCPUDTL0d
+unique chan name: PCPUDTL40
+unique chan name: Channel CCA   4
+unique chan name: spu_io_time_raw_[stop]_1
+unique chan name: GTP Single
+unique chan name: mtp.Z2SPI.CR_SET_RETRY
+unique chan name: PWR083
+unique chan name: Data Buffer Empty
+unique chan name: Power Counter FSTP 15
+unique chan name: Output DMA Margin
+unique chan name: ap_io_host_time_[hist]_16
+unique chan name: FCS error detected in MPDU
+unique chan name: Rx bphy Rx Glitch
+unique chan name: Tx retries are too high
+unique chan name: Rx MPDU in SU AMPDU Usage 6
+unique chan name: Power Counter FSTP 30
+unique chan name: Tx MPDU in AMPDU 47
+unique chan name: ap_io_host_time_[drift]
+unique chan name: DEV314
+unique chan name: Rx MPDU in SU AMPDU Usage 33
+unique chan name:                         Tx MPDU Tid7
+unique chan name:   5 6g 20MHz n
+unique chan name: PCPM v10
+unique chan name: Number SAC Action1
+unique chan name: DFS Proxy Mode DFS Resumed
+unique chan name: PNO SSID  Scan Count 5G
+unique chan name: DISP_INT_VMAX
+unique chan name: byte_cnt_[hist]_19
+unique chan name: PCPU1DTL34
+unique chan name: Tx MCS Usage 6x2
+unique chan name: GPU Power Zone Filter 4
+unique chan name: CLK014
+unique chan name: io_event_id_3
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 31
+unique chan name: LTE coex durations (ms)
+unique chan name: Used stack(1)
+unique chan name: TS Prop Delay
+unique chan name: ORED_SPMI00_VWS
+unique chan name: Tx PER is too high
+unique chan name: PCPU100
+unique chan name: link 0 RC uncor(8)
+unique chan name: DEV245
+unique chan name: Tg63a Min
+unique chan name: UMI Sent Successfully
+unique chan name: llm_count
+unique chan name: Submitted Tx bytes
+unique chan name: Port 1 AER EP Unc Completion Timeout      
+unique chan name: mtp.COMM.INIT_FAILURE
+unique chan name: CLK022
+unique chan name: pdc
+unique chan name: DEV181
+unique chan name: link 2 RC uncor(3)
+unique chan name: Num Scan Rejected IP Resolution on
+unique chan name: Channel CCA   9
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 34
+unique chan name: apciec1 Read BW
+unique chan name: C1PPT_AD_HWTRG
+unique chan name: Scan
+unique chan name: Rx MU-MIMO MCS Usage 19
+unique chan name: ExtOp-NoRSP Count
+unique chan name: frm_tim_bet_cou
+unique chan name: ap-aop_time_delta_abs_[strt]_12
+unique chan name: Tx VHT Attempts 1
+unique chan name: Rx MPDU in SU AMPDU Usage 19
+unique chan name: PM Protection Attempt
+unique chan name: OPRT1212
+unique chan name: PCPU1DTL0a
+unique chan name: Port 1 Disable Complete                
+unique chan name: ap_io_host_time_[hist]_4
+unique chan name: PWR072
+unique chan name: OPRT0602
+unique chan name: DEV111
+unique chan name: PCPUDTL01
+unique chan name: Port 0 AER RC Unc ECRC Error              
+unique chan name: Segment Prepare Error Code
+unique chan name: PNO Scan Off Ch Dur - since LinkUp
+unique chan name: DEV220
+unique chan name: mtp.TPM.FSM_TOUCH_SUPERVISOR_TRIGGER
+unique chan name: Rx MCS Usage 5x1
+unique chan name: spu_io_time_raw_[stop]_4
+unique chan name: Fender Active Time
+unique chan name:   2 2g 20MHz n
+unique chan name: DEV196
+unique chan name: Used stack(0)
+unique chan name: Tx MPDU in AMPDU 18
+unique chan name: Rx OFDMA MCS Usage 16
+unique chan name: ap-aop_time_delta_abs_[strt]_2
+unique chan name: Queued Packets Waiting For Completion At Last Check
+unique chan name: Scan Phy Mode Auto
+unique chan name: AMPDU Rx Unexpected Pkt
+unique chan name: link 2 RC corr(0)
+unique chan name: Tx MPDU in AMPDU 57
+unique chan name: Tx Trigger frames
+unique chan name: Channel CCA  52
+unique chan name: Tx MPDU in AMPDU 5
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 33
+unique chan name: Tx MCS Success 4
+unique chan name: Used stack(12)
+unique chan name: OFDMA MPDU Data
+unique chan name: AFR_AD_SWTRG
+unique chan name: Number L2C Errors
+unique chan name: Effective Data Transfer Rate
+unique chan name: LQM SNR value
+unique chan name: User confirmed
+unique chan name: com.apple.wifi.commanderResponseTime
+unique chan name: Power Counter FSTP 27
+unique chan name: MGPU1_DTH_HWTRG
+unique chan name: Tg53a Min
+unique chan name: Port 0 AER EP Unc Malformed TLP           
+unique chan name: DEV258
+unique chan name: AGX.Max_UT_Engagement_Perf_State_10
+unique chan name: OPRT0413
+unique chan name: link 1 EP corr(6)
+unique chan name: aop_zero_host_time_[strt]_6
+unique chan name: SC Tx Blanking Count MC Tx Bin 1
+unique chan name: link 3 EP uncor(0)
+unique chan name: Tg31a Sum Count
+unique chan name: Tg33a Sum
+unique chan name: MGPU2_ADCLK_TRG
+unique chan name: AFR_EXT_TRG3
+unique chan name: SC Tx Blanking Upper Bound Bin 1
+unique chan name: Tx MPDU in AMPDU 63
+unique chan name: Rx Auth
+unique chan name: Other Scan Count
+unique chan name: OPRT1204
+unique chan name:                First Level Interrupt Handler Count
+unique chan name: CLK011
+unique chan name: link 1 RC uncor(8)
+unique chan name: OPRT1004
+unique chan name: aop_zero_frame_cnt_[stop]_18
+unique chan name: Buffer Size
+unique chan name: OFDMA MPDU Bytes
+unique chan name: Tx MPDU in AMPDU 10
+unique chan name: Tx VHT Usage 7x2
+unique chan name: subframes(2)
+unique chan name: ExtOp-WR Count
+unique chan name: AP MAC address
+unique chan name: DEV251
+unique chan name: C1PPT_DITHR_TRG
+unique chan name: audio_env_dosimetry
+unique chan name: OPRT0810
+unique chan name: Channel CCA  53
+unique chan name: AMPDU Rx No delimiter errors
+unique chan name: Tx HE Success 2
+unique chan name: PWR049
+unique chan name: Min of Ideal UMA Allocation Size
+unique chan name: mtp.TOUCH_ALGS.RESET_REQUEST_PROCESS_FAILURE
+unique chan name: PACC0_CPU4
+unique chan name: Tg5a Max
+unique chan name: mtp.TPM.FSM_POST
+unique chan name: mtp.TPM.BB_TOUCH_SUPERVISOR_DISABLE
+unique chan name: mtp.KB_TRANSPORT.CR_SET_OUTPUT
+unique chan name: IOA1-AFNC-BW
+unique chan name: Port 1 AER EP Unc Unexpected Completion   
+unique chan name: Radio Tx Dur
+unique chan name: mca0a.IRQ.TXA_Frame_Error
+unique chan name: Port 1 AER EP Unc Poisoned TLP            
+unique chan name: mtp.HSP_SPI.GET_REPORT_FAILURE
+unique chan name: AGX.Count_UT_Engagement_Perf_State_15
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 57
+unique chan name: aop_host_time_[hist]_10
+unique chan name: Other Scan Cnt - since LinkUp
+unique chan name: DEV175
+unique chan name: PCPU1DTL2b
+unique chan name: AGX.UT_Not_Engaged_Perf_State_4
+unique chan name: Tx HE Success 4
+unique chan name: Tx Bytes
+unique chan name: ForceLifetimeExpired
+unique chan name: mtp.HSP_SPI.HIDSPI_INTERRUPT_WAKE_FAILURE
+unique chan name: OPRT0806
+unique chan name: Port 1 AER EP Unc Flow Ctrl Protocol Error
+unique chan name: Tg17a Sum Count
+unique chan name: Rx OFDMA MCS Usage 11
+unique chan name: Channel CCA   6
+unique chan name: PNO SSID  Scan Dur 5G
+unique chan name: 165 5g 20MHz n
+unique chan name: aop_zero_frame_cnt_[stop]_15
+unique chan name: Channel CCA State 144
+unique chan name: mtp.TOUCH_ALGS.CR_PROCESS_FAILURE
+unique chan name:                         Tx MPDU Tid4
+unique chan name: Port 0 AER EP Cor Advisory Non-Fatal Error
+unique chan name: Tx VHT Usage 10x1
+unique chan name: Data Path Stuck Notifications Exceeded
+unique chan name: RxET Duration
+unique chan name: Tg19a Sum Count
+unique chan name: Tx Queue Fill Vo
+unique chan name: Channel CCA  69
+unique chan name: Unknown Interrupt
+unique chan name: mtp.HSP_SPI.ERR_SENT
+unique chan name: PCPU110
+unique chan name: PNO BSSID Scan Count 5G
+unique chan name: PACC1_CPU2_SRAM
+unique chan name: Grp3 Misses
+unique chan name: mtp.ACT_MGR.REPORT_SEND_FAILURE
+unique chan name: Data/Mgt MPDU received
+unique chan name: Tx VHT Usage 6x1
+unique chan name: SOC-HWQ-OvfUnf Count
+unique chan name: OPRT0208
+unique chan name: Codec Output.LowImpedance
+unique chan name: mtp.AFE_BOOTLOADER.CLOSE_FAILURE
+unique chan name: com.apple.wifi.dsaStats.slice0
+unique chan name: Int Status Doorbell with zero messages     Counter
+unique chan name: Peers Count
+unique chan name: Symptoms reported failures too high
+unique chan name: aop_zero_host_time_[stop]_15
+unique chan name: Rx Reassoc Request
+unique chan name: Grp24 Hits
+unique chan name: Port 0 AER EP Unc Atomic OP Egress Blocked
+unique chan name: CDM Dependent
+unique chan name: Successfully completed Tx packet (host reported) count
+unique chan name: Rx SGI MCS Usage 3
+unique chan name: GTP Alloc New
+unique chan name: PACC1_CPU2
+unique chan name: In use system memory (driver)
+unique chan name: spu_io_time_raw_[stop]_8
+unique chan name: mtp.ACT_MGR.NOTIFY_ATTACH_BB
+unique chan name: ap-aop_time_delta_abs_[hist]_4
+unique chan name: RC1 Stats
+unique chan name: Total Rx Duration
+unique chan name: Rx SGI MCS Usage 7
+unique chan name: OPRT1003
+unique chan name: PCPUDTL210
+unique chan name: IOA5 RD+WR
+unique chan name: SOC_AD_HWTRG
+unique chan name: ap-aop_time_delta_abs_[strt]_0
+unique chan name: mca1a.IRQ.RXA_Frame_Error
+unique chan name: spu_SCMHIDDebug
+unique chan name: Sniff Grant Count
+unique chan name: PCIe Port 0 Energy
+unique chan name: MGPU3_EXT_TRG1
+unique chan name: In use system memory
+unique chan name: Grp11 Hits
+unique chan name: Input DMA Margin
+unique chan name: Used stack(11)
+unique chan name: PCPM1 v21
+unique chan name: PWR041
+unique chan name: Enabled State
+unique chan name: Critical BT
+unique chan name: Tx HE Attempts 18
+unique chan name: PCPU140
+unique chan name: ECPUDTL21
+unique chan name: User denied
+unique chan name: link 2 RC corr(6)
+unique chan name: num_requests
+unique chan name: aop_zero_host_time_[strt]_15
+unique chan name: Tx MCS Success 5
+unique chan name: DEV248
+unique chan name: SOC_VMAX
+unique chan name: DEV070
+unique chan name: PACC1_CPU5_SRAM
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 28
+unique chan name: PCPU1DTL213
+unique chan name: 235
+unique chan name: Tg0a Latest
+unique chan name: Grp19 Hits
+unique chan name: Rx VHT Usage 11x2
+unique chan name: Min
+unique chan name: Total stack(27)
+unique chan name: Power Counter FSTP 10
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 32
+unique chan name: aop_zero_frame_cnt_[strt]_10
+unique chan name: Unusable WiFi issue
+unique chan name: Page
+unique chan name: Channel CCA State 165
+unique chan name: Tx HE Attempts 0
+unique chan name: PCIe H2D Doorbell Count
+unique chan name: Tx SGI MCS Usage 10
+unique chan name: AES F2H
+unique chan name: Tx AMPDU density is too low
+unique chan name: Tx HE Success 20
+unique chan name: IOA4 RD
+unique chan name: media_scanout
+unique chan name: ChipModeError
+unique chan name: Temperature (C)
+unique chan name: Rx VHT Usage 1x2
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 1
+unique chan name: Rx VHT Usage 6x1
+unique chan name: ap_wake_time_abs_10
+unique chan name: OPRT0407
+unique chan name: 48000 Hz
+unique chan name: Channel CCA  37
+unique chan name: Tx MPDU in AMPDU 23
+unique chan name: OPRT0401
+unique chan name: com.apple.AppleVideoEncoder.ClientStats
+unique chan name: aop_host_time_[hist]_13
+unique chan name: PCPM v15
+unique chan name: mtp.TPM.FSM_RUN_NO_STATE_CHANGE
+unique chan name: aop_zero_host_time_[stop]_9
+unique chan name: ap_io_host_time_[stop]_15
+unique chan name: Port 0 Enable Request                  
+unique chan name:                         Rx LOST MPDU BA Tid5
+unique chan name: Tx delayed throughput from last measurement period (Mbps)
+unique chan name: Rx BCMC decrypt errors
+unique chan name: Rx Fragmentation Error
+unique chan name: AMPDU BlockACKs sent
+unique chan name: ap_io_host_time_[hist]_12
+unique chan name: CLK028
+unique chan name: Tx SGI VHT Usage 15
+unique chan name: Tag Roam Target Evaluation
+unique chan name: Tx RTS
+unique chan name: aop_ped_fence
+unique chan name: mtp.HSP_SPI.TRANSFER_INVALID_IFACE_ID
+unique chan name: Tg0a Max
+unique chan name: Remote Peer Unavailable - SoftAP - TS NOT Requested
+unique chan name: PCIe L0             Dur
+unique chan name: SLP_S2R
+unique chan name:                         Rx MPDU Tid0
+unique chan name: Channel CCA  64
+unique chan name: C1PPT_PPT_TRG
+unique chan name: mtp.BLACK_BOX.THROW_EXTERNAL
+unique chan name: Rx MCS Success 0
+unique chan name: link 3 RC uncor(4)
+unique chan name: PWR030
+unique chan name: Power Counter FSTP 17
+unique chan name: PCPM v17
+unique chan name: MGPU0_PPT_SWTRG
+unique chan name: Port 1 AER RC Unc Data Link Protocol Error
+unique chan name: Rx Beacon
+unique chan name: Action Frame Processing Latency
+unique chan name: aop_rose_ctrl
+unique chan name: PCPU130
+unique chan name: Rx Probe Response
+unique chan name: EVT026
+unique chan name: Rx Upr Ignored Cnt
+unique chan name: Tx MPDU in AMPDU 45
+unique chan name: Tx VHT Success 12
+unique chan name: Tx HE Success 10
+unique chan name: PWR029
+unique chan name: aop_zero_frame_cnt_[strt]_6
+unique chan name: Tx HE Attempts 20
+unique chan name: Tx MCS Success 8
+unique chan name: Tg53a Latest
+unique chan name: Rx Data Frame other RA
+unique chan name: AMPDU BlockACKs received
+unique chan name: MGPU1_PPT_HWTRG
+unique chan name: Total signals
+unique chan name: PCPUDTL3f
+unique chan name: Chip Mode error - NAN    - TS NOT Requested
+unique chan name: mtp.TOUCH_ALGS.FRAME_RECEIVE
+unique chan name: Number SAC Action2
+unique chan name: Rx MPDU in SU AMPDU Usage 2
+unique chan name: DEV186
+unique chan name: mtp.HSP_SPI.SPI_CLOCK_PHASE_KEY_SET_FAILURE
+unique chan name: mtp.AFE_BOOTLOADER.SPI_CLOCK_FREQUENCY_KEY_SET_FAILURE
+unique chan name: Tx SGI VHT Usage 21
+unique chan name: FRG Single
+unique chan name: Number of Tx Frames
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 25
+unique chan name: Report 244
+unique chan name: AGX.Min_UT_Engagement_Perf_State_4
+unique chan name: CLK004
+unique chan name: OPRT0704
+unique chan name: ECPM v5
+unique chan name: OPRT2205
+unique chan name: link 3 RC uncor(9)
+unique chan name: Port 0 Non-fatal Error Interrupt       
+unique chan name: link 1 RC uncor(10)
+unique chan name: ECPUDTL00
+unique chan name: PWR021
+unique chan name: mtp.DOCK.GET_HW_FIFO_SIZE_FAILURE
+unique chan name: SCODEC1 RD+WR
+unique chan name: frm_tim_min_us
+unique chan name: MGPU0_AD_HWTRG
+unique chan name: Report 2
+unique chan name: AGX.Sum_UT_Engagement_Perf_State_13
+unique chan name: PCPU1DTL013
+unique chan name: mtp.DRAM.UNREGISTER_FAILURE
+unique chan name: Chip Mode error - NAN    - TS Requested
+unique chan name: OPRT0319
+unique chan name: PCIe LTR Sleep      Dur
+unique chan name: Rx SGI VHT Usage 9
+unique chan name: Tx HE Success 13
+unique chan name: byte_cnt_[hist]_10
+unique chan name: Rx Filtered Out Frames
+unique chan name: Rx Fils Processed Cnt
+unique chan name: 88200 Hz
+unique chan name: OPRT2201
+unique chan name: Dequeue Action
+unique chan name: Tg31a Max
+unique chan name: OPRT1312
+unique chan name: Ant Grant By Critical BT Task
+unique chan name: aop_zero_host_time_[stop]_5
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 64
+unique chan name: Port 0 AER RC Unc Uncorrected Internal Err
+unique chan name: Tg31a Latest
+unique chan name: FRG Alloc New
+unique chan name: AGX.Max_UT_Engagement_Perf_State_6
+unique chan name: Port 1 AER RC Cor Retry Timer Timeout     
+unique chan name: A2DP Grant Count
+unique chan name: mtp.HSP_SPI.HIDSPI_TRANSFER_LEN_KEY_SET_FAILURE
+unique chan name: Tg31a Sum
+unique chan name: Dwell Time
+unique chan name: PWR078
+unique chan name: CLVR_EXT_PCPU1
+unique chan name: PCPU1DTL49
+unique chan name: Grp1 Misses
+unique chan name: Internal Error
+unique chan name: FRTS Duration
+unique chan name: DSA TxDC Ant 2 (%)
+unique chan name: CLK013
+unique chan name: PCPUDTL1b
+unique chan name: PCPUDTL00
+unique chan name: FAB_PPT_HWTRG
+unique chan name: link 3 RC uncor(11)
+unique chan name: Scan Flag Include Offchannel BSS
+unique chan name: Peer Ver Bitmap
+unique chan name: Channel CCA State 132
+unique chan name: Number of Bytes
+unique chan name: Tx MPDU in AMPDU 13
+unique chan name: Rx MPDU in SU AMPDU Usage 62
+unique chan name: Dropped Set 14 PHY Preserve
+unique chan name: OPRT0219
+unique chan name: PCPM1 v15 idle
+unique chan name: link 0 RC uncor(7)
+unique chan name: Q-TICKS-0
+unique chan name: Rx MCS Usage 2x2
+unique chan name: CLK044
+unique chan name: PCIe Interrupt count Due to Rx Completion
+unique chan name: io_event_id_0
+unique chan name: DCS0
+unique chan name: Tg21a Latest
+unique chan name: DISP_EXT
+unique chan name: Available WLAN Tx duration is too low
+unique chan name: ap-aop_time_delta_abs_[stop]_18
+unique chan name: RC2 Stats
+unique chan name: DEV137
+unique chan name:                         Rx LOST MPDU BA Tid1
+unique chan name: DEV151
+unique chan name: mtp.ACT_MGR.HOST_TARGET_TRANSITION_BB
+unique chan name: Tx Input
+unique chan name: PCIe L1             Dur
+unique chan name: Int Status Mailbox DeepSleep Enter Request Counter
+unique chan name: SOC_EXT_TRG1
+unique chan name: txRequeueFail
+unique chan name: Other Scan Dur 2G
+unique chan name: PCIe LTR Active     Count
+unique chan name: AWDL Radio Rx Dur
+unique chan name: Tx he mgmt TBPPDU
+unique chan name: PWR058
+unique chan name: PCIe Interrupt count Due to Tx Completion
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 20
+unique chan name: mtp.AFE_PWR.PIN_SET
+unique chan name:    Second Level Interrupt Handler CPU Time (MATUs)
+unique chan name: Port 0 PMETO Timeout                   
+unique chan name: ap_io_host_time_[strt]_6
+unique chan name: spu_io_time_raw_[hist]_11
+unique chan name: Doorbell Path
+unique chan name: multicast successfully transmitted MSDU
+unique chan name: Number SAC Action1 FreqArray1
+unique chan name: STRESS
+unique chan name: NVMe Power States
+unique chan name: Thread time
+unique chan name: aop_zero_frame_cnt_[strt]_0
+unique chan name: PCIe L0 Entry       Count
+unique chan name: PWR033
+unique chan name: OPRT0902
+unique chan name: Channel Noise State   1
+unique chan name: AFR_PPT_SWTRG
+unique chan name: Port 0 Suspend Hardware Off            
+unique chan name: Request
+unique chan name: Total stack(23)
+unique chan name: PCIe PERST Deassert Count
+unique chan name: mca0a.IRQ.RXA_Overflow
+unique chan name: Realtime Group Peer Count
+unique chan name: Grp3 Hits
+unique chan name: BLE Scan
+unique chan name: link 0 EP corr(7)
+unique chan name: PCIe D3 Suspend     Count
+unique chan name: link 1 RC corr(1)
+unique chan name: Number of Tx AMPDU
+unique chan name: Scan Phy Mode 11N
+unique chan name: OPRT1310
+unique chan name: Used stack(3)
+unique chan name: Rx Reassoc Response
+unique chan name: Input Dropped AWDL Off
+unique chan name: OPRT1313
+unique chan name: spu_io_time_raw_[stop]_10
+unique chan name: DSA No Mute Mode Duration (ms)
+unique chan name: link 2 EP corr(7)
+unique chan name: PCIe D0 Resume      Count
+unique chan name: ap_wake_time_abs_4
+unique chan name: aop_zero_frame_cnt_[stop]_5
+unique chan name: DSA Util Ant 0 (%)
+unique chan name: DEV332
+unique chan name: Decision Count
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 63
+unique chan name: P0 DLink Write
+unique chan name: Life Time Expired - STA    - TS NOT Requested
+unique chan name: Rx OFDMA MCS Usage 6
+unique chan name: mtp.HSP_SPI.HIDSPI_WAKE_NOTIFICATION_FAILURE
+unique chan name: SC Tx Blanking Count Total Bin 3
+unique chan name: Port 1 AER EP Unc Surprise Down Error     
+unique chan name: DISPEXT2 WR
+unique chan name: mtp.AFE_PWR.RESET_FAILURE
+unique chan name: DEV188
+unique chan name: Channel Switch Messages
+unique chan name: CCA (%) excluding own traffic
+unique chan name: Pool Allocation Max Retries
+unique chan name: FAB_VNOM
+unique chan name: OPRT0218
+unique chan name: Port 0 AER RC Unc Data Link Protocol Error
+unique chan name: Total submissions
+unique chan name: aop_zero_frame_cnt_[stop]_3
+unique chan name: Rx VHT Usage 2x1
+unique chan name: Power Counter FSTP 3
+unique chan name: Dequeued Packets
+unique chan name: ap-aop_time_delta_abs_[hist]_6
+unique chan name: Total stack(11)
+unique chan name: Tx Null AMPDU in Rsp to Basic Trig
+unique chan name: aop_zero_host_time_[strt]_8
+unique chan name: Assoc Scan Cnt - since LinkUp
+unique chan name: mtp.TOUCH.READY_SEND
+unique chan name: TVPM active
+unique chan name: Total stack(6)
+unique chan name: byte_cnt_[hist]_7
+unique chan name: Rx MPDU in SU AMPDU Usage 55
+unique chan name: PHY Search Duration
+unique chan name: spu_io_time_raw_[stop]_5
+unique chan name: Port 1 Correctable Error Interrupt     
+unique chan name: Channel CCA 128
+unique chan name: MGPU0_ADCLK_TRG
+unique chan name: M$ Stall
+unique chan name: BSS Disallow Event
+unique chan name: ECPU_DTH_SWTRG
+unique chan name: Platinum reports
+unique chan name: Channel CCA State   8
+unique chan name: OPRT0911
+unique chan name: CLK055
+unique chan name: link 3 RC uncor(10)
+unique chan name: Power Counter FSTP 25
+unique chan name: spu_io_time_raw_[strt]_6
+unique chan name: Suspended Count
+unique chan name: OPRT0408
+unique chan name: Timebase Offset (Positive)
+unique chan name: Success - NAN    - TS NOT Requested
+unique chan name: Rx MPDU in SU AMPDU Usage 26
+unique chan name: Rx MPDU in SU AMPDU Usage 29
+unique chan name: Tx VHT Success 1
+unique chan name:   7 2g 20MHz n
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 44
+unique chan name: Tx Reassoc Request
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 55
+unique chan name: link 3 RC uncor(7)
+unique chan name: Rx VHT Success 18
+unique chan name: Tag Control Management Frames
+unique chan name: DISPEXT3
+unique chan name: SOC_THRTL_TRG3
+unique chan name: Throttle Counter Misc 
+unique chan name: FRG Dependent
+unique chan name: Report 9
+unique chan name: com.apple.wifi.ePNOFoundEventLegacy
+unique chan name: Channel CCA State   1
+unique chan name: Tg5a Min
+unique chan name: ap_io_host_time_[hist]_7
+unique chan name: Peers Removed
+unique chan name: Tx VHT Success 2
+unique chan name: aop_zero_host_time_[strt]_18
+unique chan name: AGX.Count_UT_Engagement_Perf_State_2
+unique chan name: Tg3a Latest
+unique chan name: Interface Open Percent
+unique chan name: Rx NSS change request txed successfully
+unique chan name: Assoc Done Success
+unique chan name: spu_io_time_raw_[strt]_7
+unique chan name: PCPU1DTL15
+unique chan name: spu
+unique chan name: spu_io_time_raw_[stop]_17
+unique chan name: Rx HE Success 19
+unique chan name: PNO BSSID Scan Dur 2G
+unique chan name: Battery Voltage (10xV)
+unique chan name: CtrlEff0
+unique chan name: aop_zero_frame_cnt_[strt]_17
+unique chan name: Chip Buffer Unavailable  - AWDL   - TS NOT Requested
+unique chan name: Tx Data Errors
+unique chan name: Tx MPDU in AMPDU 35
+unique chan name: LQM SNR State
+unique chan name: link 3 RC uncor(1)
+unique chan name: IOA5 RD
+unique chan name: Tx output throughput is below input throughput
+unique chan name: Power Counter FSTP 8
+unique chan name: Channel Noise   1
+unique chan name: PWR059
+unique chan name: PZRSDNCY
+unique chan name: PCPU1DTL0c
+unique chan name: PCPUDTL1e
+unique chan name: aop_wireless_chrg
+unique chan name: ap_io_host_time_[stop]_6
+unique chan name: Wrong NSS
+unique chan name: Rx MCS Success 11
+unique chan name: Rx HE Success 10
+unique chan name: mtp.KB_TRANSPORT.DEVICE_ATTACHED
+unique chan name: Join Success
+unique chan name: Rx Trigger MU-RTS
+unique chan name:   1 2g 20MHz n
+unique chan name: Tx VHT Attempts 6
+unique chan name: OPRT0102
+unique chan name: Rx Data Errors
+unique chan name: mtp.HSP_SPI.NAK_RECEIVED
+unique chan name: Tx SGI MCS Usage 13
+unique chan name: Tx MPDU in AMPDU 15
+unique chan name: Successful Completions
+unique chan name: OPRT0802
+unique chan name: GPU CS SRAM0
+unique chan name: MAC Addr Changed
+unique chan name: Channel CCA State  11
+unique chan name: Tx MCS Success 0
+unique chan name: PWR055
+unique chan name: PCPUDTL11
+unique chan name: OPRT2403
+unique chan name: mtp.BOOT.TCAL_LOAD
+unique chan name: mtp.HSP_SPI.HIDSPI_INTERRUPT_FAILURE
+unique chan name: AGX.UT_Not_Engaged_Perf_State_6
+unique chan name: Number SAC Action0 FreqArray2
+unique chan name: Dropped From Queue
+unique chan name: Tg1a Sum
+unique chan name: GPU SRAM0
+unique chan name: Tag WL Roam Log
+unique chan name: AVD
+unique chan name: AMPDU DELBA received
+unique chan name: Rx duplicates are too high
+unique chan name: Channel CCA 165
+unique chan name: Tg0a Sum Count
+unique chan name: Remote Peer Unavailable - STA    - TS NOT Requested
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 27
+unique chan name: Tx VHT Usage 4x2
+unique chan name: DEV312
+unique chan name: Tx Failure Completions
+unique chan name: Grp0 Misses
+unique chan name: ap-aop_time_delta_abs_[strt]_10
+unique chan name: EVT216
+unique chan name: Power Counter FSTP 0
+unique chan name: Post To P2Pd
+unique chan name: User Scan Off Ch Dur 2G
+unique chan name: PNO Scan Dur
+unique chan name: Interface Link Activity
+unique chan name: AFR_VMAX_2
+unique chan name: mca2b.IRQ.DMA_B.RX_Fifo_Underflow
+unique chan name: Tx MPDU in AMPDU in 56 Tone RU
+unique chan name: IP timed out (PrivMac)
+unique chan name: Link Rate
+unique chan name: aop_host_time_[hist]_2
+unique chan name: Report 17
+unique chan name:               Max d2h processed within MSI handler
+unique chan name: AGX.UT_Not_Engaged_Perf_State_8
+unique chan name: Tx HE Attempts 12
+unique chan name: Processed
+unique chan name: Power Counter FSTP 31
+unique chan name: Rx MPDU in OFDMA AMPDU Usage 21
+unique chan name: mca2a.IRQ.RXA_Frame_Error
+unique chan name: Channel Utilization
+unique chan name: SC Tx Blanking Count AC BT Tx Bin 4
+unique chan name: Rx MCS Usage 4x1
+unique chan name: txRequeue
+unique chan name: OPRT0209
+unique chan name: mtp.HSP_SPI.POWER_ON_HIDSPI_FAILURE
+unique chan name: Rx Trigger Basic
+unique chan name: aop_zero_frame_cnt_[stop]_10
+unique chan name: Tx VHT Success 11
+unique chan name: EVT025
+unique chan name: mtp.AFE_MGR.INIT_FAILURE
+unique chan name: PACC0_CPM
+unique chan name: Driver Transitioned to Unavailable
+unique chan name: IOA7-AFNC-BW
+unique chan name: OPRT2300
+unique chan name: Rx MPDU in SU AMPDU Usage 13
+unique chan name: com.apple.wifi.dsaSimpleStats.slice0
+unique chan name: ap-aop_time_delta_abs_[strt]_5
+unique chan name: 4-way Handshake Failures
+unique chan name: Tx MPDU in AMPDU 36
+unique chan name: Roam Scan Count 2G
+unique chan name: Tx phy rate is below expectation
+unique chan name: apl_iofixed
+unique chan name: AGX-AFR-BW
+unique chan name: Tag Stats
+unique chan name: SysInst
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 2
+unique chan name: Self 6E Capable
+unique chan name: Rx VHT Usage 10x1
+unique chan name: Actual Rx activity duration (ms)
+unique chan name: Rx RU size 242
+unique chan name: mtp.ACT_MGR.INIT_EVENTING_FAILURE_BB
+unique chan name: Rx OFDMA MCS Usage 2
+unique chan name: PWR012
+unique chan name: Tx MCS Attempts 3
+unique chan name: CLK026
+unique chan name: mtp.AFE_MGR.TRX_REQ_ENQUEUE_FAILURE
+unique chan name: aop_zero_host_time_[strt]_16
+unique chan name: Scan On Channel  001
+unique chan name: Tx VHT Usage 7x1
+unique chan name: PCPUDTL22
+unique chan name: Assoc Scan Count
+unique chan name: Rx Trigger MU BAR
+unique chan name: AGX.Count_UT_Engagement_Perf_State_11
+unique chan name: Power Counter FSTP 26
+unique chan name: TS(ms)
+unique chan name: 149 5g 20MHz n
+unique chan name: mtp.AFE_PWR.AFE_ON_RETRIES_EXHAUSTED
+unique chan name: PCPU0_EXT_TRG0
+unique chan name: io_event_id_19
+unique chan name: CLK057
+unique chan name: Client Output position
+unique chan name: mtp.TPM.BB_NONE
+unique chan name: Grp5 Hits
+unique chan name: link 1 RC corr(5)
+unique chan name: PCPM v20 idle
+unique chan name: Power Counter FSTP 22
+unique chan name:                              d2h interrupt Counter
+unique chan name: SDB
+unique chan name: Channel CCA  48
+unique chan name: AGX.Count_UT_Engagement_Perf_State_1
+unique chan name: Critical HPP
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 61
+unique chan name: FAB_EXT_TRG3
+unique chan name: Unit test
+unique chan name: ECPUDTL12
+unique chan name: azl_accum
+unique chan name: spu_io_time_raw_[hist]_8
+unique chan name: Rx MCS Success 15
+unique chan name: Tx MCS Attempts 2
+unique chan name: aop_zero_host_time_[strt]_12
+unique chan name: subframes(10)
+unique chan name: PACC0
+unique chan name: Rx Management Frames
+unique chan name: Rx CRS glitches
+unique chan name: Noise Floor State
+unique chan name: multicast MSDU received
+unique chan name: Report 209
+unique chan name: OPRT0101
+unique chan name: OPRT0804
+unique chan name: mca2a.IRQ.RXA_Overflow
+unique chan name: ap-aop_time_delta_abs_[stop]_19
+unique chan name: Tx MPDU in AMPDU 39
+unique chan name: Tx SGI VHT Usage 14
+unique chan name: PCPUDTL011
+unique chan name: Tx SGI MCS Usage 2
+unique chan name: als
+unique chan name: PCPU1DTL2e
+unique chan name: replay_count
+unique chan name: Grape reports
+unique chan name: Assoc Scan Off Ch Dur
+unique chan name: DL MU-MIMO Resound recommendation request txed successfully
+unique chan name: DUT Tx latency issue
+unique chan name: OPRT0201
+unique chan name: aop_zero_frame_cnt_[stop]_2
+unique chan name: Report 1
+unique chan name: Rx OFDMA MCS Usage 20
+unique chan name: Rx MPDU in SU AMPDU Usage 48
+unique chan name: Pkt Cnt Max
+unique chan name: TVPM active duration (ms)
+unique chan name: SOC_THRTL_TRG4
+unique chan name: subframes(8)
+unique chan name: ap_wake_time_abs_18
+unique chan name: OMI retries as TxDone not set
+unique chan name: MSS
+unique chan name: link 0 RC corr(7)
+unique chan name: Ready
+unique chan name: PCPUDTL15
+unique chan name: Grp13 Misses
+unique chan name: spu_io_time_raw_[stop]_9
+unique chan name: Input Dropped Queue Full
+unique chan name: link 2 RC uncor(4)
+unique chan name: ap_io_host_time_[hist]_11
+unique chan name: DISPEXT1 RD+WR
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 56
+unique chan name: OPRT0713
+unique chan name: PWR022
+unique chan name: DEV050
+unique chan name: Power Counter FSTP 6
+unique chan name: drift_threshold_24MHz
+unique chan name: Tx VHT Usage 2x1
+unique chan name: OPRT0301
+unique chan name: CLK024
+unique chan name: TDM
+unique chan name: UserClient Launches
+unique chan name: PCPUDTL010
+unique chan name: Tx HE Success 3
+unique chan name: Tg33a Sum Count
+unique chan name: OPRT1213
+unique chan name: PCPU1DTL1b
+unique chan name: PCPU1DTL1f
+unique chan name: aop_zero_host_time_[strt]_17
+unique chan name: PCPUDTL3a
+unique chan name: Report 63
+unique chan name: Rx MU-MIMO MCS Usage 18
+unique chan name: aop_bluetooth
+unique chan name: PCPUDTL18
+unique chan name: Report 15
+unique chan name: io_event_id_5
+unique chan name: Rx MCS Usage 1x2
+unique chan name: PCPU1DTL07
+unique chan name: 127
+unique chan name: Non Doorbell Path Pkt Cnt
+unique chan name: Remote Peer Unavailable - SoftAP - TS Requested
+unique chan name: Number of Rx AMPDU with STBC
+unique chan name: PNO Scan Dur - since LinkUp
+unique chan name: Port 0 Correctable Error Interrupt     
+unique chan name: PWR036
+unique chan name: AFR_DTH_HWTRG
+unique chan name: ECPUDTL14
+unique chan name: Command Max Pending Queue Length
+unique chan name: Tg51a Sum
+unique chan name:  44 5g 80MHz l
+unique chan name: mtp.TPM.FSM_TRANS_ENTER_FAILURE
+unique chan name: mtp.TPM.BB_UNKNOWN_EVENT
+unique chan name: Rx MCS Usage 0x1
+unique chan name: mtp.KB_TRANSPORT.ACTUATOR_IR
+unique chan name: DPS Detected
+unique chan name: Total stack(30)
+unique chan name: Enter Count
+unique chan name: spu_io_time_raw_[strt]_1
+unique chan name: Tx VHT Attempts 0
+unique chan name: PWR050
+unique chan name: Channel CCA 112
+unique chan name: OPRT1102
+unique chan name: A2DP
+unique chan name:  13 2g 20MHz n
+unique chan name: Datapath Events
+unique chan name:                         Rx MPDU Tid3
+unique chan name:                         Tx MPDU Tid5
+unique chan name: Used stack(2)
+unique chan name: spu_io_time_raw_[hist]_3
+unique chan name: Channel CCA  21
+unique chan name: Life Time Expired - SoftAP - TS NOT Requested
+unique chan name: Roam Scan Off Ch Dur - since LinkUp
+unique chan name: Remote Peer Unavailable - AWDL   - TS Requested
+unique chan name: link 3 EP uncor(8)
+unique chan name: PCPU1DTL33
+unique chan name: ap-aop_time_delta_abs_[strt]_15
+unique chan name: Rx packets
+unique chan name: link 0 RC uncor(9)
+unique chan name: PCPM1_IDLE
+unique chan name: CLK041
+unique chan name: Suspended Duration
+unique chan name: 140 5g 20MHz n
+unique chan name: Rx SGI VHT Usage 7
+unique chan name: OPRT0417
+unique chan name: link 0 RC corr(1)
+unique chan name: Number of Rx AMPDU
+unique chan name: Rx HE Success 15
+unique chan name: MGPU3_PPT_SWTRG
+unique chan name: PCPU1DTL4c
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 38
+unique chan name: Used stack(18)
+unique chan name: Failure  - AWDL   - TS Requested
+unique chan name: VLane Read
+unique chan name: Set WL
+unique chan name: aop_zero_frame_cnt_[stop]_19
+unique chan name: User Scan Count 2G
+unique chan name: GPU_CLTM
+unique chan name: Active Chains
+unique chan name: Channel CCA State 120
+unique chan name: Number SAC Action0 FreqArray1
+unique chan name: AWDL Radio Tx Dur
+unique chan name: IOA2 RD
+unique chan name: Rx Multi TID BACK
+unique chan name: AVE1
+unique chan name: IOA3 WR
+unique chan name: mtp.TOUCH_ALGS.FORCE_CAL_BLOB_INVALID
+unique chan name: Channel CCA  10
+unique chan name: BusPr-CmdUnrecog Count
+unique chan name: CTS not Rxd in response to RTS
+unique chan name: Rx MPDU in MU-MIMO AMPDU Usage 51
+unique chan name: 136 5g 20MHz n
+unique chan name: Tx Assoc Request
+unique chan name: Success - AWDL   - TS NOT Requested
+unique chan name: Rx SGI MCS Usage 1
+unique chan name: Tx SGI MCS Usage 9
+unique chan name: aop_ttw
+unique chan name: link 2 EP uncor(6)
+unique chan name: CPU count
+unique chan name: Roam Prep
+unique chan name: OPRT0214
+unique chan name: mtp.AFE_BOOTLOADER.OPEN_FAILURE
+unique chan name: PCPM1 v18
+unique chan name: IOA2 WR
+unique chan name: AFR_AD_HWTRG
+unique chan name: FRG Idle
+unique chan name: Tx MPDU in AMPDU 43
+unique chan name: 161 5g 20MHz n
+unique chan name:  21 6g 20MHz n
+unique chan name: Total Number of UMA Pages
+unique chan name: Port 0 AER RC Unc Completion Timeout      
+unique chan name: Rx MCS Success 7
+unique chan name: Rx Action
+unique chan name: ap-aop_time_delta_abs_[stop]_7
+unique chan name: Tx HE Attempts 15
+unique chan name: Rx FCS errors
+unique chan name:                Log Calls      [Info]
+unique chan name: ap_wake_time_abs_13
+Unique chan grp: Scans
+Unique chan grp: Commander Response Time
+Unique chan grp: Tx MPDU WME Slice 1
+Unique chan grp: PPM Stats
+Unique chan grp: Hub Stats
+Unique chan grp: AppleEmbeddedPCIE
+Unique chan grp: RX Completion Queue
+Unique chan grp: GPU Discrete Power Zone Engaged
+Unique chan grp: TVPM Slice 1
+Unique chan grp: Channel
+Unique chan grp: Packet Buffer Pool
+Unique chan grp: Backplane Accesses
+Unique chan grp: IOReporter API
+Unique chan grp: AOP endpoint 34
+Unique chan grp: User RX Completion Queue
+Unique chan grp: nub-spmi2
+Unique chan grp: Interface awdl0
+Unique chan grp: nub-spmi4
+Unique chan grp: RC2 Coex
+Unique chan grp: PMP0
+Unique chan grp: DCPEXT0
+Unique chan grp: Rx
+Unique chan grp: backlight report
+Unique chan grp: Slice Frames: slice  1
+Unique chan grp: DSA Slice 0
+Unique chan grp: Digital Mic
+Unique chan grp: Interface en0 Chip
+Unique chan grp: aop-spmi0
+Unique chan grp: AOP endpoint 37
+Unique chan grp: Mesa
+Unique chan grp: Interface 
+Unique chan grp: Core Dump
+Unique chan grp: Tx MPDU WME Slice 0
+Unique chan grp: Logging Global
+Unique chan grp: DSA Slice 1
+Unique chan grp: Trace Logs
+Unique chan grp: AOP endpoint 35
+Unique chan grp: LEAP Internal Loopback
+Unique chan grp: ACIO2
+Unique chan grp: Channel Switch: Slice 0
+Unique chan grp: AMPDU
+Unique chan grp: AppleBCMWLANBusInterfacePCIe
+Unique chan grp: AOP endpoint 40
+Unique chan grp: Tx
+Unique chan grp: Trackpad Power Stats
+Unique chan grp: TDM Slice 0
+Unique chan grp: BT Coex
+Unique chan grp: INACTIVITY-SLEEP
+Unique chan grp: MTP
+Unique chan grp: nub-spmi1
+Unique chan grp: Bandwidth
+Unique chan grp: AOP endpoint 36
+Unique chan grp: TX Completion Queue
+Unique chan grp: Rx MPDU WME Slice 0
+Unique chan grp: GFX
+Unique chan grp: WLAN Power
+Unique chan grp: Rx MPDU WME Slice 1
+Unique chan grp: Controller
+Unique chan grp: Interface en0 Peer FF:FF:FF:FF:FF:FF
+Unique chan grp: NVMe
+Unique chan grp: Slice Frames: slice  0
+Unique chan grp: TX Submission Queue
+Unique chan grp: nub-spmi-a2
+Unique chan grp: Cursor
+Unique chan grp: nub-spmi-a1
+Unique chan grp: AOP
+Unique chan grp: SDXC Controller
+Unique chan grp: User RX Submission Queue
+Unique chan grp: AOP endpoint 41
+Unique chan grp: DCPEXT2
+Unique chan grp: User TX Submission Queue
+Unique chan grp: Interface en0
+Unique chan grp: SCAN-ROAM
+Unique chan grp: aop-spmi1
+Unique chan grp: AppleHIDTransport
+Unique chan grp: IPC Logs
+Unique chan grp: AOP endpoint 43
+Unique chan grp: TDM Slice 1
+Unique chan grp: AWDL Metrics
+Unique chan grp: TVPM Slice 0
+Unique chan grp: nub-spmi3
+Unique chan grp: LPRX
+Unique chan grp: LPSC Tx Blanking
+Unique chan grp: nub-spmi0
+Unique chan grp: Codec Output
+Unique chan grp: Speaker
+Unique chan grp: AOP endpoint 38
+Unique chan grp: Battery
+Unique chan grp: CoreCapture
+Unique chan grp: Interface ap1
+Unique chan grp: Interface en0 Peer 00:00:00:00:00:00
+Unique chan grp: SMC
+Unique chan grp: Multitouch
+Unique chan grp: Channel Switch: Slice 1
+Unique chan grp: ISP
+Unique chan grp: DCPEXT3
+Unique chan grp: ACIO1
+Unique chan grp: Core Performance Level
+Unique chan grp: GPU UT Engagement
+Unique chan grp: Codec Input
+Unique chan grp: Commander
+Unique chan grp: RX Submission Queue
+Unique chan grp: Chip Frames
+Unique chan grp: DCP
+Unique chan grp: Rx MPDU Lost Slice 1
+Unique chan grp: Rate
+Unique chan grp: AOP endpoint 39
+Unique chan grp: ANS2
+Unique chan grp: Slice 0
+Unique chan grp: WiFi Wake
+Unique chan grp: AOP endpoint 42
+Unique chan grp: Interface awdl0 Peer FF:FF:FF:FF:FF:FF
+Unique chan grp: RxET
+Unique chan grp: ACIO0
+Unique chan grp: BCN OFFLOAD
+Unique chan grp: MPDUs per RU
+Unique chan grp: DCPEXT1
+Unique chan grp: Channel Switch: Slice 2
+Unique chan grp: IOHIDDevice Input Report Errors
+Unique chan grp: AOP endpoint 32
+Unique chan grp: Internal Statistics
+Unique chan grp: Event Log
+Unique chan grp: SIO
+Unique chan grp: Interrupt Statistics (by index)
+Unique chan grp: Loopback
+Unique chan grp: GPU UT AggD Stats
+Unique chan grp: WIO
+Unique chan grp: Slice 2
+Unique chan grp: Slice 1
+Unique chan grp: Rx MPDU Lost Slice 0
+Unique chan grp: Chip
+Unique chan grp: AppleAOPAudio Status
+Unique chan grp: nub-spmi-a0
+Unique chan grp: Link Events
+Unique chan grp: AOP endpoint 33
+Unique chan grp: AppleMCA2Cluster_T603x
+Unique chan grp: RealTime Logs
+Unique chan grp: User TX Completion Queue
+CPU: 0.68W, GPU: 0.00W, ANE: 0.00W, Time: 213
+CPU: 1.00W, GPU: 0.00W, ANE: 0.00W, Time: 276
+CPU: 0.92W, GPU: 0.00W, ANE: 0.00W, Time: 268
+CPU: 1.01W, GPU: 0.00W, ANE: 0.00W, Time: 258
+CPU: 4.53W, GPU: 0.40W, ANE: 0.00W, Time: 251
+CPU: 1.63W, GPU: 0.67W, ANE: 0.00W, Time: 253
+CPU: 4.57W, GPU: 0.51W, ANE: 0.00W, Time: 274
+CPU: 2.57W, GPU: 0.25W, ANE: 0.00W, Time: 247
+CPU: 3.70W, GPU: 0.33W, ANE: 0.00W, Time: 268
+CPU: 1.52W, GPU: 0.40W, ANE: 0.00W, Time: 274
+CPU: 1.33W, GPU: 0.43W, ANE: 0.00W, Time: 285
+CPU: 1.13W, GPU: 0.39W, ANE: 0.00W, Time: 274
+CPU: 2.21W, GPU: 0.43W, ANE: 0.00W, Time: 261
+CPU: 1.46W, GPU: 0.26W, ANE: 0.00W, Time: 254
+CPU: 1.44W, GPU: 0.24W, ANE: 0.00W, Time: 255
+CPU: 1.40W, GPU: 0.17W, ANE: 0.00W, Time: 251
+CPU: 1.17W, GPU: 0.04W, ANE: 0.00W, Time: 281
+CPU: 2.10W, GPU: 0.07W, ANE: 0.00W, Time: 273
+test sampler::tests::test_guard_sampler ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 5.03s
+

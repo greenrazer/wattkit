@@ -22,12 +22,13 @@ def validation_image():
     )
     return transform(input)
 
-# Load the CoreML model
-cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage")
+compute_units = ct.ComputeUnit.ALL
+cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage", compute_units=compute_units)
 img = validation_image()
 
-with PowerProfiler(duration=100, num_samples=1) as profiler:
-    for i in range(5000):
+with PowerProfiler(sample_duration=100, num_samples=1) as profiler:
+    for i in range(1000):
         cml_model.predict({"image": img})
     
 profiler.print_summary()
+profiler.profile_duration()
