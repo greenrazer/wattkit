@@ -1,12 +1,15 @@
 use oneshot::channel as oneshot_channel;
 use oneshot::Sender as OneshotSender;
+use std::collections::HashSet;
 use std::{
     sync::mpsc::{channel, Receiver},
     thread::JoinHandle,
 };
 
 use crate::cf_utils::get_cf_string;
+use crate::io_report::read_residencies;
 use crate::io_report::IOReportSampleCopyDescription;
+use crate::io_report::IOReportSimpleGetIntegerValue;
 use crate::io_report::{
     read_wattage, EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName,
 };
@@ -34,9 +37,18 @@ impl SampleManager {
         let handle = std::thread::spawn(move || {
             let requests = vec![];
             let mut report = IOReport::new(requests).unwrap();
+            let mut unique_channel_groups = HashSet::new();
+            let mut unique_channel_names = HashSet::new();
 
             loop {
                 if cancel_rx.try_recv().is_ok() {
+                    println!("Cancelling sampling");
+                    for uc in unique_channel_names.iter() {
+                        println!("unique chan name: {}", uc);
+                    }
+                    for uc in unique_channel_groups.iter() {
+                        println!("Unique chan grp: {}", uc);
+                    }
                     break;
                 }
 
@@ -49,6 +61,11 @@ impl SampleManager {
                     };
 
                     for entry in sample.iterator_mut() {
+                        //println!("ENTRY: {:?}", entry);
+                        if let IOReportChannelName::Unknown(ref u) = entry.channel_name {
+                            unique_channel_names.insert(u.clone());
+                        }
+
                         match entry.group {
                             IOReportChannelGroup::EnergyModel => {
                                 let u = EnergyUnit::from(entry.unit);
@@ -60,14 +77,27 @@ impl SampleManager {
                                     _ => {}
                                 };
                             }
-                            //IOReportChannelGroup::H11ANE => {}
-                            //_ if matches!(entry.channel_name, IOReportChannelName::ANE) => {
-                            //    println!("{:?}", entry);
-                            //    let desc = get_cf_string(|| unsafe {
-                            //        IOReportSampleCopyDescription(entry.item, 0)
-                            //    });
-                            //    println!("{:?}", desc);
-                            //}
+                            IOReportChannelGroup::SoCStats => match entry.channel_name {
+                                IOReportChannelName::ANE => {
+                                    let y = read_residencies(entry.item);
+                                    println!("ANE: {:?}", y);
+                                }
+                                _ => {}
+                            },
+                            IOReportChannelGroup::H11ANE => {
+                                println!("H11ANE: {:?}", entry.item);
+                                let desc = get_cf_string(|| unsafe {
+                                    IOReportSampleCopyDescription(entry.item, 0)
+                                });
+                                let raw_value = unsafe {
+                                    IOReportSimpleGetIntegerValue(entry.item, std::ptr::null_mut())
+                                } as f32;
+                                println!("{:?}", desc);
+                                println!("Raw value: {}", raw_value);
+                            }
+                            IOReportChannelGroup::Unknown(u) => {
+                                unique_channel_groups.insert(u);
+                            }
                             _ => continue,
                         }
                     }
@@ -228,7 +258,7 @@ mod tests {
         let mut sampler = Sampler::new();
         {
             let _guard = sampler.subscribe(100, 1);
-            std::thread::sleep(std::time::Duration::from_secs(4));
+            std::thread::sleep(std::time::Duration::from_secs(10));
         }
         assert!(!sampler.samples().is_empty());
         sampler.print_summary();

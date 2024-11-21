@@ -53,6 +53,19 @@ extern "C" {
   pub fn IOReportSampleCopyDescription(a: CFDictionaryRef, b: i64) -> CFStringRef;
 }
 
+pub fn read_residencies(item: CFDictionaryRef) -> Vec<(String, i64)> {
+    let count = unsafe { IOReportStateGetCount(item) };
+    let mut res = vec![];
+
+    for i in 0..count {
+        let name = unsafe { IOReportStateGetNameForIndex(item, i) };
+        let val = unsafe { IOReportStateGetResidency(item, i) };
+        res.push((from_cfstr(name), val));
+    }
+
+    res
+}
+
 pub fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
     let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, std::ptr::null_mut()) } as f32;
     let val = raw_value / (duration as f32 / 1000.0);
@@ -138,6 +151,7 @@ pub enum IOReportChannelGroup {
     CPUStats,
     GPUStats,
     H11ANE,
+    SoCStats,
     Unknown(String),
 }
 
@@ -148,6 +162,7 @@ impl IOReportChannelGroup {
             Self::CPUStats => "CPU Stats",
             Self::GPUStats => "GPU Stats",
             Self::H11ANE => "H11ANE",
+            Self::SoCStats => "SoC Stats",
             Self::Unknown(s) => s.as_str(),
         }
     }
@@ -160,6 +175,7 @@ impl<S: AsRef<str>> From<S> for IOReportChannelGroup {
             "CPU Stats" => Self::CPUStats,
             "GPU Stats" => Self::GPUStats,
             "H11ANE" => Self::H11ANE,
+            "SoC Stats" => Self::SoCStats,
             s => Self::Unknown(s.to_string()),
         }
     }
@@ -170,7 +186,7 @@ pub enum IOReportChannelName {
     CPUEnergy,
     GPUEnergy,
     ANE,
-    Unknown,
+    Unknown(String),
 }
 
 impl IOReportChannelName {
@@ -179,7 +195,7 @@ impl IOReportChannelName {
             Self::CPUEnergy => "CPU Energy",
             Self::GPUEnergy => "GPU Energy",
             Self::ANE => "ANE",
-            Self::Unknown => "Unknown",
+            Self::Unknown(s) => s.as_str(),
         }
     }
 }
@@ -190,7 +206,7 @@ impl From<String> for IOReportChannelName {
             "CPU Energy" => Self::CPUEnergy,
             "GPU Energy" => Self::GPUEnergy,
             c if c.starts_with("ANE") => Self::ANE,
-            _ => Self::Unknown,
+            s => Self::Unknown(s.to_string()),
         }
     }
 }
