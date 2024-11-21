@@ -258,25 +258,26 @@ impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
         let mut profile = PowerProfile::default();
         let samples = samples.as_ref();
 
+        let mut total_cpu_milliwatts = 0.;
+        let mut total_gpu_milliwatts = 0.;
+        let mut total_ane_milliwatts = 0.;
         for s in samples.iter() {
+            println!("SAMPLE: {:?}", s);
             let duration_secs = s.duration as f64 / 1000.0;
 
             profile.total_cpu_energy += s.cpu_energy;
             profile.total_gpu_energy += s.gpu_energy;
             profile.total_ane_energy += s.ane_energy;
-            profile.total_cpu_milliwatts += f64::round(s.cpu_energy as f64 / duration_secs) as u64;
-            profile.total_gpu_milliwatts += f64::round(s.gpu_energy as f64 / duration_secs) as u64;
-            profile.total_ane_milliwatts += f64::round(s.ane_energy as f64 / duration_secs) as u64;
+            total_cpu_milliwatts += s.cpu_energy as f64 / duration_secs;
+            total_gpu_milliwatts += s.gpu_energy as f64 / duration_secs;
+            total_ane_milliwatts += s.ane_energy as f64 / duration_secs;
             profile.total_duration += s.duration;
         }
 
         let num_samples = samples.len() as f64;
-        profile.total_cpu_milliwatts =
-            f64::round(profile.total_cpu_milliwatts as f64 / num_samples) as u64;
-        profile.total_gpu_milliwatts =
-            f64::round(profile.total_gpu_milliwatts as f64 / num_samples) as u64;
-        profile.total_ane_milliwatts =
-            f64::round(profile.total_ane_milliwatts as f64 / num_samples) as u64;
+        profile.total_cpu_milliwatts = f64::round(total_cpu_milliwatts / num_samples) as u64;
+        profile.total_gpu_milliwatts = f64::round(total_gpu_milliwatts / num_samples) as u64;
+        profile.total_ane_milliwatts = f64::round(total_ane_milliwatts / num_samples) as u64;
 
         profile.total_energy =
             profile.total_cpu_energy + profile.total_gpu_energy + profile.total_ane_energy;
@@ -315,7 +316,7 @@ mod tests {
     fn test_guard_sampler() {
         let mut sampler = Sampler::new();
         {
-            let _guard = sampler.subscribe(100, 1);
+            let _guard = sampler.subscribe(100, 5);
             std::thread::sleep(std::time::Duration::from_secs(5));
         }
         assert!(!sampler.samples().is_empty());

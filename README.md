@@ -31,6 +31,7 @@ profiler.print_summary()
 
 # TODO
 - [x] Surface ContextManager impl
+- [ ] `num_samples` (sampling multiple times within a sample duration doesn't work)
 - [ ] Code is very jank
 - [ ] Determine baseline energy consumption of ANE
 - [ ] Improve measurements by determining the process in question, and computing

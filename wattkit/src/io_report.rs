@@ -376,7 +376,6 @@ impl IOReport {
     }
 
     pub fn get_samples(&mut self, duration: u64, count: usize) -> Vec<IOReportSample> {
-        let count = count.clamp(1, 32);
         let mut samples: Vec<IOReportSample> = Vec::with_capacity(count);
         let step_msec = duration / count as u64;
 
