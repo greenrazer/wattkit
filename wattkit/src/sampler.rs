@@ -13,7 +13,7 @@ pub struct EnergySample {
     cpu_energy: u128,
     gpu_energy: u128,
     ane_energy: u128,
-    duration: u64,
+    duration: u64, //milliseconds
 }
 
 #[derive(Debug)]
@@ -123,7 +123,6 @@ impl SampleManager {
 ///         let y = x * x;
 ///     }
 /// }
-/// sampler.print_summary();
 #[derive(Debug, Default)]
 pub struct Sampler {
     start_time: Option<std::time::Instant>,
@@ -166,27 +165,38 @@ impl Sampler {
         &self.samples
     }
 
-    pub fn print_summary(&self) {
-        println!("SAMPLES: {}", self.samples.len());
+    pub fn power_profile(&self) -> PowerProfile {
+        let mut profile = PowerProfile::default();
 
-        let mut total_sample = EnergySample::default();
         for s in self.samples.iter() {
-            println!(
-                "CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
-                s.cpu_energy, s.gpu_energy, s.ane_energy, s.duration
-            );
-            total_sample.cpu_energy += s.cpu_energy;
-            total_sample.gpu_energy += s.gpu_energy;
-            total_sample.ane_energy += s.ane_energy;
-            total_sample.duration += s.duration;
+            println!("S: {:?}", s);
+
+            let duration_secs = s.duration as f64 / 1000.0;
+
+            profile.total_cpu_energy += s.cpu_energy;
+            profile.total_gpu_energy += s.gpu_energy;
+            profile.total_ane_energy += s.ane_energy;
+            profile.total_cpu_milliwatts += f64::round(s.cpu_energy as f64 / duration_secs) as u64;
+            profile.total_gpu_milliwatts += f64::round(s.gpu_energy as f64 / duration_secs) as u64;
+            profile.total_ane_milliwatts += f64::round(s.ane_energy as f64 / duration_secs) as u64;
+            profile.total_duration += s.duration;
         }
-        println!(
-            "TOTAL: CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
-            total_sample.cpu_energy,
-            total_sample.gpu_energy,
-            total_sample.ane_energy,
-            total_sample.duration
-        );
+
+        let num_samples = self.samples.len() as f64;
+        profile.total_cpu_milliwatts =
+            f64::round(profile.total_cpu_milliwatts as f64 / num_samples) as u64;
+        profile.total_gpu_milliwatts =
+            f64::round(profile.total_gpu_milliwatts as f64 / num_samples) as u64;
+        profile.total_ane_milliwatts =
+            f64::round(profile.total_ane_milliwatts as f64 / num_samples) as u64;
+
+        profile.total_energy =
+            profile.total_cpu_energy + profile.total_gpu_energy + profile.total_ane_energy;
+        profile.total_power = profile.total_cpu_milliwatts
+            + profile.total_gpu_milliwatts
+            + profile.total_ane_milliwatts;
+
+        profile
     }
 
     pub fn duration(&self) -> Option<u64> {
@@ -247,27 +257,8 @@ impl StartStopSampler {
         &self.samples
     }
 
-    pub fn print_summary(&self) {
-        println!("SAMPLES: {}", self.samples.len());
-
-        let mut total_sample = EnergySample::default();
-        for s in self.samples.iter() {
-            println!(
-                "CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
-                s.cpu_energy, s.gpu_energy, s.ane_energy, s.duration
-            );
-            total_sample.cpu_energy += s.cpu_energy;
-            total_sample.gpu_energy += s.gpu_energy;
-            total_sample.ane_energy += s.ane_energy;
-            total_sample.duration += s.duration;
-        }
-        println!(
-            "TOTAL: CPU: {}mJ, GPU: {}mJ, ANE: {}mJ, Time: {}",
-            total_sample.cpu_energy,
-            total_sample.gpu_energy,
-            total_sample.ane_energy,
-            total_sample.duration
-        );
+    pub fn power_profile(&self) -> PowerProfile {
+        todo!()
     }
 
     pub fn duration(&self) -> Option<u128> {
@@ -276,6 +267,38 @@ impl StartStopSampler {
         } else {
             None
         }
+    }
+}
+
+#[derive(Debug, Default)]
+pub struct PowerProfile {
+    total_cpu_energy: u128,
+    total_gpu_energy: u128,
+    total_ane_energy: u128,
+    total_cpu_milliwatts: u64,
+    total_gpu_milliwatts: u64,
+    total_ane_milliwatts: u64,
+    total_energy: u128,
+    total_power: u64,
+    total_duration: u64,
+}
+
+impl std::fmt::Display for PowerProfile {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "Total Energy: {} mJ\nTotal Power: {} mW\nTotal Duration: {} ms\nCPU Energy: {} mJ\nGPU Energy: {} mJ\nANE Energy: {} mJ\nCPU Power: {} mW\nGPU Power: {} mW\nANE Power: {} mW",
+            self.total_energy,
+            self.total_power,
+            self.total_duration,
+            self.total_cpu_energy,
+            self.total_gpu_energy,
+            self.total_ane_energy,
+            self.total_cpu_milliwatts,
+            self.total_gpu_milliwatts,
+            self.total_ane_milliwatts
+        )?;
+        Ok(())
     }
 }
 
@@ -291,7 +314,8 @@ mod tests {
             std::thread::sleep(std::time::Duration::from_secs(5));
         }
         assert!(!sampler.samples().is_empty());
-        sampler.print_summary();
+        let profile = sampler.power_profile();
+        println!("{}", profile);
     }
 
     #[test]
@@ -307,6 +331,7 @@ mod tests {
         sampler.stop().unwrap();
         assert!(!sampler.is_sampling());
         assert!(!sampler.samples().is_empty());
-        sampler.print_summary();
+        let profile = sampler.power_profile();
+        println!("{}", profile);
     }
 }
