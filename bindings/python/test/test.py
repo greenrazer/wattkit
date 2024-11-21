@@ -30,5 +30,4 @@ with PowerProfiler(sample_duration=100, num_samples=1) as profiler:
     for i in range(1000):
         cml_model.predict({"image": img})
     
-profiler.print_summary()
-profiler.profile_duration()
+profiler.print_profile()

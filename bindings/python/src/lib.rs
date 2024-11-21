@@ -39,12 +39,9 @@ impl PowerProfiler {
         Ok(true)
     }
 
-    fn print_summary(&self) {
-        self.sampler.print_summary()
-    }
-
-    fn profile_duration(&self) {
-        println!("Profiling duration: {:?}", self.sampler.duration());
+    fn print_profile(&self) -> PyResult<()> {
+        println!("{}", self.sampler.power_profile());
+        Ok(())
     }
 }
 
