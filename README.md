@@ -5,11 +5,11 @@
 
 `wattkit` intends to provide a method for measuring the power consumption of your Rust or Python code.
 
-Using RAII, we provide a nice Rust interface
+Using RAII, we provide a nice Rust interface:
 ```rust
 let mut sampler = Sampler::new();
 {
-    let _guard = sampler.subscribe(100, 1);
+    let _guard = sampler.subscribe(100, 1); # Will be sampled until drop/end of scope
     std::thread::sleep(std::time::Duration::from_secs(4));
 }
 assert!(!sampler.samples().is_empty());
@@ -30,12 +30,14 @@ profiler.print_summary()
 ```
 
 # TODO
-- [ ] Code is pretty jank
 - [x] Surface ContextManager impl
-- [ ] Add frequency measurements
+- [ ] Code is very jank
+- [ ] Improve measurements by determining the process in question, and computing
+  what % of the time during the sample period it is running. Use that to compute
+  the fraction of the power consumption that is due to the process.
+- [ ] Add frequency measurements (ANE impossible :( )
 - [ ] Add braindead method that does statistical sampling for you
-- [ ] Convenience method to generate comparison report of power consumption between compute units? (Seems CoreML specific)
-- [ ] Publish on PyPi
-
+- [ ] Convenience method to generate comparison report of power consumption between compute units? (CoreML specific, put in coremlprofiler)
+- [ ] Publish on PyPi and crates.io
 
 Lots of the reverse engineering work here was done by @vladkens with [macmon](https://github.com/vladkens/macmon).
