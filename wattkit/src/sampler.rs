@@ -113,17 +113,18 @@ impl SampleManager {
 /// ```rust
 /// use wattkit::*;
 ///
-/// let sampler = Sampler::new(SamplerType::Energy);
+/// let mut sampler = Sampler::new();
 /// {
 ///     // Start sampling
-///     let guard = sampler.subscribe(1000); //sample every 1000ms
+///     let guard = sampler.subscribe(1000, 1); //sample every 1000ms
 ///
 ///     // Do some work
 ///     for x in 0..1000000 {
-///         let y = x * x;
+///         let y = x + x*2;
 ///     }
 /// }
 /// sampler.print_summary();
+/// ```
 #[derive(Debug, Default)]
 pub struct Sampler {
     start_time: Option<std::time::Instant>,

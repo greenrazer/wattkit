@@ -1,17 +1,15 @@
 use std::{
+    ffi::c_void,
     marker::{PhantomData, PhantomPinned},
     mem::MaybeUninit,
 };
 
 use crate::cf_utils::*;
 use core_foundation::{
-    array::{CFArrayGetCount, CFArrayGetValueAtIndex, CFArrayRef},
-    base::{kCFAllocatorDefault, CFRelease, CFTypeRef},
-    dictionary::{
-        CFDictionaryCreateMutableCopy, CFDictionaryGetCount, CFDictionaryRef,
+    array::{CFArray, CFArrayGetCount, CFArrayGetValueAtIndex, CFArrayRef}, base::{kCFAllocatorDefault, CFRelease, CFType, CFTypeRef, TCFType}, boolean::CFBoolean, data::CFData, date::CFDate, dictionary::{
+        CFDictionary, CFDictionaryCreateMutableCopy, CFDictionaryGetCount, CFDictionaryRef,
         CFMutableDictionaryRef,
-    },
-    string::CFStringRef,
+    }, number::CFNumber, set::CFSet, string::{CFString, CFStringRef}, url::CFURL
 };
 
 #[derive(Debug, thiserror::Error)]
@@ -308,11 +306,48 @@ impl IOReport {
         let channels = Self::create_channels(channels)?;
         let subscription = Self::subscribe(channels)?;
 
-        Ok(Self {
+        let slf: IOReport = Self {
             subscription,
             channels,
             previous: None,
-        })
+        };
+
+        slf.list_channels();
+
+        Ok(slf)
+    }
+
+    fn list_channels(&self) {
+        let cf_dict: CFDictionary<*const c_void, *const c_void> =
+            unsafe { CFDictionary::wrap_under_get_rule(self.channels) };
+
+        let (keys_array, values_array) = cf_dict.get_keys_and_values();
+
+        // Iterate through the key-value pairs
+        for (key_ptr, value_ptr) in keys_array.iter().zip(values_array.iter()) {
+            // Safely cast keys and values to CFType
+            let key: CFTypeRef = *key_ptr as CFTypeRef;
+            let value: CFTypeRef = *value_ptr as CFTypeRef;
+
+            // Check the type of the key
+            let key_type = unsafe { CFType::wrap_under_get_rule(key).type_of() };
+            let key_string = if key_type == CFString::type_id() {
+                Some(unsafe {
+                    CFType::wrap_under_get_rule(key)
+                        .downcast::<CFString>()
+                        .unwrap()
+                        .to_string()
+                })
+            } else {
+                None
+            };
+
+            let value_type = unsafe { CFType::wrap_under_get_rule(value).type_of() };
+
+            if let Some(k) = key_string{
+                println!("Key: {}, Value Type: {}", k, value_type);
+            }
+        }
     }
 
     fn subscribe(channel: CFMutableDictionaryRef) -> Result<IOReportSubscriptionRef> {
