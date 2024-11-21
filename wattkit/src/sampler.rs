@@ -5,6 +5,7 @@ use std::{
     thread::JoinHandle,
 };
 
+use crate::io_report::IOReportChannelRequest;
 use crate::io_report::IOReportSimpleGetIntegerValue;
 use crate::io_report::{EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName};
 
@@ -29,7 +30,11 @@ impl SampleManager {
         let (sample_tx, sample_rx) = channel();
 
         let handle = std::thread::spawn(move || {
-            let requests = vec![];
+            //TODO: extend to other samples
+            let requests = vec![IOReportChannelRequest::new(
+                IOReportChannelGroup::EnergyModel,
+                None as Option<IOReportChannelName>,
+            )];
             let mut report = IOReport::new(requests).unwrap();
 
             loop {
@@ -262,7 +267,6 @@ impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
         let mut total_gpu_milliwatts = 0.;
         let mut total_ane_milliwatts = 0.;
         for s in samples.iter() {
-            println!("SAMPLE: {:?}", s);
             let duration_secs = s.duration as f64 / 1000.0;
 
             profile.total_cpu_energy += s.cpu_energy;
@@ -316,10 +320,11 @@ mod tests {
     fn test_guard_sampler() {
         let mut sampler = Sampler::new();
         {
-            let _guard = sampler.subscribe(100, 5);
+            let _guard = sampler.subscribe(100, 2);
             std::thread::sleep(std::time::Duration::from_secs(5));
         }
         assert!(!sampler.samples().is_empty());
+        println!("NUMBER OF SAMPLES: {}", sampler.samples().len());
         let profile = sampler.power_profile();
         println!("{}", profile);
     }

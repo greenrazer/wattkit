@@ -22,7 +22,7 @@ def validation_image():
     )
     return transform(input)
 
-compute_units = ct.ComputeUnit.CPU_ONLY
+compute_units = ct.ComputeUnit.ALL
 cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage", compute_units=compute_units)
 img = validation_image()
 
