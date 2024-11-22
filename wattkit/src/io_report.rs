@@ -47,33 +47,6 @@ extern "C" {
   pub fn IOReportChannelGetChannelName(a: CFDictionaryRef) -> CFStringRef;
   pub fn IOReportSimpleGetIntegerValue(a: CFDictionaryRef, b: *mut i32) -> i64;
   pub fn IOReportChannelGetUnitLabel(a: CFDictionaryRef) -> CFStringRef;
-  pub fn IOReportStateGetCount(a: CFDictionaryRef) -> i64;
-  pub fn IOReportStateGetNameForIndex(a: CFDictionaryRef, b: i64) -> CFStringRef;
-  pub fn IOReportStateGetResidency(a: CFDictionaryRef, b: i64) -> i64;
-  pub fn IOReportSampleCopyDescription(a: CFDictionaryRef, b: i64) -> CFStringRef;
-}
-
-pub fn read_wattage(item: CFDictionaryRef, unit: &EnergyUnit, duration: u64) -> Result<f32> {
-    let raw_value = unsafe { IOReportSimpleGetIntegerValue(item, std::ptr::null_mut()) } as f32;
-    let val = raw_value / (duration as f32 / 1000.0);
-    match unit {
-        EnergyUnit::MilliJoules => Ok(val / 1e3f32),
-        EnergyUnit::MicroJoules => Ok(val / 1e6f32),
-        EnergyUnit::NanoJoules => Ok(val / 1e9f32),
-    }
-}
-
-pub fn cfio_get_residencies(item: CFDictionaryRef) -> Vec<(String, i64)> {
-    let count = unsafe { IOReportStateGetCount(item) };
-    let mut res = vec![];
-
-    for i in 0..count {
-        let name = unsafe { IOReportStateGetNameForIndex(item, i) };
-        let val = unsafe { IOReportStateGetResidency(item, i) };
-        res.push((from_cfstr(name), val));
-    }
-
-    res
 }
 
 #[derive(Debug)]
@@ -204,6 +177,7 @@ impl std::fmt::Display for IOReportChannelName {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug)]
 pub struct IOReportIteratorItem {
     pub group: IOReportChannelGroup,
