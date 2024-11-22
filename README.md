@@ -1,8 +1,5 @@
 # WattKit - Measure the power usage of your code on MacOS! (Rust / Python)
 
-> [!WARNING]  
-> This is a sandbox for active development! Do not use :) 
-
 > [!WARNING]
 > This only works on MacOS!
 
@@ -25,8 +22,7 @@ let profile = sampler.profile();
 println!("{}", profile);
 ```
 
-We use `pyo3` to provide a Python interface.
-
+We use `pyo3` to provide a Python interface:
 ```python
 from wattkit import Profiler 
 import time
@@ -43,7 +39,8 @@ print(profile)
 # TODO
 - [x] Surface ContextManager impl
 - [x] `num_samples` (sampling multiple times within a sample duration doesn't work)
-- [ ] Code is very jank
+- [x] Code is very jank
+- [ ] Publish on PyPi and crates.io
 - [ ] Determine baseline energy consumption of ANE
 - [ ] Improve measurements by determining the process in question, and computing
   what % of the time during the sample period it is running. Use that to compute
@@ -53,6 +50,6 @@ print(profile)
 - [ ] Add frequency measurements (ANE impossible :( )
 - [ ] Add braindead method that does statistical sampling for you
 - [ ] Convenience method to generate comparison report of power consumption between compute units? (CoreML specific, put in coremlprofiler)
-- [ ] Publish on PyPi and crates.io
+
 
 Lots of the reverse engineering work here was done by @vladkens with [macmon](https://github.com/vladkens/macmon).
