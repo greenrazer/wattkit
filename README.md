@@ -40,7 +40,7 @@ print(profile)
 - [x] Surface ContextManager impl
 - [x] `num_samples` (sampling multiple times within a sample duration doesn't work)
 - [x] Code is very jank
-- [ ] Publish on PyPi and crates.io
+- [x] Publish on PyPi and crates.io
 - [ ] Determine baseline energy consumption of ANE
 - [ ] Improve measurements by determining the process in question, and computing
   what % of the time during the sample period it is running. Use that to compute
