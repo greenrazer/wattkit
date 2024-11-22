@@ -9,6 +9,18 @@ use crate::io_report::IOReportChannelRequest;
 use crate::io_report::IOReportSimpleGetIntegerValue;
 use crate::io_report::{EnergyUnit, IOReport, IOReportChannelGroup, IOReportChannelName};
 
+#[derive(thiserror::Error, Debug)]
+pub enum SamplerError {
+    #[error("IOReportError: {0}")]
+    IOReportError(#[from] crate::io_report::IOReportError),
+    #[error("No samples available")]
+    SamplesNotAvailable,
+    #[error("Sampling in progress")]
+    SamplingInProgress,
+    #[error("No sampling currently in progress")]
+    NoSamplingInProgress,
+}
+
 #[derive(Clone, Debug, Default)]
 pub struct EnergySample {
     cpu_energy: u128,
@@ -30,7 +42,6 @@ impl SampleManager {
         let (sample_tx, sample_rx) = channel();
 
         let handle = std::thread::spawn(move || {
-            //TODO: extend to other samples
             let requests = vec![IOReportChannelRequest::new(
                 IOReportChannelGroup::EnergyModel,
                 None as Option<IOReportChannelName>,
@@ -39,7 +50,6 @@ impl SampleManager {
 
             loop {
                 if cancel_rx.try_recv().is_ok() {
-                    println!("Cancelling sampling");
                     break;
                 }
 
@@ -62,7 +72,6 @@ impl SampleManager {
                                     EnergyUnit::NanoJoules => raw_joules / 1_000_000,
                                     EnergyUnit::MicroJoules => raw_joules / 1_000,
                                     EnergyUnit::MilliJoules => raw_joules,
-                                    _ => 0,
                                 };
 
                                 match entry.channel_name {
@@ -97,12 +106,36 @@ impl SampleManager {
 
     fn stop(self) -> Vec<EnergySample> {
         let _ = self.cancel_sender.send(());
-        let mut samples = Vec::new();
+        let mut samples = Vec::with_capacity(128);
         while let Ok(sample) = self.sample_receiver.recv() {
             samples.push(sample);
         }
         let _ = self.thread_handle.join();
         samples
+    }
+}
+
+pub trait Sampling {
+    fn samples(&self) -> Option<&Vec<EnergySample>>;
+
+    fn start_time(&self) -> Option<std::time::Instant>;
+
+    fn end_time(&self) -> Option<std::time::Instant>;
+
+    fn power_profile(&self) -> Result<PowerProfile, SamplerError> {
+        if let Some(samples) = self.samples() {
+            Ok(PowerProfile::from(samples))
+        } else {
+            Err(SamplerError::SamplesNotAvailable)
+        }
+    }
+
+    fn duration(&self) -> Option<u64> {
+        if let (Some(start), Some(end)) = (self.start_time(), self.end_time()) {
+            Some(end.duration_since(start).as_secs())
+        } else {
+            None
+        }
     }
 }
 
@@ -118,7 +151,7 @@ impl SampleManager {
 /// ```rust
 /// use wattkit::*;
 ///
-/// let sampler = Sampler::new(SamplerType::Energy);
+/// let sampler = Sampler::new();
 /// {
 ///     // Start sampling
 ///     let guard = sampler.subscribe(1000); //sample every 1000ms
@@ -128,15 +161,16 @@ impl SampleManager {
 ///         let y = x * x;
 ///     }
 /// }
+/// let profile = sampler.power_profile();
 #[derive(Debug, Default)]
-pub struct Sampler {
+pub struct GuardSampler {
     start_time: Option<std::time::Instant>,
     end_time: Option<std::time::Instant>,
-    samples: Vec<EnergySample>,
+    samples: Option<Vec<EnergySample>>,
 }
 
 pub struct SamplerGuard<'a> {
-    sampler: &'a mut Sampler,
+    sampler: &'a mut GuardSampler,
     manager: Option<SampleManager>,
 }
 
@@ -144,18 +178,14 @@ impl<'a> Drop for SamplerGuard<'a> {
     fn drop(&mut self) {
         if let Some(manager) = self.manager.take() {
             self.sampler.end_time = Some(std::time::Instant::now());
-            self.sampler.samples.extend(manager.stop());
+            self.sampler.samples = Some(manager.stop());
         }
     }
 }
 
-impl Sampler {
+impl GuardSampler {
     pub fn new() -> Self {
-        Sampler {
-            samples: Vec::new(),
-            start_time: None,
-            end_time: None,
-        }
+        GuardSampler::default()
     }
 
     pub fn subscribe(&mut self, duration: u64, num_samples: usize) -> SamplerGuard {
@@ -165,21 +195,19 @@ impl Sampler {
             manager: Some(SampleManager::new(duration, num_samples)),
         }
     }
+}
 
-    pub fn samples(&self) -> &Vec<EnergySample> {
-        &self.samples
+impl Sampling for GuardSampler {
+    fn samples(&self) -> Option<&Vec<EnergySample>> {
+        self.samples.as_ref()
     }
 
-    pub fn power_profile(&self) -> PowerProfile {
-        PowerProfile::from(&self.samples)
+    fn start_time(&self) -> Option<std::time::Instant> {
+        self.start_time
     }
 
-    pub fn duration(&self) -> Option<u64> {
-        if let (Some(start), Some(end)) = (self.start_time, self.end_time) {
-            Some(end.duration_since(start).as_secs())
-        } else {
-            None
-        }
+    fn end_time(&self) -> Option<std::time::Instant> {
+        self.end_time
     }
 }
 
@@ -188,7 +216,7 @@ impl Sampler {
 /// Exclusively for use with pyo3, use `Sampler` from Rust instead.
 #[derive(Debug, Default)]
 pub struct StartStopSampler {
-    samples: Vec<EnergySample>,
+    samples: Option<Vec<EnergySample>>,
     manager: Option<SampleManager>,
     start_time: Option<std::time::Instant>,
     end_time: Option<std::time::Instant>,
@@ -196,12 +224,7 @@ pub struct StartStopSampler {
 
 impl StartStopSampler {
     pub fn new() -> Self {
-        StartStopSampler {
-            samples: Vec::new(),
-            manager: None,
-            start_time: None,
-            end_time: None,
-        }
+        StartStopSampler::default()
     }
 
     pub fn start(&mut self, duration: u64, num_samples: usize) -> Result<(), &'static str> {
@@ -214,10 +237,9 @@ impl StartStopSampler {
     }
 
     pub fn stop(&mut self) -> Result<(), &'static str> {
-        println!("Stopping sampling");
         if let Some(core) = self.manager.take() {
             self.end_time = Some(std::time::Instant::now());
-            self.samples.extend(core.stop());
+            self.samples = Some(core.stop());
             Ok(())
         } else {
             Err("No sampling in progress")
@@ -227,21 +249,19 @@ impl StartStopSampler {
     pub fn is_sampling(&self) -> bool {
         self.manager.is_some()
     }
+}
 
-    pub fn samples(&self) -> &Vec<EnergySample> {
-        &self.samples
+impl Sampling for StartStopSampler {
+    fn samples(&self) -> Option<&Vec<EnergySample>> {
+        self.samples.as_ref()
     }
 
-    pub fn power_profile(&self) -> PowerProfile {
-        PowerProfile::from(&self.samples)
+    fn start_time(&self) -> Option<std::time::Instant> {
+        self.start_time
     }
 
-    pub fn duration(&self) -> Option<u128> {
-        if let (Some(start), Some(end)) = (self.start_time, self.end_time) {
-            Some(end.duration_since(start).as_millis())
-        } else {
-            None
-        }
+    fn end_time(&self) -> Option<std::time::Instant> {
+        self.end_time
     }
 }
 
@@ -267,7 +287,7 @@ impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
         let mut total_gpu_milliwatts = 0.;
         let mut total_ane_milliwatts = 0.;
         for s in samples.iter() {
-            let duration_secs = s.duration as f64 / 1000.0;
+            let duration_secs = s.duration as f64 / 1000.0; //mJs-1 == mW
 
             profile.total_cpu_energy += s.cpu_energy;
             profile.total_gpu_energy += s.gpu_energy;
@@ -318,14 +338,12 @@ mod tests {
 
     #[test]
     fn test_guard_sampler() {
-        let mut sampler = Sampler::new();
+        let mut sampler = GuardSampler::new();
         {
             let _guard = sampler.subscribe(100, 2);
             std::thread::sleep(std::time::Duration::from_secs(5));
         }
-        assert!(!sampler.samples().is_empty());
-        println!("NUMBER OF SAMPLES: {}", sampler.samples().len());
-        let profile = sampler.power_profile();
+        let profile = sampler.power_profile().unwrap();
         println!("{}", profile);
     }
 
@@ -334,15 +352,14 @@ mod tests {
         let mut sampler = StartStopSampler::new();
 
         assert!(!sampler.is_sampling());
-        sampler.start(100, 1).unwrap();
+        sampler.start(100, 2).unwrap();
         assert!(sampler.is_sampling());
 
-        std::thread::sleep(std::time::Duration::from_secs(4));
+        std::thread::sleep(std::time::Duration::from_secs(5));
 
         sampler.stop().unwrap();
         assert!(!sampler.is_sampling());
-        assert!(!sampler.samples().is_empty());
-        let profile = sampler.power_profile();
+        let profile = sampler.power_profile().unwrap();
         println!("{}", profile);
     }
 }

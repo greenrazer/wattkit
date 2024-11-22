@@ -1,18 +1,28 @@
 use pyo3::prelude::*;
-use wattkit::*;
+use wattkit::{PowerProfile, Sampling, StartStopSampler};
 
 #[pyclass]
-struct PowerProfiler {
+struct Profiler {
     sampler: StartStopSampler,
     sample_duration: u64,
     num_samples: usize,
 }
 
+#[pyclass]
+pub struct PyPowerProfile(pub PowerProfile);
+
 #[pymethods]
-impl PowerProfiler {
+impl PyPowerProfile {
+    fn __str__(&self) -> PyResult<String> {
+        Ok(format!("{:?}", self.0))
+    }
+}
+
+#[pymethods]
+impl Profiler {
     #[new]
     fn new(sample_duration: u64, num_samples: usize) -> PyResult<Self> {
-        Ok(PowerProfiler {
+        Ok(Profiler {
             sampler: StartStopSampler::new(),
             sample_duration,
             num_samples,
@@ -39,14 +49,14 @@ impl PowerProfiler {
         Ok(true)
     }
 
-    fn print_profile(&self) -> PyResult<()> {
-        println!("{}", self.sampler.power_profile());
-        Ok(())
+    fn get_profile(&self) -> PyResult<PyPowerProfile> {
+        let profile = self.sampler.power_profile();
+        Ok(PyPowerProfile(profile.unwrap())) //TODO: proper error handling
     }
 }
 
 #[pymodule]
 fn _wattkit_pyo3(m: &Bound<'_, PyModule>) -> PyResult<()> {
-    m.add_class::<PowerProfiler>()?;
+    m.add_class::<Profiler>()?;
     Ok(())
 }

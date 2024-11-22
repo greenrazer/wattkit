@@ -1,4 +1,4 @@
-from wattkit import PowerProfiler
+from wattkit import Profiler 
 import coremltools as ct
 from PIL import Image
 from torchvision import transforms
@@ -26,8 +26,10 @@ compute_units = ct.ComputeUnit.ALL
 cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage", compute_units=compute_units)
 img = validation_image()
 
-with PowerProfiler(sample_duration=100, num_samples=1) as profiler:
+with Profiler(sample_duration=100, num_samples=2) as profiler:
     for i in range(1000):
         cml_model.predict({"image": img})
+
+profile = profiler.get_profile()
+print(profile)
     
-profiler.print_profile()
