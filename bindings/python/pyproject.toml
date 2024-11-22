@@ -4,12 +4,25 @@ build-backend = "maturin"
 
 [project]
 name = "wattkit"
+description = "Measure the energy usage of your Python code!" 
 requires-python = ">=3.8"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/FL33TW00D/coremlprofiler"
+repository = "https://github.com/FL33TW00D/coremlprofiler"
+keywords = ["profiler", "machine learning", "energy usage", "climate"]
 classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+
 dynamic = ["version"]
 
 [tool.maturin]
