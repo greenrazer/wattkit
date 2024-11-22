@@ -50,7 +50,7 @@ impl Profiler {
     }
 
     fn get_profile(&self) -> PyResult<PyPowerProfile> {
-        let profile = self.sampler.power_profile();
+        let profile = self.sampler.profile();
         Ok(PyPowerProfile(profile.unwrap())) //TODO: proper error handling
     }
 }

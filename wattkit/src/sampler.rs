@@ -122,7 +122,7 @@ pub trait Sampling {
 
     fn end_time(&self) -> Option<std::time::Instant>;
 
-    fn power_profile(&self) -> Result<PowerProfile, SamplerError> {
+    fn profile(&self) -> Result<PowerProfile, SamplerError> {
         if let Some(samples) = self.samples() {
             Ok(PowerProfile::from(samples))
         } else {
@@ -343,7 +343,7 @@ mod tests {
             let _guard = sampler.subscribe(100, 2);
             std::thread::sleep(std::time::Duration::from_secs(5));
         }
-        let profile = sampler.power_profile().unwrap();
+        let profile = sampler.profile().unwrap();
         println!("{}", profile);
     }
 
@@ -359,7 +359,7 @@ mod tests {
 
         sampler.stop().unwrap();
         assert!(!sampler.is_sampling());
-        let profile = sampler.power_profile().unwrap();
+        let profile = sampler.profile().unwrap();
         println!("{}", profile);
     }
 }

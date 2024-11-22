@@ -21,23 +21,23 @@ let mut sampler = Sampler::new();
     std::thread::sleep(std::time::Duration::from_secs(4));
 }
 
-let profile = sampler.power_profile();
+let profile = sampler.profile();
 println!("{}", profile);
-
 ```
 
 We use `pyo3` to provide a Python interface.
 
 ```python
-from wattkit import PowerProfiler
+from wattkit import Profiler 
 import time
 
-with PowerProfiler(duration=100, num_samples=2) as profiler:
+with Profiler(duration=100, num_samples=2) as profiler:
     # Do intensive work here
     for i in range(10):
         time.sleep(0.5)
     
-profiler.print_profile()
+profile = profiler.profile()
+print(profile)
 ```
 
 # TODO
