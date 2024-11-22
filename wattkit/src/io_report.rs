@@ -49,6 +49,7 @@ extern "C" {
   pub fn IOReportChannelGetUnitLabel(a: CFDictionaryRef) -> CFStringRef;
 }
 
+#[allow(clippy::enum_variant_names)]
 #[derive(Debug)]
 pub enum EnergyUnit {
     MilliJoules,
@@ -141,6 +142,7 @@ impl<S: AsRef<str>> From<S> for IOReportChannelGroup {
     }
 }
 
+#[allow(clippy::upper_case_acronyms)]
 #[derive(Debug)]
 pub enum IOReportChannelName {
     CPUEnergy,
