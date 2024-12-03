@@ -24,6 +24,12 @@ classifiers = [
 ]
 
 dynamic = ["version"]
+dependencies = [
+    "coremltools>=8.1",
+    "pillow>=10.4.0",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+]
 
 [tool.maturin]
 python-source = "py_src"

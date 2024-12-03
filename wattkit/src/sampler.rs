@@ -267,15 +267,15 @@ impl Sampling for StartStopSampler {
 
 #[derive(Debug, Default)]
 pub struct PowerProfile {
-    total_cpu_energy: u128,
-    total_gpu_energy: u128,
-    total_ane_energy: u128,
-    total_cpu_milliwatts: u64,
-    total_gpu_milliwatts: u64,
-    total_ane_milliwatts: u64,
-    total_energy: u128,
-    total_power: u64,
-    total_duration: u64,
+    pub total_cpu_energy: u128,
+    pub total_gpu_energy: u128,
+    pub total_ane_energy: u128,
+    pub total_cpu_milliwatts: u64,
+    pub total_gpu_milliwatts: u64,
+    pub total_ane_milliwatts: u64,
+    pub total_energy: u128,
+    pub total_power: u64,
+    pub total_duration: u64,
 }
 
 impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
