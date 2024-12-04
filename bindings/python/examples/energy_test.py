@@ -67,11 +67,11 @@ if __name__ == "__main__":
     print(",".join([str(x) for x in [
         model_bytes,
         model_iterations,
-        profile.total_cpu_millijoules,
-        profile.total_gpu_millijoules,
-        profile.total_ane_millijoules,
-        profile.average_cpu_milliwatts,
-        profile.average_gpu_milliwatts,
-        profile.average_ane_milliwatts,
+        profile.total_cpu_energy,
+        profile.total_gpu_energy,
+        profile.total_ane_energy,
+        profile.average_cpu_power,
+        profile.average_gpu_power,
+        profile.average_ane_power,
         profile.total_duration_milliseconds
     ]]))
