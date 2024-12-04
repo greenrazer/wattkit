@@ -275,7 +275,7 @@ pub struct PowerProfile {
     pub average_ane_power: u64,
     pub total_energy: u128,
     pub average_power: u64,
-    pub total_duration_milliseconds: u64,
+    pub total_duration: u64,
 }
 
 impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
@@ -295,7 +295,7 @@ impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
             average_cpu_power += s.cpu_energy as f64 / duration_secs;
             average_gpu_power += s.gpu_energy as f64 / duration_secs;
             average_ane_power += s.ane_energy as f64 / duration_secs;
-            profile.total_duration_milliseconds += s.duration;
+            profile.total_duration += s.duration;
         }
 
         let num_samples = samples.len() as f64;
@@ -320,7 +320,7 @@ impl std::fmt::Display for PowerProfile {
             "Total Energy: {} mJ\nTotal Power: {} mW\nTotal Duration: {} ms\nCPU Energy: {} mJ\nGPU Energy: {} mJ\nANE Energy: {} mJ\nCPU Power: {} mW\nGPU Power: {} mW\nANE Power: {} mW",
             self.total_energy,
             self.average_power,
-            self.total_duration_milliseconds,
+            self.total_duration,
             self.total_cpu_energy,
             self.total_gpu_energy,
             self.total_ane_energy,

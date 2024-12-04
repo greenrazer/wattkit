@@ -79,5 +79,5 @@ print(",".join([str(x) for x in [
     profile.average_cpu_power,
     profile.average_gpu_power,
     profile.average_ane_power,
-    profile.total_duration_milliseconds
+    profile.total_duration
 ]]))

@@ -58,8 +58,8 @@ impl PyPowerProfile {
     }
 
     #[getter]
-    fn total_duration_milliseconds(&self) -> PyResult<u64> {
-        Ok(self.0.total_duration_milliseconds)
+    fn total_duration(&self) -> PyResult<u64> {
+        Ok(self.0.total_duration)
     }
 }
 
