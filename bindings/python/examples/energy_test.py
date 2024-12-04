@@ -22,14 +22,9 @@ def random_inputs_for_model(model):
                 height = image_type.height
                 width = image_type.width
                 
-                if image_type.colorSpace == 0:  # GRAYSCALE
+                if image_type.colorSpace == 0: # GRAYSCALE
                     channels = 1
-                elif image_type.colorSpace == 1:  # RGB
-                    channels = 3
-                elif image_type.colorSpace == 2:  # BGR
-                    channels = 3
-                else:
-                    # Default to 3 if color space is unknown
+                else: # Default to 3
                     channels = 3
 
                 noise_array = np.random.randint(0, 256, (height, width, channels), dtype=np.uint8)
