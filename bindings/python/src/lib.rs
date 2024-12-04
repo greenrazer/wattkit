@@ -18,43 +18,43 @@ impl PyPowerProfile {
     }
 
     #[getter]
-    fn total_cpu_energy_millijoules(&self) -> PyResult<u128> {
-        Ok(self.0.total_cpu_energy_millijoules)
+    fn total_cpu_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_cpu_millijoules)
     }
 
     #[getter]
-    fn total_gpu_energy_millijoules(&self) -> PyResult<u128> {
-        Ok(self.0.total_gpu_energy_millijoules)
+    fn total_gpu_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_gpu_millijoules)
     }
 
     #[getter]
-    fn total_ane_energy_millijoules(&self) -> PyResult<u128> {
-        Ok(self.0.total_ane_energy_millijoules)
+    fn total_ane_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_ane_millijoules)
     }
 
     #[getter]
-    fn average_cpu_power_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.average_cpu_power_milliwatts)
+    fn average_cpu_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_cpu_milliwatts)
     }
 
     #[getter]
-    fn average_gpu_power_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.average_gpu_power_milliwatts)
+    fn average_gpu_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_gpu_milliwatts)
     }
 
     #[getter]
-    fn average_ane_power_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.average_ane_power_milliwatts)
+    fn average_ane_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_ane_milliwatts)
     }
 
     #[getter]
-    fn total_energy_millijoules(&self) -> PyResult<u128> {
-        Ok(self.0.total_energy_millijoules)
+    fn total_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_millijoules)
     }
 
     #[getter]
-    fn average_power_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.average_power_milliwatts)
+    fn average_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_milliwatts)
     }
 
     #[getter]

@@ -52,13 +52,13 @@ def count_model_bytes(model):
 
 if __name__ == "__main__":
     compute_units = ct.ComputeUnit.CPU_AND_GPU
-    cml_model = ct.models.MLModel("DepthProNormalizedInverseDepthPrunedQuantized.mlpackage", compute_units=compute_units)
+    cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage", compute_units=compute_units)
 
     model_bytes = count_model_bytes(cml_model)
     model_inputs = random_inputs_for_model(cml_model)
 
     cml_model.predict(model_inputs)
-    model_iterations = 10
+    model_iterations = 100
     with Profiler(sample_duration=100, num_samples=2) as profiler:
         for i in range(model_iterations):
             cml_model.predict(model_inputs)
@@ -67,11 +67,11 @@ if __name__ == "__main__":
     print(",".join([str(x) for x in [
         model_bytes,
         model_iterations,
-        profile.total_cpu_energy_millijoules,
-        profile.total_gpu_energy_millijoules,
-        profile.total_ane_energy_millijoules,
-        profile.average_cpu_power_milliwatts,
-        profile.average_gpu_power_milliwatts,
-        profile.average_ane_power_milliwatts,
+        profile.total_cpu_millijoules,
+        profile.total_gpu_millijoules,
+        profile.total_ane_millijoules,
+        profile.average_cpu_milliwatts,
+        profile.average_gpu_milliwatts,
+        profile.average_ane_milliwatts,
         profile.total_duration_milliseconds
     ]]))

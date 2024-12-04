@@ -23,7 +23,7 @@ def validation_image():
     return transform(input)
 
 compute_units = ct.ComputeUnit.ALL
-cml_model = ct.models.MLModel("../../FastViTMA36F16.mlpackage", compute_units=compute_units)
+cml_model = ct.models.MLModel("FastViTMA36F16.mlpackage", compute_units=compute_units)
 img = validation_image()
 
 with Profiler(sample_duration=100, num_samples=2) as profiler:
@@ -31,7 +31,5 @@ with Profiler(sample_duration=100, num_samples=2) as profiler:
         cml_model.predict({"image": img})
 
 profile = profiler.get_profile()
-print(dir(profile))
-print(profile.total_energy_millijoules)
-# print(profile)
+print(profile)
     
