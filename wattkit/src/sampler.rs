@@ -23,9 +23,9 @@ pub enum SamplerError {
 
 #[derive(Clone, Debug, Default)]
 pub struct EnergySample {
-    cpu_energy: u128,
-    gpu_energy: u128,
-    ane_energy: u128,
+    cpu_energy_millijoules: u128,
+    gpu_energy_millijoules: u128,
+    ane_energy_millijoules: u128,
     duration: u64, //milliseconds
 }
 
@@ -76,13 +76,13 @@ impl SampleManager {
 
                                 match entry.channel_name {
                                     IOReportChannelName::CPUEnergy => {
-                                        energy_sample.cpu_energy += milli_joules
+                                        energy_sample.cpu_energy_millijoules += milli_joules
                                     }
                                     IOReportChannelName::GPUEnergy => {
-                                        energy_sample.gpu_energy += milli_joules
+                                        energy_sample.gpu_energy_millijoules += milli_joules
                                     }
                                     IOReportChannelName::ANE => {
-                                        energy_sample.ane_energy += milli_joules
+                                        energy_sample.ane_energy_millijoules += milli_joules
                                     }
                                     _ => {}
                                 };
@@ -267,15 +267,15 @@ impl Sampling for StartStopSampler {
 
 #[derive(Debug, Default)]
 pub struct PowerProfile {
-    pub total_cpu_energy: u128,
-    pub total_gpu_energy: u128,
-    pub total_ane_energy: u128,
-    pub total_cpu_milliwatts: u64,
-    pub total_gpu_milliwatts: u64,
-    pub total_ane_milliwatts: u64,
-    pub total_energy: u128,
-    pub total_power: u64,
-    pub total_duration: u64,
+    pub total_cpu_energy_millijoules: u128,
+    pub total_gpu_energy_millijoules: u128,
+    pub total_ane_energy_millijoules: u128,
+    pub average_cpu_power_milliwatts: u64,
+    pub average_gpu_power_milliwatts: u64,
+    pub average_ane_power_milliwatts: u64,
+    pub total_energy_millijoules: u128,
+    pub average_power_milliwatts: u64,
+    pub total_duration_milliseconds: u64,
 }
 
 impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
@@ -283,31 +283,31 @@ impl<C: AsRef<[EnergySample]>> From<C> for PowerProfile {
         let mut profile = PowerProfile::default();
         let samples = samples.as_ref();
 
-        let mut total_cpu_milliwatts = 0.;
-        let mut total_gpu_milliwatts = 0.;
-        let mut total_ane_milliwatts = 0.;
+        let mut average_cpu_power_milliwatts = 0.;
+        let mut average_gpu_power_milliwatts = 0.;
+        let mut average_ane_power_milliwatts = 0.;
         for s in samples.iter() {
             let duration_secs = s.duration as f64 / 1000.0; //mJs-1 == mW
 
-            profile.total_cpu_energy += s.cpu_energy;
-            profile.total_gpu_energy += s.gpu_energy;
-            profile.total_ane_energy += s.ane_energy;
-            total_cpu_milliwatts += s.cpu_energy as f64 / duration_secs;
-            total_gpu_milliwatts += s.gpu_energy as f64 / duration_secs;
-            total_ane_milliwatts += s.ane_energy as f64 / duration_secs;
-            profile.total_duration += s.duration;
+            profile.total_cpu_energy_millijoules += s.cpu_energy_millijoules;
+            profile.total_gpu_energy_millijoules += s.gpu_energy_millijoules;
+            profile.total_ane_energy_millijoules += s.ane_energy_millijoules;
+            average_cpu_power_milliwatts += s.cpu_energy_millijoules as f64 / duration_secs;
+            average_gpu_power_milliwatts += s.gpu_energy_millijoules as f64 / duration_secs;
+            average_ane_power_milliwatts += s.ane_energy_millijoules as f64 / duration_secs;
+            profile.total_duration_milliseconds += s.duration;
         }
 
         let num_samples = samples.len() as f64;
-        profile.total_cpu_milliwatts = f64::round(total_cpu_milliwatts / num_samples) as u64;
-        profile.total_gpu_milliwatts = f64::round(total_gpu_milliwatts / num_samples) as u64;
-        profile.total_ane_milliwatts = f64::round(total_ane_milliwatts / num_samples) as u64;
+        profile.average_cpu_power_milliwatts = f64::round(average_cpu_power_milliwatts / num_samples) as u64;
+        profile.average_gpu_power_milliwatts = f64::round(average_gpu_power_milliwatts / num_samples) as u64;
+        profile.average_ane_power_milliwatts = f64::round(average_ane_power_milliwatts / num_samples) as u64;
 
-        profile.total_energy =
-            profile.total_cpu_energy + profile.total_gpu_energy + profile.total_ane_energy;
-        profile.total_power = profile.total_cpu_milliwatts
-            + profile.total_gpu_milliwatts
-            + profile.total_ane_milliwatts;
+        profile.total_energy_millijoules =
+            profile.total_cpu_energy_millijoules + profile.total_gpu_energy_millijoules + profile.total_ane_energy_millijoules;
+        profile.average_power_milliwatts = profile.average_cpu_power_milliwatts
+            + profile.average_gpu_power_milliwatts
+            + profile.average_ane_power_milliwatts;
 
         profile
     }
@@ -318,15 +318,15 @@ impl std::fmt::Display for PowerProfile {
         write!(
             f,
             "Total Energy: {} mJ\nTotal Power: {} mW\nTotal Duration: {} ms\nCPU Energy: {} mJ\nGPU Energy: {} mJ\nANE Energy: {} mJ\nCPU Power: {} mW\nGPU Power: {} mW\nANE Power: {} mW",
-            self.total_energy,
-            self.total_power,
-            self.total_duration,
-            self.total_cpu_energy,
-            self.total_gpu_energy,
-            self.total_ane_energy,
-            self.total_cpu_milliwatts,
-            self.total_gpu_milliwatts,
-            self.total_ane_milliwatts
+            self.total_energy_millijoules,
+            self.average_power_milliwatts,
+            self.total_duration_milliseconds,
+            self.total_cpu_energy_millijoules,
+            self.total_gpu_energy_millijoules,
+            self.total_ane_energy_millijoules,
+            self.average_cpu_power_milliwatts,
+            self.average_gpu_power_milliwatts,
+            self.average_ane_power_milliwatts
         )?;
         Ok(())
     }

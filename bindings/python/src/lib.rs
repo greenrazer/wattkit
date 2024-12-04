@@ -18,48 +18,48 @@ impl PyPowerProfile {
     }
 
     #[getter]
-    fn total_cpu_energy(&self) -> PyResult<u128> {
-        Ok(self.0.total_cpu_energy)
+    fn total_cpu_energy_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_cpu_energy_millijoules)
     }
 
     #[getter]
-    fn total_gpu_energy(&self) -> PyResult<u128> {
-        Ok(self.0.total_gpu_energy)
+    fn total_gpu_energy_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_gpu_energy_millijoules)
     }
 
     #[getter]
-    fn total_ane_energy(&self) -> PyResult<u128> {
-        Ok(self.0.total_ane_energy)
+    fn total_ane_energy_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_ane_energy_millijoules)
     }
 
     #[getter]
-    fn total_cpu_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.total_cpu_milliwatts)
+    fn average_cpu_power_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_cpu_power_milliwatts)
     }
 
     #[getter]
-    fn total_gpu_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.total_gpu_milliwatts)
+    fn average_gpu_power_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_gpu_power_milliwatts)
     }
 
     #[getter]
-    fn total_ane_milliwatts(&self) -> PyResult<u64> {
-        Ok(self.0.total_ane_milliwatts)
+    fn average_ane_power_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_ane_power_milliwatts)
     }
 
     #[getter]
-    fn total_energy(&self) -> PyResult<u128> {
-        Ok(self.0.total_energy)
+    fn total_energy_millijoules(&self) -> PyResult<u128> {
+        Ok(self.0.total_energy_millijoules)
     }
 
     #[getter]
-    fn total_power(&self) -> PyResult<u64> {
-        Ok(self.0.total_power)
+    fn average_power_milliwatts(&self) -> PyResult<u64> {
+        Ok(self.0.average_power_milliwatts)
     }
 
     #[getter]
-    fn total_duration(&self) -> PyResult<u64> {
-        Ok(self.0.total_duration)
+    fn total_duration_milliseconds(&self) -> PyResult<u64> {
+        Ok(self.0.total_duration_milliseconds)
     }
 }
 

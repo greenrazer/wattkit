@@ -32,6 +32,6 @@ with Profiler(sample_duration=100, num_samples=2) as profiler:
 
 profile = profiler.get_profile()
 print(dir(profile))
-print(profile.total_energy)
+print(profile.total_energy_millijoules)
 # print(profile)
     
